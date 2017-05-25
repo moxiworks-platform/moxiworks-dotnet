@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using NUnit.Framework;
+namespace MoxiWorks.Platform.Test
+{
+    [TestFixture]
+    public class ExampleTest
+    {
+        [Test]
+        public void shouldbeTrue()
+        {
+            Assert.IsTrue(true); 
+        }
+    }
+}
