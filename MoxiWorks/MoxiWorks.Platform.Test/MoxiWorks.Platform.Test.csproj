@@ -45,7 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CredentialsFixture.cs" />
-    <Compile Include="Credentials.cs" />
     <Compile Include="SessionFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,6 +1,8 @@
-﻿namespace MoxiWorks.Platform.Test
+﻿using System;
+using System.Text;
+namespace MoxiWorks.Platform
 {
-    internal class Credentials
+    public class Credentials
     {
         public readonly string Identifier;
         public readonly string Secret;
@@ -10,5 +12,13 @@
             this.Identifier = identifier;
             this.Secret = secret;
         }
+
+        public string ToBase64()
+        {
+            var text = string.Format("{0}:{1}", Identifier, Secret);
+            var bytes = Encoding.UTF8.GetBytes(text);
+            return Convert.ToBase64String(bytes);  
+        }
+
     }
 }

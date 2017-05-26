@@ -19,7 +19,7 @@ namespace MoxiWorks.Platform
 
 
         public string Cookie { get; set; }
-   
+        public bool IsSessionCookieSet { get { return  !string.IsNullOrWhiteSpace(this.Cookie); } }
     }
 
 }

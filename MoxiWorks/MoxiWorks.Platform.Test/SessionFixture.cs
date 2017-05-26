@@ -26,6 +26,19 @@ namespace MoxiWorks.Platform.Test
             Assert.AreEqual(expected, actual);
             
         }
+
+        [Test]
+        public void ShouldReturnFalseIfCookiesNotSet()
+        {
+            Session.Instance.Cookie = null;
+            Assert.IsFalse(Session.Instance.IsSessionCookieSet);
+            Session.Instance.Cookie = string.Empty;
+            Assert.IsFalse(Session.Instance.IsSessionCookieSet);
+            Session.Instance.Cookie = "   ";
+            Assert.IsFalse(Session.Instance.IsSessionCookieSet);
+
+
+        }
     }
 }
     
