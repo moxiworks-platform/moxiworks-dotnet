@@ -8,9 +8,21 @@ namespace MoxiWorks.Platform
 {
     public class ListingResults
     {
-        public bool? final;
+        public bool? FinalPage;
+        public string LastMoxiWorksID {
+            get {
+                if (Listings.Count() > 0) {
 
-        public List<Listing> Listings {get;set;} 
+                    return Listings.Last().MoxiWorksListingId;
+                } 
+                else {
+                    return null;
+                } 
+                  
+            } }
+
+        private List<Listing> _listings = new List<Listing>();
+        public List<Listing> Listings { get { return _listings; } set { _listings = value; } } 
 
     }
 }

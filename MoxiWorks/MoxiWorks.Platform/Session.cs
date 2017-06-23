@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
 
 namespace MoxiWorks.Platform
 {
@@ -18,8 +19,8 @@ namespace MoxiWorks.Platform
         }
 
 
-        public string Cookie { get; set; }
-        public bool IsSessionCookieSet { get { return  !string.IsNullOrWhiteSpace(this.Cookie); } }
+        public  Cookie SessionCookie{ get; set; }
+        public bool IsSessionCookieSet { get { return SessionCookie != null && !SessionCookie.Expired;  } }
     }
 
 }
