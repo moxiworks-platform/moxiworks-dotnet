@@ -16,7 +16,6 @@ namespace MoxiWorks.Platform.Test
             var cred = new Credentials("foo", "bar");
             Assert.AreEqual(cred.Identifier, "foo");
             Assert.AreEqual(cred.Secret, "bar"); 
-
         }
            
     }

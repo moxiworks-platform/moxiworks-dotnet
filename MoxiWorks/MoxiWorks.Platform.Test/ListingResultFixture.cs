@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 namespace MoxiWorks.Platform.Test
 {
@@ -12,19 +8,18 @@ namespace MoxiWorks.Platform.Test
         [Test]
         public void ShouldReturnNullIfNoListingsExists()
         {
-            ListingResults results = new ListingResults();
+            var results = new ListingResults();
             Assert.AreEqual(results.LastMoxiWorksID, null);  
         }
 
         [Test]
-        public void ShouldReturnTheLastMoxiWorksListingID()
+        public void ShouldReturnTheLastMoxiWorksListingId()
         {
-            ListingResults results = new ListingResults();
-            List<Listing> listings = new List<Listing>(); 
-            for(int i = 0; i < 100; i++)
+            var results = new ListingResults();
+            var listings = new List<Listing>(); 
+            for(var i = 0; i < 100; i++)
             {
-                var l = new Listing();
-                l.MoxiWorksListingId = i.ToString();
+                var l = new Listing {MoxiWorksListingId = i.ToString()};
                 listings.Add(l);
             }
             results.Listings = listings;

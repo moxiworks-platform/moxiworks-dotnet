@@ -1,14 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net; 
-using System.Net.Http;
-using System.Net.Http.Headers;
 using NUnit.Framework;
-using MoxiWorks.Platform;
-using Newtonsoft.Json;
+
 namespace MoxiWorks.Platform.Test
 {
     [TestFixture]
@@ -18,8 +11,7 @@ namespace MoxiWorks.Platform.Test
         public void GetListings()
         {
             var d = new DateTime(2017, 1, 1, 00, 00, 00);
-            List<ListingResults> results = new List<ListingResults>();
-            results.Add(Client.GetListingsUpdateSince("windermere", d));
+            var results = new List<ListingResults> {Client.GetListingsUpdateSince("windermere", d)};
 
 
 
@@ -38,6 +30,21 @@ namespace MoxiWorks.Platform.Test
             var expectedId = "5ce0e9a5-6015-fec5-aadf-a328aebc40d7";
             Listing l = Client.GetListing("windermere", expectedId);
             Assert.AreEqual(expectedId, l.MoxiWorksListingId );
+        }
+
+        [Test]
+        public void GetAgentsByCompany()
+        {
+            var d = new DateTime(2017, 1, 1, 00, 00, 00);
+            var results = new List<AgentResults> {Client.GetAgents("windermere", d)};
+            results.Add(Client.GetAgents("windermere", d,2,results[0].TotalPages));
+                
+
+            
+
+            Assert.AreEqual(results[0].TotalPages, results[1].TotalPages);
+            Assert.AreNotEqual(results[0].PageNumber, results[1].PageNumber);
+           
         }
 
         //[Test]

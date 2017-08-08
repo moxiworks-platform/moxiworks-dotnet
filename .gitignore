@@ -9,7 +9,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+.DS_Store
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -19,6 +19,7 @@ x64/
 x86/
 build/
 bld/
+.idea/
 [Bb]in/
 [Oo]bj/
 

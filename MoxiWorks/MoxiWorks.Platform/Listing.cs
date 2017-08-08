@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace MoxiWorks.Platform
 {
     public class Listing
     {
-      
-
         public float? LotSizeAcres { get; set; }
         public int? BathroomsFull { get; set; }
         public int? BathroomsHalf { get; set; }
