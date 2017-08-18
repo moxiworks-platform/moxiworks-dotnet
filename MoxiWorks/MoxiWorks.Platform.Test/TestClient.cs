@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
+using FakeItEasy;
+using FakeItEasy.Core;
 
 namespace MoxiWorks.Platform.Test
 {
@@ -36,16 +39,57 @@ namespace MoxiWorks.Platform.Test
         public void GetAgentsByCompany()
         {
             var d = new DateTime(2017, 1, 1, 00, 00, 00);
-            var results = new List<AgentResults> {Client.GetAgents("windermere", d)};
-            results.Add(Client.GetAgents("windermere", d,2,results[0].TotalPages));
+            var results = new List<AgentResults> {Client.GetAgentsUpdatedSince("windermere", d)};
+            results.Add(Client.GetAgentsUpdatedSince("windermere", d,2,results[0].TotalPages));
                 
-
-            
-
             Assert.AreEqual(results[0].TotalPages, results[1].TotalPages);
             Assert.AreNotEqual(results[0].PageNumber, results[1].PageNumber);
-           
+            results[0].Agents.ForEach(a => Console.WriteLine(a.Uuid));
+
         }
+
+        [Test]
+        public void GetCompany()
+        {
+            var id = "windermere"; 
+            var c = Client.GetCompany("windermere");
+            Assert.AreEqual(id, c.MoxiWorksCompanyId );
+        }
+
+        [Test]
+        public void GetContact()
+        {
+            var id = "windermere"; 
+            var c = Client.GetCompany("windermere");
+            Assert.AreEqual(id, c.MoxiWorksCompanyId );
+        }
+
+        [Test]
+        public void GetContactsUpdateSince()
+        {
+            throw new NotImplementedException();
+            //Client.GetContactsUpdatedSince();
+        }
+        
+        [Test]
+        public void CreateContact()
+        {
+            //var contact = A.Fake<Contact>();
+            throw new NotImplementedException();
+            
+        } 
+        
+        [Test]
+        public void UpdateContact()
+        {
+            throw new NotImplementedException();
+        }
+
+      
+        
+ 
+        
+        
 
         //[Test]
         //public void ShouldBeAbleToGetCookes()m
