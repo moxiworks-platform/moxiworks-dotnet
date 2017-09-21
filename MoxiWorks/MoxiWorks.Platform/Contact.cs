@@ -51,9 +51,9 @@ namespace MoxiWorks.Platform
         [JsonProperty("property_zip")]
         public string PropertyZip{ get; set; }   
         [JsonProperty("property_beds")]
-        public int PropertyBeds{ get; set; }   
+        public int? PropertyBeds{ get; set; }   
         [JsonProperty("property_baths")]
-        public int  PropertyBaths{ get; set; }   
+        public int?  PropertyBaths{ get; set; }   
         [JsonProperty("property_list_price")]
         public string PropertyListPrice{ get; set; }   
         [JsonProperty("property_listing_status")]
@@ -67,21 +67,21 @@ namespace MoxiWorks.Platform
         [JsonProperty("search_zip")]
         public string SearchZip{ get; set; }   
         [JsonProperty("search_min_baths")]
-        public int SearchMinBaths{ get; set; }   
+        public int? SearchMinBaths{ get; set; }   
         [JsonProperty("search_min_beds")]
-        public int SearchMinBeds{ get; set; }   
+        public int? SearchMinBeds{ get; set; }   
         [JsonProperty("search_min_price")]
-        public int  SearchMinPrice{ get; set; }   
+        public int?  SearchMinPrice{ get; set; }   
         [JsonProperty("search_max_price")]
-        public int  SearchMaxPrice{ get; set; }   
+        public int?  SearchMaxPrice{ get; set; }   
         [JsonProperty("search_min_sq_ft")]
-        public int SearchMinSqFt{ get; set; }   
+        public int? SearchMinSqFt{ get; set; }   
         [JsonProperty("search_max_sq_ft")]
-        public int  SearchMaxSqFt { get; set; }   
+        public int?  SearchMaxSqFt { get; set; }   
         [JsonProperty("search_min_lot_size")]
-        public int SearchMinLotSize{ get; set; }   
+        public int? SearchMinLotSize{ get; set; }   
         [JsonProperty("search_max_lot_size")]
-        public int  SearchMaxLotSize{ get; set; }   
+        public int?  SearchMaxLotSize{ get; set; }   
         [JsonProperty("search_min_year_built")]
         public string SearchMinYearBuilt{ get; set; }   
         [JsonProperty("search_max_year_built")]

@@ -25,6 +25,10 @@ namespace MoxiWorks.Platform
 
         public string BuildQueryString()
         {
+            if (QueryParameters.Count <= 0)
+            return string.Empty;
+                
+                
             return "?" + string.Join("&", QueryParameters.Select(q => $"{  HttpUtility.UrlEncode(q.Key)}={HttpUtility.UrlEncode(q.Value)}"));
         }
 
@@ -40,7 +44,7 @@ namespace MoxiWorks.Platform
 
         public void AddQueryParameter(string key, int? value)
         {
-            if (string.IsNullOrWhiteSpace(key))
+            if (string.IsNullOrWhiteSpace(key) || ! value.HasValue)
             {
                 return; 
             }

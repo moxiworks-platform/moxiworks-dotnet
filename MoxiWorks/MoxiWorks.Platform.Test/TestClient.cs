@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.Remoting;
+using System.Security.Cryptography;
 using NUnit.Framework;
-using FakeItEasy;
-using FakeItEasy.Core;
+using Bogus;
 
 namespace MoxiWorks.Platform.Test
 {
     [TestFixture]
     class TestClient
     {
+        const string  MOXI_WORKS_AGENT_ID = "5872936a-4f75-49e6-9a64-f459f5f8ac3d";
         [Test]
         public void GetListings()
         {
@@ -56,39 +59,92 @@ namespace MoxiWorks.Platform.Test
             Assert.AreEqual(id, c.MoxiWorksCompanyId );
         }
 
-        [Test]
-        public void GetContact()
-        {
-            var id = "windermere"; 
-            var c = Client.GetCompany("windermere");
-            Assert.AreEqual(id, c.MoxiWorksCompanyId );
-        }
+//        [Test]
+//        public void CreatContact()
+//        {
+//            var fakeContact = GetFakerContactBuilder();
+//
+//
+//            var c = fakeContact.Generate();
+//            c.PartnerContactId =  Guid.NewGuid().ToString();;
+//            c.AgentUuid = MOXI_WORKS_AGENT_ID;
+//            
+//
+//            var result = Client.CreateContact(c);
+//            
+//            
+//            
+//            Assert.AreEqual(c.PartnerContactId,result.PartnerContactId);
+//            Assert.AreEqual(c.MoxiWorksAgentId, result.MoxiWorksAgentId);
+//        }
+
+//        [Test]
+//        public void UpdateContact()
+//        {
+//            var fakeContact = GetFakerContactBuilder();
+//
+//
+//            var c = fakeContact.Generate();  
+//            c.PartnerContactId =  Guid.NewGuid().ToString();;
+//            c.AgentUuid = MOXI_WORKS_AGENT_ID;
+//
+//            var newContact = Client.CreateContact(c);
+//            var expected  = "1234 happy lane";
+//            newContact.HomeStreetAddress = expected;
+//
+//            var result = Client.UpdateContact(newContact);
+//            
+//            Assert.AreEqual(expected, result.HomeStreetAddress);
+//            
+//        }
 
         [Test]
-        public void GetContactsUpdateSince()
+        public void ContactCrudOperations()
         {
-            throw new NotImplementedException();
-            //Client.GetContactsUpdatedSince();
-        }
-        
-        [Test]
-        public void CreateContact()
-        {
-            //var contact = A.Fake<Contact>();
-            throw new NotImplementedException();
+            var fakeContact = GetFakerContactBuilder();
+            var c = fakeContact.Generate();
+            c.PartnerContactId =  Guid.NewGuid().ToString();;
+            c.AgentUuid = MOXI_WORKS_AGENT_ID;
             
-        } 
-        
-        [Test]
-        public void UpdateContact()
-        {
-            throw new NotImplementedException();
-        }
+            var created = Client.CreateContact(c);
+            
+            // testing create
+            Assert.AreEqual(c.PartnerContactId,created.PartnerContactId, "Create PartnerContactId did not match" );
+            Assert.AreEqual(c.MoxiWorksAgentId, created.MoxiWorksAgentId ,"Create MoxiWorksAgentId did not match");
 
-      
+            // test update 
+            var old_address = created.HomeStreetAddress;
+            var expected_address  = "1234 happy lane";
+            created.HomeStreetAddress = expected_address;
+            var updated = Client.UpdateContact(created);
+            
+            Assert.AreEqual(expected_address, updated.HomeStreetAddress,"Update did not match");
+            
+            // test get
+            var result =  Client.GetContact(updated.AgentUuid, AgentIdType.AgentUuid, updated.PartnerContactId);
+            
+            Assert.AreNotEqual(old_address, result.HomeStreetAddress,"get returned incorrect address");
+            Assert.AreEqual(updated.HomeStreetAddress, result.HomeStreetAddress,"get returned incorrect address");
+            
+            
+            
+        }
         
+       
+
+        private Faker<Contact> GetFakerContactBuilder()
+        {
+            return new Faker<Contact>()
+                .RuleFor(co => co.ContactName, f => $"{f.Name.FirstName()} {f.Name.LastName()}")
+                .RuleFor(co => co.PrimaryPhoneNumber, f => f.Phone.PhoneNumber())
+                .RuleFor(co => co.PrimaryEmailAddress, f => f.Internet.ExampleEmail())
+                .RuleFor(co => co.HomeStreetAddress, f => f.Address.StreetAddress())
+                .RuleFor(co => co.HomeCity, f => f.Address.City())
+                .RuleFor(co => co.HomeState, f => f.Address.State())
+                .RuleFor(co => co.HomeZip, f => f.Address.ZipCode());
+        }
  
-        
+
         
 
         //[Test]
@@ -104,8 +160,9 @@ namespace MoxiWorks.Platform.Test
 
 
     }
-
-
+        
+    
+   
 
 
 
