@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuyerTransactionFixture.cs" />
     <Compile Include="CredentialsFixture.cs" />
     <Compile Include="ListingResultFixture.cs" />
     <Compile Include="SessionFixture.cs" />
