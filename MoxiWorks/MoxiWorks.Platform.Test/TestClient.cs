@@ -87,8 +87,6 @@ namespace MoxiWorks.Platform.Test
             Assert.AreNotEqual(old_address, result.HomeStreetAddress, "get returned incorrect address");
             Assert.AreEqual(updated.HomeStreetAddress, result.HomeStreetAddress, "get returned incorrect address");
 
-
-
         }
 
         [Test]

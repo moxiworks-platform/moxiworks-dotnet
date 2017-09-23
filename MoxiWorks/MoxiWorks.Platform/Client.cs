@@ -70,17 +70,9 @@ namespace MoxiWorks.Platform
             }
 
             var s = content.ReadAsStringAsync().Result;
-            Console.Write(s);
-//            Console.Write(Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "/BuyerTransactions.json");
-           
-//           // Console.Write(Environment.GetFolderPath(Environment.SpecialFolder.MyComputer));
-//
-//            //Environment.GetFolderPath(Environment.SpecialFolder.Personal)
-//            var str  = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "/BuyerTransactions.json");
-//            
-//            
-//            //Console.Write(Environment.SpecialFolder.Personal);
-            return JsonConvert.DeserializeObject<T>(s,new JsonSerializerSettings{DefaultValueHandling = DefaultValueHandling.Ignore});  
+            //Console.Write(s);
+
+            return JsonConvert.DeserializeObject<T>(s);  
         }
 
         public static T PostRequest<T>(string url, T obj)

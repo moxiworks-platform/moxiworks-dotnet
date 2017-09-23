@@ -58,6 +58,11 @@ using Newtonsoft.Json;
             public decimal? MinPrice { get; set; }
             [JsonProperty("max_price")]
             public decimal? MaxPrice { get; set; }
+            [JsonProperty("closing_price")]
+            public decimal?  ClosingPrice { get; set; }
+            [JsonProperty("closing_timestamp")]
+            public int? ClosingTimeStamp { get; set; }
+            
             
             [JsonIgnore]
             public List<string> Errors = new List<string>();
