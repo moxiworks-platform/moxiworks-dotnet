@@ -33,9 +33,9 @@ using Newtonsoft.Json;
             [JsonProperty("max_sqft")]
             public int? MiniSqft { get; set; }
             [JsonProperty("min_beds")]
-            public int? MinBeds { get; set; }
+            public decimal? MinBeds { get; set; }
             [JsonProperty("max_beds")]
-            public int? MaxBeds { get; set; }
+            public decimal? MaxBeds { get; set; }
             [JsonProperty("min_baths")]
             public decimal? MinBaths { get; set; }
             [JsonProperty("max_baths")]
