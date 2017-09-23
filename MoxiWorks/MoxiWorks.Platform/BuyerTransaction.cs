@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Web.UI.WebControls;
-using System.Xml.Xsl.Runtime;
 using Newtonsoft.Json;
     namespace MoxiWorks.Platform
     {
@@ -10,7 +7,7 @@ using Newtonsoft.Json;
         {
 
             [JsonProperty("agent_uuid")]
-            public string AgentUUID { get; set; }
+            public string AgentUuid { get; set; }
             [JsonProperty("moxi_works_agent_id")]
             public string MoxiWorksAgentId { get; set; }
             [JsonProperty("moxi_works_transaction_id")]
@@ -32,35 +29,35 @@ using Newtonsoft.Json;
             [JsonProperty("zip_code")]  
             public string ZipCode { get; set; }
             [JsonProperty("min_sqft")]
-            public int MinSqft { get; set; } 
+            public int? MinSqft { get; set; } 
             [JsonProperty("max_sqft")]
-            public int MiniSqft { get; set; }
+            public int? MiniSqft { get; set; }
             [JsonProperty("min_beds")]
-            public int MinBeds { get; set; }
+            public int? MinBeds { get; set; }
             [JsonProperty("max_beds")]
-            public int MaxBeds { get; set; }
+            public int? MaxBeds { get; set; }
             [JsonProperty("min_baths")]
-            public decimal MinBaths { get; set; }
+            public decimal? MinBaths { get; set; }
             [JsonProperty("max_baths")]
-            public decimal MaxBaths { get; set; }
+            public decimal? MaxBaths { get; set; }
             [JsonProperty("area_of_interest")]
             public string AreaOfInterest { get; set; }
             [JsonProperty("is_mls_transaction")]
-            public bool  IsMlsTransaction  { get; set; }
+            public bool?  IsMlsTransaction  { get; set; }
             [JsonProperty("mls_number")]
             public string MlsNumber { get; set; }
             [JsonProperty("start_timestamp")]
-            public int StartTimeStamp { get; set; }
+            public int? StartTimeStamp { get; set; }
             [JsonProperty("commission_percentage")]
-            public decimal CommisionPercentage { get; set; }
+            public decimal? CommisionPercentage { get; set; }
             [JsonProperty("commission_flat_fee")]
-            public decimal CommissionFlatFee { get; set; }
+            public decimal? CommissionFlatFee { get; set; }
             [JsonProperty("target_price")]
-            public int  TargetPrice { get; set; }
+            public decimal?  TargetPrice { get; set; }
             [JsonProperty("min_price")]
-            public int MinPrice { get; set; }
+            public decimal? MinPrice { get; set; }
             [JsonProperty("max_price")]
-            public int MaxPrice { get; set; }
+            public decimal? MaxPrice { get; set; }
             
             [JsonIgnore]
             public List<string> Errors = new List<string>();
@@ -69,12 +66,12 @@ using Newtonsoft.Json;
             {
                 Errors.Clear();
                 
-                if (! String.IsNullOrWhiteSpace(MoxiWorksContactId) && ! String.IsNullOrWhiteSpace(PartnerContactId))
+                if (! string.IsNullOrWhiteSpace(MoxiWorksContactId) && ! String.IsNullOrWhiteSpace(PartnerContactId))
                 {
                     Errors.Add("Cannot Include both PartnereContactId and MoxiworksContactId");
                 }
 
-                if (IsMlsTransaction && string.IsNullOrWhiteSpace(MlsNumber))
+                if (IsMlsTransaction.HasValue && string.IsNullOrWhiteSpace(MlsNumber))
                 {
                     Errors.Add("If IsMlsTransaction is true a Mls Number must be included");
                 }

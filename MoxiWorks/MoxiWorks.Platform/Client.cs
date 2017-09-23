@@ -1,7 +1,9 @@
 ﻿using System;
+using System.IO;
 using System.Net.Http;
 using System.Net;
 using System.Net.Http.Headers;
+using System.Web.UI;
 using Newtonsoft.Json;
 namespace MoxiWorks.Platform
 {
@@ -56,7 +58,7 @@ namespace MoxiWorks.Platform
             return client; 
         }
         
-        public static T Request<T>(string url)
+        public static T GetRequest<T>(string url)
         {
             var client = RequestClient(); 
             var result = client.GetAsync(new Uri(url)).Result;
@@ -67,7 +69,18 @@ namespace MoxiWorks.Platform
                 Session.Instance.SessionCookie = _handler.CookieContainer.GetCookies(new Uri("https://api-qa.moxiworks.com"))["_wms_svc_public_session"];
             }
 
-            return JsonConvert.DeserializeObject<T>(content.ReadAsStringAsync().Result);  
+            var s = content.ReadAsStringAsync().Result;
+            Console.Write(s);
+//            Console.Write(Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "/BuyerTransactions.json");
+           
+//           // Console.Write(Environment.GetFolderPath(Environment.SpecialFolder.MyComputer));
+//
+//            //Environment.GetFolderPath(Environment.SpecialFolder.Personal)
+//            var str  = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "/BuyerTransactions.json");
+//            
+//            
+//            //Console.Write(Environment.SpecialFolder.Personal);
+            return JsonConvert.DeserializeObject<T>(s,new JsonSerializerSettings{DefaultValueHandling = DefaultValueHandling.Ignore});  
         }
 
         public static T PostRequest<T>(string url, T obj)
@@ -111,14 +124,14 @@ namespace MoxiWorks.Platform
             builder.AddQueryParameter("per_page",perpage.ToString());
             builder.AddQueryParameter("last_moxi_works_listing_id",lastMoxiWorksListingId);
 
-            return Request<ListingResults>(builder.getUrl()); 
+            return GetRequest<ListingResults>(builder.getUrl()); 
         }
 
         public static Listing GetListing(string companyId, string moxiWorksListingId)
         {
             var builder = new UriBuilder($"https://api-qa.moxiworks.com/api/listings/{moxiWorksListingId}");
             builder.AddQueryParameter("moxi_works_company_id",companyId);
-            return Request<Listing>(builder.getUrl());
+            return GetRequest<Listing>(builder.getUrl());
 
         }
 
@@ -126,7 +139,7 @@ namespace MoxiWorks.Platform
         {
             var builder = new UriBuilder($"https://api-qa.moxiworks.com/api/agent/{moxiWorksAgentId}");
             builder.AddQueryParameter("moxi_works_company_id",companyId);
-            return Request<Agent>(builder.getUrl());
+            return GetRequest<Agent>(builder.getUrl());
         }
 
         public static AgentResults GetAgentsUpdatedSince(string moxiWorksCompanyId, DateTime updatedSince ,int? totalPages = null, int pageNumber = 1 )
@@ -139,13 +152,13 @@ namespace MoxiWorks.Platform
             builder.AddQueryParameter("total_pages",totalPages);
             builder.AddQueryParameter("page_number",pageNumber);
             
-            return Request<AgentResults>(builder.getUrl());
+            return GetRequest<AgentResults>(builder.getUrl());
         }
 
         public static Company GetCompany(string moxiWorksCompanyId)
         {
             var builder = new UriBuilder($"https://api-qa.moxiworks.com/api/companies/{moxiWorksCompanyId}");
-            return Request<Company>(builder.getUrl());
+            return GetRequest<Company>(builder.getUrl());
         }
 
         public static Contact GetContact(string agentId,AgentIdType agentIdType, string partnerContactId)
@@ -154,7 +167,7 @@ namespace MoxiWorks.Platform
             builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
                 agentId);
   
-            return Request<Contact>(builder.getUrl());
+            return GetRequest<Contact>(builder.getUrl());
        }
 
         public static Contact CreateContact(Contact contact)
@@ -203,9 +216,45 @@ namespace MoxiWorks.Platform
             builder.AddQueryParameter("contact_name",contactName); 
             builder.AddQueryParameter("phone_number",phoneNumber);
             builder.AddQueryParameter("page_number", pageNumber);
-            return Request<ContactResults>(builder.getUrl());
+            return GetRequest<ContactResults>(builder.getUrl());
         }
 
+        public static BuyerTransaction CreateBuyerTransaction( BuyerTransaction buyerTransaction)
+        {
+            var builder = new UriBuilder("https://api-qa.moxiworks.com/api/buyer_transactions/");
+            return PostRequest(builder.getUrl(), buyerTransaction); 
+        }
+
+
+        public static BuyerTransaction UpdateBuyerTransaction(BuyerTransaction buyerTransaction)
+        {
+            var builder = new UriBuilder($"https://api-qa.moxiworks.com/api/buyer_transactions/{buyerTransaction.MoxiWorksTransactionId}");
+            return PutRequest(builder.getUrl(), buyerTransaction);
+        }
+
+        public static BuyerTransaction GetBuyerTransaction(string agentId, AgentIdType agentIdType, string moxiworksTransactionId)
+        {
+            var builder = new UriBuilder($"https://api-qa.moxiworks.com/api/buyer_transactions/{moxiworksTransactionId}");
+            builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
+                agentId);
+           
+            return GetRequest<BuyerTransaction>(builder.getUrl());
+        }
+
+
+        public static BuyerTransactionResults GetBuyerTransactions(string agentId, AgentIdType agentIdType,string moxiworksContactId = null, string partnerContactId = null, int pageNumber = 1 )
+        {
+            var builder = new UriBuilder("https://api-qa.moxiworks.com/api/buyer_transactions/");
+            
+            builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
+                agentId);
+            
+            builder.AddQueryParameter("partner_contact_id", partnerContactId);
+            builder.AddQueryParameter("moxi_works_contact_id", moxiworksContactId);
+            builder.AddQueryParameter("page_number",pageNumber);
+            
+            return GetRequest<BuyerTransactionResults>(builder.getUrl());
+        }
     }
     
     /*

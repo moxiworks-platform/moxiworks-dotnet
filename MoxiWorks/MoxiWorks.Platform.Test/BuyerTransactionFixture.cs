@@ -10,7 +10,7 @@ namespace MoxiWorks.Platform.Test
         [Test]
         public void ValidateMoxiWorksContactIdOrPartnerContactID()
         {
-            var fake = GetFackerBuerBuyerTransaction().Generate();
+            var fake = GetFakerBuyerTransaction().Generate();
             fake.PartnerContactId = "foo";
             fake.MoxiWorksContactId = "bar";
             Assert.IsFalse(fake.Validate());
@@ -20,7 +20,7 @@ namespace MoxiWorks.Platform.Test
         [Test]
         public void ValidateMlsBuyerTransactionContainsMlsNumber()
         {
-            var fake = GetFackerBuerBuyerTransaction().Generate();
+            var fake = GetFakerBuyerTransaction().Generate();
             fake.IsMlsTransaction = true;
             fake.MlsNumber = string.Empty;
             
@@ -31,7 +31,7 @@ namespace MoxiWorks.Platform.Test
         [Test]
         public void ValidateCommisionPercentageOrCommisionFlatFeeNotBoth()
         {
-            var fake = GetFackerBuerBuyerTransaction().Generate();
+            var fake = GetFakerBuyerTransaction().Generate();
             fake.CommisionPercentage = 0.10m;
             fake.CommissionFlatFee = 2000; 
             
@@ -42,7 +42,7 @@ namespace MoxiWorks.Platform.Test
         [Test]
         public void ValidateTargetPriceOrMinMaxPriceButNotBoth()
         {
-            var fake = GetFackerBuerBuyerTransaction().Generate();
+            var fake = GetFakerBuyerTransaction().Generate();
             fake.TargetPrice = 1;
             fake.MinPrice = 1;
             fake.MaxPrice = 1;
@@ -52,7 +52,7 @@ namespace MoxiWorks.Platform.Test
         }
         
         
-        public Faker<BuyerTransaction> GetFackerBuerBuyerTransaction()
+        public Faker<BuyerTransaction> GetFakerBuyerTransaction()
         {
             return new Faker<BuyerTransaction>()
                 .RuleFor(b => b.Address, f => f.Address.StreetAddress())
