@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace MoxiWorks.Platform
 {
@@ -7,7 +8,7 @@ namespace MoxiWorks.Platform
 
         [JsonProperty("agent_uuid")]
         public string AgentUuid { get; set; }
-        [JsonProperty("moxi_works_agent_id")]
+        [    JsonProperty("moxi_works_agent_id")]
         public string MoxiWorksAgentId { get; set; }
         [JsonProperty("body")]
         public string Body { get; set; }
@@ -17,5 +18,8 @@ namespace MoxiWorks.Platform
         public string PartnerContactId { get; set; }
         [JsonProperty("title")]
         public string Title { get; set; }
+        [JsonProperty("log_data")]
+        public Dictionary<string,string> LogData { get; set; } 
+        
     }
 }

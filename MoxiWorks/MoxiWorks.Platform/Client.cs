@@ -60,6 +60,7 @@ namespace MoxiWorks.Platform
         
         public static T GetRequest<T>(string url)
         {
+     
             var client = RequestClient(); 
             var result = client.GetAsync(new Uri(url)).Result;
             var content = result.Content;
@@ -70,9 +71,13 @@ namespace MoxiWorks.Platform
             }
 
             var s = content.ReadAsStringAsync().Result;
-            //Console.Write(s);
+            Console.Write(s);
+            return JsonConvert.DeserializeObject<T>(s, new JsonSerializerSettings
+            { 
+                MissingMemberHandling = MissingMemberHandling.Ignore,
+                NullValueHandling = NullValueHandling.Include
+            });
 
-            return JsonConvert.DeserializeObject<T>(s);  
         }
 
         public static T PostRequest<T>(string url, T obj)
@@ -217,7 +222,6 @@ namespace MoxiWorks.Platform
             return PostRequest(builder.getUrl(), buyerTransaction); 
         }
 
-
         public static BuyerTransaction UpdateBuyerTransaction(BuyerTransaction buyerTransaction)
         {
             var builder = new UriBuilder($"https://api-qa.moxiworks.com/api/buyer_transactions/{buyerTransaction.MoxiWorksTransactionId}");
@@ -233,7 +237,6 @@ namespace MoxiWorks.Platform
             return GetRequest<BuyerTransaction>(builder.getUrl());
         }
 
-
         public static BuyerTransactionResults GetBuyerTransactions(string agentId, AgentIdType agentIdType,string moxiworksContactId = null, string partnerContactId = null, int pageNumber = 1 )
         {
             var builder = new UriBuilder("https://api-qa.moxiworks.com/api/buyer_transactions/");
@@ -247,6 +250,23 @@ namespace MoxiWorks.Platform
             
             return GetRequest<BuyerTransactionResults>(builder.getUrl());
         }
+
+        public static ActionLog CreateActionLog(ActionLog log)
+        {
+            var builder = new UriBuilder("https://api-qa.moxiworks.com/api/action_logs/");
+
+            return PostRequest(builder.getUrl(), log);
+        }
+
+        public static ActionLogResults GetActionLogs(string agentId, AgentIdType agentIdType, string partnerContactId)
+        {
+            var builder = new UriBuilder("https://api-qa.moxiworks.com/api/action_logs/");
+            builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
+                agentId);
+            builder.AddQueryParameter("partner_contact_id",partnerContactId);
+
+            return GetRequest<ActionLogResults>(builder.getUrl());
+        }    
     }
     
     /*

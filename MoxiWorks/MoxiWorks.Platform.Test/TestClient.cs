@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using Bogus;
 using Newtonsoft.Json;
-using System.IO; 
+using System.IO;
+using System.Threading;
 
 namespace MoxiWorks.Platform.Test
 {
@@ -131,16 +132,36 @@ namespace MoxiWorks.Platform.Test
         [Test]
         public void GetResultListOfBuyerTransactions()
         {
-                   
+            
             var results = Client.GetBuyerTransactions(MOXI_WORKS_AGENT_ID,AgentIdType.AgentUuid);
             
             Assert.IsNotNull(results.PageNumber); 
             Assert.IsNotNull(results.TotalPages);
-            
-
         }
 
+        [Test]
+        public void CreateActionLogAndGetItFromIndex()
+        {
+            var fakeContact = GetFakerContactBuilder();
+            var c = fakeContact.Generate();
+            c.PartnerContactId = Guid.NewGuid().ToString();
+            c.AgentUuid = MOXI_WORKS_AGENT_ID;
 
+            var contact = Client.CreateContact(c);
+            var log = GetBogusActionLogBuilder().Generate();
+            log.PartnerContactId = contact.PartnerContactId;
+            log.AgentUuid = contact.AgentUuid; 
+            
+            var result = Client.CreateActionLog(log);
+            
+            Assert.AreEqual(log.Title,result.Title);
+            Assert.AreEqual(log.Body,result.Body);
+            Thread.Sleep(6000);
+            var results = Client.GetActionLogs(MOXI_WORKS_AGENT_ID,AgentIdType.AgentUuid,log.PartnerContactId);
+            Assert.IsTrue(results.Actions.Count > 0 );
+        }
+
+  
         private Faker<Contact> GetFakerContactBuilder()
         {
             return new Faker<Contact>()
@@ -163,7 +184,13 @@ namespace MoxiWorks.Platform.Test
                 .RuleFor(bt => bt.ZipCode, f => f.Address.ZipCode())
                 .RuleFor(bt => bt.CommissionFlatFee, 3000)
                 .RuleFor(bt => bt.TransactionName, f => f.Name.FullName() + " - buyer");
+        }
 
+        private Faker<ActionLog> GetBogusActionLogBuilder()
+        {
+            return new Faker<ActionLog>()
+                .RuleFor(al => al.Body, f => f.Lorem.Paragraph())
+                .RuleFor(al => al.Title, f => f.Lorem.Word() + "-title");
         }
 
 

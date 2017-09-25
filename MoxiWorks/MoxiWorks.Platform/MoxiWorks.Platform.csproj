@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionLog.cs" />
+    <Compile Include="ActionLogIndexItem.cs" />
+    <Compile Include="ActionLogResults.cs" />
     <Compile Include="Agent.cs" />
     <Compile Include="AgentIdType.cs" />
     <Compile Include="AgentResults.cs" />
