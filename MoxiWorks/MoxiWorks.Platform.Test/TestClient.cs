@@ -12,7 +12,7 @@ namespace MoxiWorks.Platform.Test
     class TestClient
     {
         const string MOXI_WORKS_AGENT_ID = "5872936a-4f75-49e6-9a64-f459f5f8ac3d";
-
+        const string COMPANY_ID = "windermere";
         [Test]
         public void GetListings()
         {
@@ -159,6 +159,21 @@ namespace MoxiWorks.Platform.Test
             Thread.Sleep(6000);
             var results = Client.GetActionLogs(MOXI_WORKS_AGENT_ID,AgentIdType.AgentUuid,log.PartnerContactId);
             Assert.IsTrue(results.Actions.Count > 0 );
+        }
+
+        [Test]
+        public void GetBrand()
+        {
+            var result = Client.GetCompanyBrand(COMPANY_ID);
+            Assert.IsNotNull(result.ImageLogo);
+        }
+        
+        [Test]
+        public void GetFullCompanyBranding()
+        {
+            var results = Client.GetFullCompanyBranding(COMPANY_ID,MOXI_WORKS_AGENT_ID);
+            
+            
         }
 
   
