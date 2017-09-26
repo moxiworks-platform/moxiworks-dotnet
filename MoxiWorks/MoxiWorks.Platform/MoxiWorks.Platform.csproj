@@ -48,6 +48,7 @@
     <Compile Include="Agent.cs" />
     <Compile Include="AgentIdType.cs" />
     <Compile Include="AgentResults.cs" />
+    <Compile Include="Brand.cs" />
     <Compile Include="BuyerTransaction.cs" />
     <Compile Include="BuyerTransactionResults.cs" />
     <Compile Include="Client.cs" />
