@@ -8,17 +8,17 @@ namespace MoxiWorks.Platform.Test
         [Test]
         public void ShouldTakeTheUrl()
         {
-            var expected = "http://foo.bar@example.com/goo";
-            var builder = new UriBuilder(expected);
+            var expected = "https://api-qa.moxiworks.com/api/goo";
+            var builder = new UriBuilder("/goo");
             Assert.AreEqual(expected, builder.GetUrl()); 
         }
 
         [Test]
         public void ShouldGenerateQueryString()
         {
-            var expected = "http://foo.bar@example.com/goo?foo=bar&ding=dong&boo=bam";
+            var expected = "https://api-qa.moxiworks.com/api/goo?foo=bar&ding=dong&boo=bam";
 
-            var builder = new UriBuilder("http://foo.bar@example.com/goo");
+            var builder = new UriBuilder("/goo");
             builder.QueryParameters.Add("foo","bar");
             builder.QueryParameters.Add("ding","dong");
             builder.QueryParameters.Add("boo","bam");
