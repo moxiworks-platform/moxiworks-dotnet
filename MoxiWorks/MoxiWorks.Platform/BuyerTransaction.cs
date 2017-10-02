@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using Newtonsoft.Json;
     namespace MoxiWorks.Platform
     {
@@ -49,7 +50,7 @@ using Newtonsoft.Json;
             [JsonProperty("start_timestamp")]
             public int? StartTimeStamp { get; set; }
             [JsonProperty("commission_percentage")]
-            public decimal? CommisionPercentage { get; set; }
+            public decimal? CommissionPercentage { get; set; }
             [JsonProperty("commission_flat_fee")]
             public decimal? CommissionFlatFee { get; set; }
             [JsonProperty("target_price")]
@@ -58,12 +59,7 @@ using Newtonsoft.Json;
             public decimal? MinPrice { get; set; }
             [JsonProperty("max_price")]
             public decimal? MaxPrice { get; set; }
-            [JsonProperty("closing_price")]
-            public decimal?  ClosingPrice { get; set; }
-            [JsonProperty("closing_timestamp")]
-            public int? ClosingTimeStamp { get; set; }
-            
-            
+
             [JsonIgnore]
             public List<string> Errors = new List<string>();
 
@@ -81,9 +77,9 @@ using Newtonsoft.Json;
                     Errors.Add("If IsMlsTransaction is true a Mls Number must be included");
                 }
 
-                if (CommisionPercentage > 0 && CommissionFlatFee > 0)
+                if (CommissionPercentage > 0 && CommissionFlatFee > 0)
                 {
-                    Errors.Add("Can only include CommisionPercentage or CommissionFlatFee not both");
+                    Errors.Add("Can only include CommissionPercentage or CommissionFlatFee not both");
                 }
 
                 if (TargetPrice > 0 && (MaxPrice > 0 || MinPrice > 0))

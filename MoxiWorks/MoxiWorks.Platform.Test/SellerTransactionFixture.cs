@@ -1,12 +1,11 @@
-﻿using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Bogus;
+
 namespace MoxiWorks.Platform.Test
 {
     [TestFixture]
-    public class BuyerTransactionFixture
+    public class SellerTransactionFixture
     {
-
         [Test]
         public void ValidateMoxiWorksContactIdOrPartnerContactID()
         {
