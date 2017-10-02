@@ -80,17 +80,17 @@ namespace MoxiWorks.Platform.Test
             Assert.AreEqual(c.MoxiWorksAgentId, created.MoxiWorksAgentId, "Create MoxiWorksAgentId did not match");
 
             // test update 
-            var old_address = created.HomeStreetAddress;
-            var expected_address = "1234 happy lane";
-            created.HomeStreetAddress = expected_address;
+            var oldAddress = created.HomeStreetAddress;
+            var expectedAddress = "1234 happy lane";
+            created.HomeStreetAddress = expectedAddress;
             var updated = Client.UpdateContact(created);
 
-            Assert.AreEqual(expected_address, updated.HomeStreetAddress, "Update did not match");
+            Assert.AreEqual(expectedAddress, updated.HomeStreetAddress, "Update did not match");
 
             // test get
             var result = Client.GetContact(updated.AgentUuid, AgentIdType.AgentUuid, updated.PartnerContactId);
 
-            Assert.AreNotEqual(old_address, result.HomeStreetAddress, "get returned incorrect address");
+            Assert.AreNotEqual(oldAddress, result.HomeStreetAddress, "get returned incorrect address");
             Assert.AreEqual(updated.HomeStreetAddress, result.HomeStreetAddress, "get returned incorrect address");
 
         }
@@ -207,17 +207,17 @@ namespace MoxiWorks.Platform.Test
             c.AgentUuid = MOXI_WORKS_AGENT_ID;
             var contact = Client.CreateContact(c);
 
-            var new_event = GetFakerEventBuilder().Generate();
-            new_event.AgentUuId = MOXI_WORKS_AGENT_ID;
-            new_event.PartnerEventId = Guid.NewGuid().ToString();
-            new_event.Attendees.Add(contact.PartnerContactId);
+            var newEvent = GetFakerEventBuilder().Generate();
+            newEvent.AgentUuId = MOXI_WORKS_AGENT_ID;
+            newEvent.PartnerEventId = Guid.NewGuid().ToString();
+            newEvent.Attendees.Add(contact.PartnerContactId);
 
-            var created = Client.CreateEvent(new_event);
-            Assert.AreEqual(new_event.AgentUuId, created.AgentUuId);
-            Assert.AreEqual(new_event.PartnerEventId,created.PartnerEventId);
-            Assert.AreEqual(new_event.AllDay, created.AllDay);
-            Assert.AreEqual(new_event.EventLocation, created.EventLocation);
-            Assert.AreEqual(new_event.Attendees.Count, 1);
+            var created = Client.CreateEvent(newEvent);
+            Assert.AreEqual(newEvent.AgentUuId, created.AgentUuId);
+            Assert.AreEqual(newEvent.PartnerEventId,created.PartnerEventId);
+            Assert.AreEqual(newEvent.AllDay, created.AllDay);
+            Assert.AreEqual(newEvent.EventLocation, created.EventLocation);
+            Assert.AreEqual(newEvent.Attendees.Count, 1);
 
             var current = Client.GetEvent(MOXI_WORKS_AGENT_ID, AgentIdType.AgentUuid, created.PartnerEventId);
             Assert.AreEqual(created.MoxiWorksAgentId ,current.MoxiWorksAgentId);
@@ -229,12 +229,18 @@ namespace MoxiWorks.Platform.Test
             Assert.AreEqual(expected, updated.EventLocation);
 
 
-            var resutls = Client.GetEventsByDate(MOXI_WORKS_AGENT_ID,
-                AgentIdType.AgentUuid,
-                updated.EventStart.Value,
-                updated.EventEnd.Value);
-            Assert.AreEqual(2, resutls.EventListDates.Count);
-      
+            if (updated.EventStart != null)
+            {
+                if (updated.EventEnd != null)
+                {
+                    var resutls = Client.GetEventsByDate(MOXI_WORKS_AGENT_ID,
+                        AgentIdType.AgentUuid,
+                        updated.EventStart.Value,
+                        updated.EventEnd.Value);
+                    Assert.AreEqual(2, resutls.EventListDates.Count);
+                }
+            }
+
 
             var deleted = Client.DeleteEvent(MOXI_WORKS_AGENT_ID,
                 AgentIdType.AgentUuid,

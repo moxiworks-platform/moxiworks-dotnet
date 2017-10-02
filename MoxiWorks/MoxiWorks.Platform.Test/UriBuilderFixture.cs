@@ -10,7 +10,7 @@ namespace MoxiWorks.Platform.Test
         {
             var expected = "http://foo.bar@example.com/goo";
             var builder = new UriBuilder(expected);
-            Assert.AreEqual(expected, builder.getUrl()); 
+            Assert.AreEqual(expected, builder.GetUrl()); 
         }
 
         [Test]
@@ -23,7 +23,7 @@ namespace MoxiWorks.Platform.Test
             builder.QueryParameters.Add("ding","dong");
             builder.QueryParameters.Add("boo","bam");
             
-            Assert.AreEqual(expected, builder.getUrl());
+            Assert.AreEqual(expected, builder.GetUrl());
 
         }
         

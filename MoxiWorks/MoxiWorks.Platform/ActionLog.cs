@@ -8,7 +8,7 @@ namespace MoxiWorks.Platform
 
         [JsonProperty("agent_uuid")]
         public string AgentUuid { get; set; }
-        [    JsonProperty("moxi_works_agent_id")]
+        [JsonProperty("moxi_works_agent_id")]
         public string MoxiWorksAgentId { get; set; }
         [JsonProperty("body")]
         public string Body { get; set; }

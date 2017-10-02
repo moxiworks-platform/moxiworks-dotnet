@@ -10,15 +10,15 @@ namespace MoxiWorks.Platform
     {
         
         public Dictionary<string, string> QueryParameters { get; } =  new Dictionary<string, string>(); 
-        private Uri Host { get; set; } 
-        
+        private Uri Host { get; } 
+
         public  UriBuilder(string address)
         {
             Host = new Uri(address); 
            
         }
 
-        public string getUrl()
+        public string GetUrl()
         {
             return Host + BuildQueryString();
         }
