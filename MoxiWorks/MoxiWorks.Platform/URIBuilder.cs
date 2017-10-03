@@ -29,7 +29,7 @@ namespace MoxiWorks.Platform
         public Dictionary<string, string> QueryParameters { get; } =  new Dictionary<string, string>(); 
         private Uri Path { get; }
 
-        public UriBuilder(string path)
+        public UriBuilder(string path = "")
         {
             Path = new Uri(Host +  path); 
         }
@@ -66,10 +66,6 @@ namespace MoxiWorks.Platform
             
             QueryParameters.Add(key,value.Value.ToString());
         }
-        
-        
-        
-        
         
     }
 }

@@ -70,6 +70,7 @@
     <Compile Include="GroupItem.cs" />
     <Compile Include="GroupResults.cs" />
     <Compile Include="Listing.cs" />
+    <Compile Include="MoxiWorksClient.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="PropertyFeatures.cs" />
     <Compile Include="ListingResults.cs" />
