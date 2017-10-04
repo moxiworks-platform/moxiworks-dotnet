@@ -17,7 +17,7 @@ namespace MoxiWorks.Platform.Test
     {
         const string MOXI_WORKS_AGENT_ID = "5872936a-4f75-49e6-9a64-f459f5f8ac3d";
         const string COMPANY_ID = "windermere";
-
+        private readonly Client Client = new Client(); 
         [Test]
         public void GetListings()
         {
