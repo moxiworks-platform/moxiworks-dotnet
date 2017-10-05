@@ -22,7 +22,7 @@ namespace MoxiWorks.Platform
             return (int)Math.Truncate(value.ToUniversalTime().Subtract(new DateTime(1970, 1, 1)).TotalSeconds);
         }
 
-        public  ListingResults GetListingsUpdateSince(string companyId, DateTime updateSince,
+        public  Response<ListingResults> GetListingsUpdateSince(string companyId, DateTime updateSince,
             string lastMoxiWorksListingId = null, int perpage = 10)
         {
             var timestamp = GetTimeStamp(updateSince);
@@ -35,7 +35,7 @@ namespace MoxiWorks.Platform
             return GetRequest<ListingResults>(builder.GetUrl());
         }
 
-        public  Listing GetListing(string companyId, string moxiWorksListingId)
+        public  Response<Listing> GetListing(string companyId, string moxiWorksListingId)
         {
             var builder = new UriBuilder($"/listings/{moxiWorksListingId}");
             builder.AddQueryParameter("moxi_works_company_id", companyId);
@@ -43,14 +43,14 @@ namespace MoxiWorks.Platform
 
         }
 
-        public  Agent GetAgent(string moxiWorksAgentId, string companyId)
+        public  Response<Agent> GetAgent(string moxiWorksAgentId, string companyId)
         {
             var builder = new UriBuilder($"/agent/{moxiWorksAgentId}");
             builder.AddQueryParameter("moxi_works_company_id", companyId);
             return GetRequest<Agent>(builder.GetUrl());
         }
 
-        public  AgentResults GetAgentsUpdatedSince(string moxiWorksCompanyId, DateTime updatedSince,
+        public  Response<AgentResults> GetAgentsUpdatedSince(string moxiWorksCompanyId, DateTime updatedSince,
             int? totalPages = null, int pageNumber = 1)
         {
             var builder = new UriBuilder("/agents");
@@ -64,13 +64,13 @@ namespace MoxiWorks.Platform
             return GetRequest<AgentResults>(builder.GetUrl());
         }
 
-        public  Company GetCompany(string moxiWorksCompanyId)
+        public  Response<Company> GetCompany(string moxiWorksCompanyId)
         {
             var builder = new UriBuilder($"/companies/{moxiWorksCompanyId}");
             return GetRequest<Company>(builder.GetUrl());
         }
 
-        public  Contact GetContact(string agentId, AgentIdType agentIdType, string partnerContactId)
+        public  Response<Contact> GetContact(string agentId, AgentIdType agentIdType, string partnerContactId)
         {
             var builder = new UriBuilder($"/contacts/{partnerContactId}");
             builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
@@ -79,35 +79,35 @@ namespace MoxiWorks.Platform
             return GetRequest<Contact>(builder.GetUrl());
         }
 
-        public  Contact CreateContact(Contact contact)
+        public  Response<Contact> CreateContact(Contact contact)
         {
             var builder = new UriBuilder($"/contacts");
 
             return PostRequest(builder.GetUrl(), contact);
         }
 
-        public  Contact UpdateContact(Contact contact)
+        public  Response<Contact> UpdateContact(Contact contact)
         {
             var builder = new UriBuilder($"/contacts/{contact.PartnerContactId}");
             return PutRequest(builder.GetUrl(), contact);
 
         }
 
-        public  ContactResults GetContactResultsAgentUuid(string AgentId, string emailAddress = null,
+        public  Response<ContactResults> GetContactResultsAgentUuid(string AgentId, string emailAddress = null,
             string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1)
         {
             return GetContactsUpdatedSince(AgentId, AgentIdType.AgentUuid, emailAddress, contactName, phoneNumber,
                 updatedSince, pageNumber);
         }
 
-        public  ContactResults GetContactResultsMoxiWorksagentId(string AgentId, string emailAddress = null,
+        public  Response<ContactResults> GetContactResultsMoxiWorksagentId(string AgentId, string emailAddress = null,
             string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1)
         {
             return GetContactsUpdatedSince(AgentId, AgentIdType.MoxiWorksagentId, emailAddress, contactName,
                 phoneNumber, updatedSince, pageNumber);
         }
 
-        public  ContactResults GetContactsUpdatedSince(string AgentId, AgentIdType agentIdType,
+        public  Response<ContactResults> GetContactsUpdatedSince(string AgentId, AgentIdType agentIdType,
             string emailAddress = null,
             string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1)
         {
@@ -130,13 +130,13 @@ namespace MoxiWorks.Platform
             return GetRequest<ContactResults>(builder.GetUrl());
         }
 
-        public  BuyerTransaction CreateBuyerTransaction(BuyerTransaction buyerTransaction)
+        public  Response<BuyerTransaction> CreateBuyerTransaction(BuyerTransaction buyerTransaction)
         {
             var builder = new UriBuilder("/buyer_transactions/");
             return PostRequest(builder.GetUrl(), buyerTransaction);
         }
 
-        public  BuyerTransaction UpdateBuyerTransaction(BuyerTransaction buyerTransaction)
+        public  Response<BuyerTransaction> UpdateBuyerTransaction(BuyerTransaction buyerTransaction)
         {
             var builder =
                 new UriBuilder(
@@ -144,7 +144,7 @@ namespace MoxiWorks.Platform
             return PutRequest(builder.GetUrl(), buyerTransaction);
         }
 
-        public  BuyerTransaction GetBuyerTransaction(string agentId, AgentIdType agentIdType,
+        public  Response<BuyerTransaction> GetBuyerTransaction(string agentId, AgentIdType agentIdType,
             string moxiworksTransactionId)
         {
             var builder =
@@ -155,7 +155,7 @@ namespace MoxiWorks.Platform
             return GetRequest<BuyerTransaction>(builder.GetUrl());
         }
 
-        public  BuyerTransactionResults GetBuyerTransactions(string agentId, AgentIdType agentIdType,
+        public  Response<BuyerTransactionResults> GetBuyerTransactions(string agentId, AgentIdType agentIdType,
             string moxiworksContactId = null, string partnerContactId = null, int pageNumber = 1)
         {
             var builder = new UriBuilder("/buyer_transactions/");
@@ -170,14 +170,14 @@ namespace MoxiWorks.Platform
             return GetRequest<BuyerTransactionResults>(builder.GetUrl());
         }
 
-        public  ActionLog CreateActionLog(ActionLog log)
+        public  Response<ActionLog> CreateActionLog(ActionLog log)
         {
             var builder = new UriBuilder("/action_logs/");
 
             return PostRequest(builder.GetUrl(), log);
         }
 
-        public  ActionLogResults GetActionLogs(string agentId, AgentIdType agentIdType, string partnerContactId)
+        public  Response<ActionLogResults> GetActionLogs(string agentId, AgentIdType agentIdType, string partnerContactId)
         {
             var builder = new UriBuilder("/action_logs/");
             builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
@@ -187,13 +187,13 @@ namespace MoxiWorks.Platform
             return GetRequest<ActionLogResults>(builder.GetUrl());
         }
 
-        public  Brand GetCompanyBrand(string moxiWorksCompanyId)
+        public  Response<Brand> GetCompanyBrand(string moxiWorksCompanyId)
         {
             var builder = new UriBuilder($"/brands/{moxiWorksCompanyId}");
             return GetRequest<Brand>(builder.GetUrl());
         }
 
-        public  Brand GetFullCompanyBranding(string moxiworksCompanyId, string moxiworksAgentId)
+        public  Response<Brand> GetFullCompanyBranding(string moxiworksCompanyId, string moxiworksAgentId)
         {
             var builder = new UriBuilder($"/brands/{moxiworksCompanyId}");
             builder.AddQueryParameter("moxi_works_agent_id", moxiworksAgentId);
@@ -201,7 +201,7 @@ namespace MoxiWorks.Platform
         }
 
 
-        public  EmailCampaignResults GetEmailCampaign(string agentId, AgentIdType agentIdType,
+        public  Response<EmailCampaignResults> GetEmailCampaign(string agentId, AgentIdType agentIdType,
             string partnerContactId)
         {
             var builder = new UriBuilder("/email_campaigns");
@@ -209,27 +209,38 @@ namespace MoxiWorks.Platform
                 agentId);
 
             builder.AddQueryParameter("partner_contact_id", partnerContactId);
-            return new EmailCampaignResults
+           
+            var res = GetRequest<List<EmailCampaign>>(builder.GetUrl());
+            
+            var campaigns = new EmailCampaignResults
             {
-                EmailCampaigns = GetRequest<EmailCampaign[]>(builder.GetUrl()).ToList()
+                EmailCampaigns = res.Item
             };
+
+            var response = new Response<EmailCampaignResults>
+            {
+                Errors = res.Errors,
+                Item = campaigns
+            };
+            
+            return response; 
 
         }
 
-        public  Event CreateEvent(Event cmaEvent)
+        public  Response<Event> CreateEvent(Event cmaEvent)
         {
             var builder = new UriBuilder("/events");
             
             return PostRequest(builder.GetUrl(),cmaEvent);
         }
 
-        public  Event UpdateEvent(Event updateEvent)
+        public  Response<Event> UpdateEvent(Event updateEvent)
         {
             var builder = new UriBuilder($"/events/{updateEvent.PartnerEventId}");
             return PutRequest(builder.GetUrl(), updateEvent);
         }
 
-        public  Event GetEvent(string agentId, AgentIdType agentIdType, string partnerEventId)
+        public  Response<Event> GetEvent(string agentId, AgentIdType agentIdType, string partnerEventId)
         {
             var builder = new UriBuilder($"/events/{partnerEventId}");
             builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
@@ -237,7 +248,7 @@ namespace MoxiWorks.Platform
             return GetRequest<Event>(builder.GetUrl());
         }
 
-        public  EventResults GetEventsByDate(string agentId, AgentIdType agentIdType, int eventStart, int eventEnd)
+        public  Response<EventResults> GetEventsByDate(string agentId, AgentIdType agentIdType, int eventStart, int eventEnd)
         {
            var builder = new UriBuilder($"/events");
             builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
@@ -245,14 +256,21 @@ namespace MoxiWorks.Platform
             builder.AddQueryParameter("date_start",eventStart);
             builder.AddQueryParameter("date_end",eventEnd);
 
+            var resultsList = GetRequest<List<EventDateList>>(builder.GetUrl());
   
-            return new EventResults
+            var results =  new EventResults
             {
-                EventListDates = GetRequest<List<EventDateList>>(builder.GetUrl())
+                EventListDates = resultsList.Item
+            };
+
+            return new Response<EventResults>
+            {
+                Errors = resultsList.Errors,
+                Item = results
             };
         }
 
-        public  EventDeleteResult DeleteEvent(string agentId, AgentIdType agentIdType, string eventId)
+        public  Response<EventDeleteResult> DeleteEvent(string agentId, AgentIdType agentIdType, string eventId)
         {
             var builder = new UriBuilder($"/events/{eventId}");
             builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
@@ -263,7 +281,7 @@ namespace MoxiWorks.Platform
 
         }
 
-        public  Group GetGroup(string agentId, AgentIdType agentIdType, string moxiWorksGroupId)
+        public  Response<Group> GetGroup(string agentId, AgentIdType agentIdType, string moxiWorksGroupId)
         {
             var builder = new UriBuilder($"/groups/{moxiWorksGroupId}");
             builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
@@ -273,22 +291,28 @@ namespace MoxiWorks.Platform
             
         }
 
-        public  ICollection<GroupItem>GetGroups(string agentId, AgentIdType agentIdType, string name = null)
+        public  Response<ICollection<GroupItem>> GetGroups(string agentId, AgentIdType agentIdType, string name = null)
         {
             var builder = new UriBuilder("/groups");
             builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
                 agentId);
             builder.AddQueryParameter("name",name);
-            return GetRequest <List<GroupItem>>(builder.GetUrl());
+            var results = GetRequest <List<GroupItem>>(builder.GetUrl());
+
+            return new Response<ICollection<GroupItem>>
+            {
+                Errors = results.Errors, 
+                Item = results.Item
+            };
         }
 
-        public  BuyerTransaction CreateSellerTransaction(BuyerTransaction buyerTransaction)
+        public  Response<BuyerTransaction> CreateSellerTransaction(BuyerTransaction buyerTransaction)
         {
             var builder = new UriBuilder("/buyer_transactions/");
             return PostRequest(builder.GetUrl(), buyerTransaction);
         }
 
-        public  SellerTransaction UpdateSellerTransaction(SellerTransaction sellerTransaction)
+        public  Response<SellerTransaction> UpdateSellerTransaction(SellerTransaction sellerTransaction)
         {
             var builder =
                 new UriBuilder(
@@ -296,7 +320,7 @@ namespace MoxiWorks.Platform
             return PutRequest(builder.GetUrl(), sellerTransaction);
         }
 
-        public  SellerTransaction GetSellerTransaction(string agentId, AgentIdType agentIdType,
+        public  Response<SellerTransaction> GetSellerTransaction(string agentId, AgentIdType agentIdType,
             string moxiworksTransactionId)
         {
             var builder =
@@ -307,7 +331,7 @@ namespace MoxiWorks.Platform
             return GetRequest<SellerTransaction>(builder.GetUrl());
         }
 
-        public  SellerTransactionResults GetSellerTransactions(string agentId, AgentIdType agentIdType,
+        public  Response<SellerTransactionResults> GetSellerTransactions(string agentId, AgentIdType agentIdType,
             string moxiworksContactId = null, string partnerContactId = null, int pageNumber = 1)
         {
             var builder = new UriBuilder("/buyer_transactions/");

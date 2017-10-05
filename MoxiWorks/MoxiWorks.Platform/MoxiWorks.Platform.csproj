@@ -69,9 +69,11 @@
     <Compile Include="IContextClient.cs" />
     <Compile Include="Listing.cs" />
     <Compile Include="MoxiWorksClient.cs" />
+    <Compile Include="MoxiWorksError.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="PropertyFeatures.cs" />
     <Compile Include="ListingResults.cs" />
+    <Compile Include="Response.cs" />
     <Compile Include="SellerTransaction.cs" />
     <Compile Include="SellerTransactionResults.cs" />
     <Compile Include="Session.cs" />

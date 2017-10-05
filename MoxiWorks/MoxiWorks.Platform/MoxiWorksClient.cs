@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace MoxiWorks.Platform
@@ -14,36 +15,50 @@ namespace MoxiWorks.Platform
                 ClientContext = context;
         }
         
-        public  T GetRequest<T>(string url)
+        public  Response<T> GetRequest<T>(string url)
         {
             var s = ClientContext.GetRequest<T>(url);
             Console.WriteLine(s);
-            return JsonConvert.DeserializeObject<T>(s, new JsonSerializerSettings
+            return DeserializeToResponse<T>(s);
+        }
+
+        public  Response<T> PostRequest<T>(string url, T obj)
+        {
+            return DeserializeToResponse<T>(ClientContext.PostRequest(url,obj));
+        }
+
+        public  Response<T> PutRequest<T>(string url, T obj)
+        {
+            return DeserializeToResponse<T>(ClientContext.PutRequest(url,obj));
+
+        }
+
+        public  Response<T> DeleteRequest<T>(string url)
+        {
+            return DeserializeToResponse<T>(ClientContext.DeleteRequest<T>(url));
+        }
+
+        private Response<T> DeserializeToResponse<T>(string json)
+        {
+            var error = JsonConvert.DeserializeObject<MoxiWorksError>(json);
+            Response<T> response;
+
+            if (error.Messages.Any())
             {
-                MissingMemberHandling = MissingMemberHandling.Ignore,
-                NullValueHandling = NullValueHandling.Include
-            });
-        }
-
-        public  T PostRequest<T>(string url, T obj)
-        {
-            return JsonConvert.DeserializeObject<T>(ClientContext.PostRequest(url,obj));
-        }
-
-        public  T PutRequest<T>(string url, T obj)
-        {
-            return JsonConvert.DeserializeObject<T>(ClientContext.PutRequest(url,obj));
-
-        }
-
-        public  T DeleteRequest<T>(string url)
-        {
-            return JsonConvert.DeserializeObject<T>(ClientContext.DeleteRequest<T>(url), new JsonSerializerSettings
+                response = new Response<T>();
+                response.Errors.Add(error);
+            }
+            else
             {
-                MissingMemberHandling = MissingMemberHandling.Ignore,
-                NullValueHandling = NullValueHandling.Include
-            });
-
+                response = new Response<T>(
+                JsonConvert.DeserializeObject<T>(json,  new JsonSerializerSettings
+                {
+                    MissingMemberHandling = MissingMemberHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Include
+                }));
+            }
+           
+            return response;
         }
 
     }

@@ -12,6 +12,5 @@ namespace MoxiWorks.Platform
 
         [JsonProperty("tasks")] 
         public List<Task> Tasks { get; set; } = new List<Task>(); 
-
     }
 }
