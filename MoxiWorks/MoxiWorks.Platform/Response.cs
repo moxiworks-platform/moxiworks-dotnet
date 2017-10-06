@@ -16,9 +16,9 @@ namespace MoxiWorks.Platform
 
         public T Item { get; set; }   
         
-      public bool HasErrors => Errors.Count > 0;
+        public bool HasErrors => Errors.Count > 0;
 
-      public List<MoxiWorksError> Errors { get; set; } = new List<MoxiWorksError>();
+        public List<MoxiWorksError> Errors { get; set; } = new List<MoxiWorksError>();
 
     }
 }

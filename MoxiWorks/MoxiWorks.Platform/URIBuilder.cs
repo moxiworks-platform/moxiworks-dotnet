@@ -66,6 +66,21 @@ namespace MoxiWorks.Platform
             
             QueryParameters.Add(key,value.Value.ToString());
         }
-        
+
+        public void AddQueryParameter(string key, DateTime? value)
+        {
+            if (string.IsNullOrWhiteSpace(key) || !value.HasValue)
+            {
+                return;
+            }
+
+            QueryParameters.Add(key, GetTimeStamp(value.Value).ToString());
+        }
+
+        private int GetTimeStamp(DateTime value)
+        {
+            return (int)Math.Truncate(value.ToUniversalTime().Subtract(new DateTime(1970, 1, 1)).TotalSeconds);
+        }
+
     }
 }

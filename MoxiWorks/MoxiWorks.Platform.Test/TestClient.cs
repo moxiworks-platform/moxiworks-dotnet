@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Odbc;
-using System.Dynamic;
 using NUnit.Framework;
 using Bogus;
-using Newtonsoft.Json;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace MoxiWorks.Platform.Test

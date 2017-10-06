@@ -10,6 +10,8 @@ namespace MoxiWorks.Platform
         public string MoxiWorksAgentId { get; set; }
         [JsonProperty("partner_contact_id")]
         public string PartnerContactId { get; set; }
+        [JsonProperty("partner_task_id")]
+        public string PartnerTaskId { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }
         [JsonProperty("description")]
