@@ -1,0 +1,5 @@
+﻿{
+    "status":"fail",
+    "errorCode": 1234,
+    "messages": ["messages"]
+}

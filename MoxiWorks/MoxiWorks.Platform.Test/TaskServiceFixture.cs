@@ -1,8 +1,6 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using static NUnit.Framework.Assert;
-using MoxiWorks.Platform;
-using Bogus;
+
 namespace MoxiWorks.Platform.Test
 {
     [TestFixture]
@@ -11,13 +9,24 @@ namespace MoxiWorks.Platform.Test
         [Test]
         public void ShouldReturnATask()
         {
-            var service = new MoxiWorks.Platform.TaskService(new MoxiWorksClient(new StubContextClient()));
+            var taskJson = StubDataLoader.LoadJsonFile("Task.json");  
+           
+            var service = new TaskService(new MoxiWorksClient(new StubContextClient(taskJson)));
+            var response = service.GetTask("foo", AgentIdType.AgentUuid, "1234", "12345"); 
+            IsInstanceOf<Task>(response.Item);
         }
 
-        private IContextClient GetStubClient()
+        [Test]
+        public void ShouldHanldeApiReturnedErrors()
         {
-            throw new NotImplementedException();
+            var json = StubDataLoader.LoadJsonFile("FailureResponse.json"); 
+            var service = new TaskService(new MoxiWorksClient(new StubContextClient(json)));
+            var response = service.GetTask("foo", AgentIdType.AgentUuid, "1234", "12345");
+            IsTrue(response.HasErrors); 
+            
         }
+
+       
     }
 
 

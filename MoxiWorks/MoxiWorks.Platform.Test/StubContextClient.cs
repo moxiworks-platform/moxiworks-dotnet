@@ -6,7 +6,7 @@ namespace MoxiWorks.Platform.Test
     public class StubContextClient: IContextClient 
     {
         public string Json { get; set; }
-        public void SubContextClient(string json = null)
+        public  StubContextClient(string json = null)
         {
             Json = json;
         }

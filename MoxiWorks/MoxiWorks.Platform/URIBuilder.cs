@@ -47,34 +47,45 @@ namespace MoxiWorks.Platform
             return "?" + string.Join("&", QueryParameters.Select(q => $"{  HttpUtility.UrlEncode(q.Key)}={HttpUtility.UrlEncode(q.Value)}"));
         }
 
-        public void AddQueryParameter(string key, string value)
+        public UriBuilder AddQueryParameter(string key, string value)
         {
             if (string.IsNullOrWhiteSpace(key) || string.IsNullOrWhiteSpace(value))
             {
-                return; 
+                return this; 
             }
             
             QueryParameters.Add(key,value);
+
+            return this;
         }
 
-        public void AddQueryParameter(string key, int? value)
+        public UriBuilder AddQueryParameter(string key, int? value)
         {
             if (string.IsNullOrWhiteSpace(key) || ! value.HasValue)
             {
-                return; 
+                return this; 
             }
             
             QueryParameters.Add(key,value.Value.ToString());
+            return this;
         }
 
-        public void AddQueryParameter(string key, DateTime? value)
+        public UriBuilder AddQueryParameter(string key, DateTime? value)
         {
             if (string.IsNullOrWhiteSpace(key) || !value.HasValue)
             {
-                return;
+                return this; 
             }
 
             QueryParameters.Add(key, GetTimeStamp(value.Value).ToString());
+            return this; 
+        }
+
+        public UriBuilder AddQueryPerameterAgentId(string agentId, AgentIdType agentIdType)
+        {
+            AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
+                agentId);
+            return this; 
         }
 
         private int GetTimeStamp(DateTime value)
