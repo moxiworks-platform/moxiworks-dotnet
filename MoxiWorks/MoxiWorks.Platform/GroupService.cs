@@ -13,7 +13,7 @@ namespace MoxiWorks.Platform
 
         public Response<Group> GetGroup(string agentId, AgentIdType agentIdType, string moxiWorksGroupId)
         {
-            var builder = new UriBuilder($"/groups/{moxiWorksGroupId}");
+            var builder = new UriBuilder($"groups/{moxiWorksGroupId}");
             builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
                 agentId);
 
@@ -23,7 +23,7 @@ namespace MoxiWorks.Platform
 
         public Response<ICollection<GroupItem>> GetGroups(string agentId, AgentIdType agentIdType, string name = null)
         {
-            var builder = new UriBuilder("/groups");
+            var builder = new UriBuilder("groups");
             builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
                 agentId);
             builder.AddQueryParameter("name", name);
