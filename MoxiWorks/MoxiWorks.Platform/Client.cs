@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Net.Http;
-using System.Net;
-using System.Net.Http.Headers;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Dynamic;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.Remoting.Messaging;
-using System.Web.UI;
-using Newtonsoft.Json;
-using static  MoxiWorks.Platform.MoxiWorksClient; 
+
 namespace MoxiWorks.Platform
 {
     public class Client : MoxiWorksClient

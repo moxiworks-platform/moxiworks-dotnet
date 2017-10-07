@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using Newtonsoft.Json.Serialization;
 
 namespace MoxiWorks.Platform
 {

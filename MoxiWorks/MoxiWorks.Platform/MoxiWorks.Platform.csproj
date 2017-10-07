@@ -92,6 +92,7 @@
     <Compile Include="Response.cs" />
     <Compile Include="SellerTransaction.cs" />
     <Compile Include="SellerTransactionResults.cs" />
+    <Compile Include="SellerTransactionService.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task.cs" />

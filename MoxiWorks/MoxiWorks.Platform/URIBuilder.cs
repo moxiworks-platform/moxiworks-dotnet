@@ -1,10 +1,8 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
 using System.Web;
-using System.Configuration;
 using System.Web.Configuration;
 
 
