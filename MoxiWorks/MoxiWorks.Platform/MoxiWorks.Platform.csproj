@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting" />
@@ -54,12 +58,16 @@
     <Compile Include="BrandService.cs" />
     <Compile Include="BuyerTransaction.cs" />
     <Compile Include="BuyerTransactionResults.cs" />
+    <Compile Include="BuyerTransactionService.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="ContactService.cs" />
     <Compile Include="Company.cs" />
+    <Compile Include="CompanyService.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="ContactResults.cs" />
     <Compile Include="ContextClient.cs" />
     <Compile Include="Credentials.cs" />
+    <Compile Include="EmailCampiagnService.cs" />
     <Compile Include="EventDeleteResult.cs" />
     <Compile Include="EmailCampaign.cs" />
     <Compile Include="EmailCampaignResults.cs" />

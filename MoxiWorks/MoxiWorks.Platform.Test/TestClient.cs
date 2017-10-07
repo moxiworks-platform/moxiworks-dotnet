@@ -167,13 +167,13 @@ namespace MoxiWorks.Platform.Test
             Assert.IsNotNull(result.ImageLogo);
         }
 
-        [Test]
-        public void GetFullCompanyBranding()
-        {
-            var result = Client.GetFullCompanyBranding(COMPANY_ID, MOXI_WORKS_AGENT_ID).Item;
+        //[Test]
+        //public void GetFullCompanyBranding()
+        //{
+        //    var result = Client.GetFullCompanyBranding(COMPANY_ID, MOXI_WORKS_AGENT_ID).Item;
 
-            Assert.IsNotNull(result.ImageLogo);
-        }
+        //    Assert.IsNotNull(result.ImageLogo);
+        //}
 
         [Test]
         public void GetEmailCampaign()

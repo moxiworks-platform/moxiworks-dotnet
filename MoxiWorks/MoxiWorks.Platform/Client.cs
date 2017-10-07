@@ -193,12 +193,12 @@ namespace MoxiWorks.Platform
             return GetRequest<Brand>(builder.GetUrl());
         }
 
-        public  Response<Brand> GetFullCompanyBranding(string moxiworksCompanyId, string moxiworksAgentId)
-        {
-            var builder = new UriBuilder($"/brands/{moxiworksCompanyId}");
-            builder.AddQueryParameter("moxi_works_agent_id", moxiworksAgentId);
-            return GetRequest<Brand>(builder.GetUrl());
-        }
+        //public  Response<Brand> GetFullCompanyBranding(string moxiworksCompanyId, string moxiworksAgentId)
+        //{
+        //    var builder = new UriBuilder($"/brands/{moxiworksCompanyId}");
+        //    builder.AddQueryParameter("moxi_works_agent_id", moxiworksAgentId);
+        //    return GetRequest<Brand>(builder.GetUrl());
+        //}
 
 
         public  Response<EmailCampaignResults> GetEmailCampaign(string agentId, AgentIdType agentIdType,
