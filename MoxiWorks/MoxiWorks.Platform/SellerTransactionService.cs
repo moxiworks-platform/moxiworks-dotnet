@@ -41,9 +41,8 @@
             string moxiworksTransactionId)
         {
             var builder =
-                new UriBuilder($"seller_transactions/{moxiworksTransactionId}");
-            builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
-                agentId);
+                new UriBuilder($"seller_transactions/{moxiworksTransactionId}")
+            .AddQueryPerameterAgentId(agentId,agentIdType);
 
             return Client.GetRequest<SellerTransaction>(builder.GetUrl());
         }
@@ -51,14 +50,11 @@
         public Response<SellerTransactionResults> GetSellerTransactions(string agentId, AgentIdType agentIdType,
             string moxiworksContactId = null, string partnerContactId = null, int pageNumber = 1)
         {
-            var builder = new UriBuilder("seller_transactions");
-
-            builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
-                agentId);
-
-            builder.AddQueryParameter("partner_contact_id", partnerContactId);
-            builder.AddQueryParameter("moxi_works_contact_id", moxiworksContactId);
-            builder.AddQueryParameter("page_number", pageNumber);
+            var builder = new UriBuilder("seller_transactions")
+            .AddQueryPerameterAgentId(agentId,agentIdType)
+            .AddQueryParameter("partner_contact_id", partnerContactId)
+            .AddQueryParameter("moxi_works_contact_id", moxiworksContactId)
+            .AddQueryParameter("page_number", pageNumber);
 
             return Client.GetRequest<SellerTransactionResults>(builder.GetUrl());
         }

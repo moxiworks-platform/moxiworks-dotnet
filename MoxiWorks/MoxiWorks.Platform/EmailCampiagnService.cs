@@ -14,9 +14,9 @@ namespace MoxiWorks.Platform
         public Response<EmailCampaignResults> GetEmailCampaign(string agentId, AgentIdType agentIdType,
             string partnerContactId)
         {
-            var builder = new UriBuilder("email_campaigns");
-            builder.AddQueryPerameterAgentId(agentId, agentIdType);
-            builder.AddQueryParameter("partner_contact_id", partnerContactId);
+            var builder = new UriBuilder("email_campaigns")
+            .AddQueryPerameterAgentId(agentId, agentIdType)
+            .AddQueryParameter("partner_contact_id", partnerContactId);
 
             var res = Client.GetRequest<List<EmailCampaign>>(builder.GetUrl());
 

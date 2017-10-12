@@ -13,6 +13,7 @@
         {
             var builder = new UriBuilder($"offices/{moxiWorksOfficeId}")
                 .AddQueryParameter("moxi_works_company_id", moxiWorksCompanyId);
+            
             return Client.GetRequest<Office>(builder.GetUrl()); 
         }
 

@@ -14,10 +14,9 @@ namespace MoxiWorks.Platform
         public Response<Task> GetTask(string agentId, AgentIdType agentIdType, string partnerContactId,
             string partnerTaskId)
         {
-            var builder = new UriBuilder($"task/{partnerTaskId}");
-            builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
-                agentId);
-            builder.AddQueryParameter("partner_contact_id", partnerContactId);
+            var builder = new UriBuilder($"task/{partnerTaskId}")
+            .AddQueryPerameterAgentId(agentId,agentIdType)
+            .AddQueryParameter("partner_contact_id", partnerContactId);
 
             return Client.GetRequest<Task>(builder.GetUrl()); 
         }
@@ -37,13 +36,12 @@ namespace MoxiWorks.Platform
         public Response<TaskResponse> GetTaskDueBetween(string agentId, AgentIdType agentIdType, DateTime startDate,
             DateTime endDate, string partnerContactId, int pageNumber =1)
         {
-            var builder = new UriBuilder($"task");
-            builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
-                agentId);
-            builder.AddQueryParameter("start_date",startDate);
-            builder.AddQueryParameter("start_date", endDate);
-            builder.AddQueryParameter("partner_contact_id", partnerContactId);
-            builder.AddQueryParameter("page_number", pageNumber);
+            var builder = new UriBuilder("task")
+            .AddQueryPerameterAgentId(agentId,agentIdType)
+            .AddQueryParameter("start_date",startDate)
+            .AddQueryParameter("start_date", endDate)
+            .AddQueryParameter("partner_contact_id", partnerContactId)
+            .AddQueryParameter("page_number", pageNumber);
 
             return Client.GetRequest<TaskResponse>(builder.GetUrl());
         }

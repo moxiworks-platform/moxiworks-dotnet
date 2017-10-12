@@ -26,19 +26,17 @@ namespace MoxiWorks.Platform
 
         public Response<Event> GetEvent(string agentId, AgentIdType agentIdType, string partnerEventId)
         {
-            var builder = new UriBuilder($"events/{partnerEventId}");
-            builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
-                agentId);
+            var builder = new UriBuilder($"events/{partnerEventId}")
+            .AddQueryPerameterAgentId(agentId,agentIdType);
             return Client.GetRequest<Event>(builder.GetUrl());
         }
 
         public Response<EventResults> GetEventsByDate(string agentId, AgentIdType agentIdType, int eventStart, int eventEnd)
         {
-            var builder = new UriBuilder("events");
-            builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
-                agentId);
-            builder.AddQueryParameter("date_start", eventStart);
-            builder.AddQueryParameter("date_end", eventEnd);
+            var builder = new UriBuilder("events")
+            .AddQueryPerameterAgentId(agentId, agentIdType)
+            .AddQueryParameter("date_start", eventStart)
+            .AddQueryParameter("date_end", eventEnd);
 
             var resultsList = Client.GetRequest<List<EventDateList>>(builder.GetUrl());
 
@@ -56,10 +54,8 @@ namespace MoxiWorks.Platform
 
         public Response<EventDeleteResult> DeleteEvent(string agentId, AgentIdType agentIdType, string eventId)
         {
-            var builder = new UriBuilder($"events/{eventId}");
-            builder.AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
-                agentId);
-
+            var builder = new UriBuilder($"events/{eventId}")
+            .AddQueryPerameterAgentId(agentId, agentIdType);
 
             return Client.DeleteRequest<EventDeleteResult>(builder.GetUrl());
 
