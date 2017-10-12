@@ -2,7 +2,7 @@
 
 namespace MoxiWorks.Platform
 {
-    public class TaskService
+    public class TaskService : ITaskService
     {
         private readonly MoxiWorksClient Client; 
 

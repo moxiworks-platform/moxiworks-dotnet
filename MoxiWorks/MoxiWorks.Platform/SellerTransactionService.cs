@@ -1,6 +1,6 @@
 ﻿namespace MoxiWorks.Platform
 {
-    public class SellerTransactionService
+    public class SellerTransactionService 
     {
         public MoxiWorksClient Client { get; set; }
 
@@ -9,10 +9,17 @@
             Client = client;
         }
 
-        public Response<BuyerTransaction> CreateSellerTransaction(BuyerTransaction buyerTransaction)
+        public Response<SellerTransaction> CreateSellerTransaction(SellerTransaction sellerTransaction)
         {
+            sellerTransaction.Validate();
+
+            if (sellerTransaction.HasErrors)
+            {
+                return BuilderErrorResponse(sellerTransaction);
+
+            }
             var builder = new UriBuilder("seller_transactions");
-            return Client.PostRequest(builder.GetUrl(), buyerTransaction);
+            return Client.PostRequest(builder.GetUrl(), sellerTransaction);
         }
 
         public Response<SellerTransaction> UpdateSellerTransaction(SellerTransaction sellerTransaction)
@@ -21,7 +28,7 @@
 
             if (sellerTransaction.HasErrors)
             {
-                
+                return BuilderErrorResponse(sellerTransaction);
 
             }
             var builder =

@@ -1,6 +1,6 @@
 ﻿namespace MoxiWorks.Platform
 {
-    public class BuyerTransactionService
+    public class BuyerTransactionService : IBuyerTransactionService
     {
         public MoxiWorksClient Client { get; set; }
         public BuyerTransactionService(MoxiWorksClient client)

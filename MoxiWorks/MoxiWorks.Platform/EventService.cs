@@ -2,7 +2,7 @@
 namespace MoxiWorks.Platform
 {
 
-    public class EventService
+    public class EventService : IEventService
     {
         public MoxiWorksClient Client { get; set; }
 

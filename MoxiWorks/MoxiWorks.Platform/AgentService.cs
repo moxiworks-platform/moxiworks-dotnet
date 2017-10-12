@@ -2,7 +2,7 @@
 
 namespace MoxiWorks.Platform
 {
-    public class AgentService
+    public class AgentService : IAgentService
     {
         public MoxiWorksClient Client { get; set; }
 

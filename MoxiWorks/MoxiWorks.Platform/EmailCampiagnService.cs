@@ -2,7 +2,7 @@
 
 namespace MoxiWorks.Platform
 {
-    public class EmailCampiagnService
+    public class EmailCampiagnService : IEmailCampiagnService
     {
         public MoxiWorksClient Client { get; set; }
 

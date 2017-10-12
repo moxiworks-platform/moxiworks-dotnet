@@ -1,6 +1,6 @@
 ﻿namespace MoxiWorks.Platform
 {   
-    public class OfficeService
+    public class OfficeService : IOfficeService
     {
         public MoxiWorksClient Client {get;set;}
 

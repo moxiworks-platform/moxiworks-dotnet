@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 namespace MoxiWorks.Platform
 {
-    public class Brand
+    public class Brand 
     {
         [JsonProperty("image_logo")]
         public string ImageLogo { get; set; }

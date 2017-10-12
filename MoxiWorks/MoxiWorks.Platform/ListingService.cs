@@ -2,7 +2,17 @@
 
 namespace MoxiWorks.Platform
 {
-    public class ListingService
+    public interface IListingService
+    {
+        MoxiWorksClient Client { get; set; }
+        Response<Listing> GetListing(string moxiWorksListingId, string moxiWorksCompanyId);
+
+        Response<ListingResults> GetListingsUpdatedSince(string moxiWorksCompanyId
+            ,AgentIdType agentIdType, string agentId = null,DateTime? updatedSince = null  
+            ,string lastMoxiWorksListingId = null);
+    }
+
+    public class ListingService : IListingService
     {
         public MoxiWorksClient Client { get; set; }
         

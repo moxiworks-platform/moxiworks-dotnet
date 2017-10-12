@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting" />
@@ -59,14 +55,18 @@
     <Compile Include="BuyerTransaction.cs" />
     <Compile Include="BuyerTransactionResults.cs" />
     <Compile Include="BuyerTransactionService.cs" />
-    <Compile Include="Client.cs" />
+    <Compile Include="Client\ContextClient.cs" />
+    <Compile Include="Client\Credentials.cs" />
+    <Compile Include="Client\MoxiWorksClient.cs" />
+    <Compile Include="Client\MoxiWorksError.cs" />
+    <Compile Include="Client\Response.cs" />
+    <Compile Include="Client\Session.cs" />
+    <Compile Include="Client\URIBuilder.cs" />
     <Compile Include="ContactService.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="CompanyService.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="ContactResults.cs" />
-    <Compile Include="ContextClient.cs" />
-    <Compile Include="Credentials.cs" />
     <Compile Include="EmailCampiagnService.cs" />
     <Compile Include="EventDeleteResult.cs" />
     <Compile Include="EmailCampaign.cs" />
@@ -79,26 +79,31 @@
     <Compile Include="GroupItem.cs" />
     <Compile Include="GroupResults.cs" />
     <Compile Include="GroupService.cs" />
-    <Compile Include="IContextClient.cs" />
+    <Compile Include="Interfaces\IActionLogService.cs" />
+    <Compile Include="Interfaces\IAgentService.cs" />
+    <Compile Include="Interfaces\IBuyerTransactionService.cs" />
+    <Compile Include="Interfaces\ICompanyService.cs" />
+    <Compile Include="Interfaces\IContactService.cs" />
+    <Compile Include="Interfaces\IContextClient.cs" />
+    <Compile Include="Interfaces\IEmailCampiagnService.cs" />
+    <Compile Include="Interfaces\IEventService.cs" />
+    <Compile Include="Interfaces\IGroupService.cs" />
+    <Compile Include="Interfaces\IOfficeService.cs" />
+    <Compile Include="Interfaces\ITaskService.cs" />
     <Compile Include="Listing.cs" />
     <Compile Include="ListingService.cs" />
-    <Compile Include="MoxiWorksClient.cs" />
-    <Compile Include="MoxiWorksError.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="OfficeResults.cs" />
     <Compile Include="OfficeService.cs" />
     <Compile Include="PropertyFeatures.cs" />
     <Compile Include="ListingResults.cs" />
-    <Compile Include="Response.cs" />
     <Compile Include="SellerTransaction.cs" />
     <Compile Include="SellerTransactionResults.cs" />
     <Compile Include="SellerTransactionService.cs" />
-    <Compile Include="Session.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="TaskResponse.cs" />
     <Compile Include="TaskService.cs" />
-    <Compile Include="URIBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -2,7 +2,7 @@
 
 namespace MoxiWorks.Platform
 {
-    public class GroupService
+    public class GroupService : IGroupService
     {
         public MoxiWorksClient Client { get; set; }
         public GroupService(MoxiWorksClient client)

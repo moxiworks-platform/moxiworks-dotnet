@@ -1,7 +1,7 @@
 ﻿
 namespace MoxiWorks.Platform
 {
-    public class CompanyService
+    public class CompanyService : ICompanyService
     {
         public MoxiWorksClient Client { get; set; }
 
