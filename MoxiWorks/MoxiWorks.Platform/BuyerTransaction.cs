@@ -62,6 +62,8 @@ using Newtonsoft.Json;
 
             [JsonIgnore]
             public List<string> Errors = new List<string>();
+            [JsonIgnore]
+            public bool HasErrors => Errors.Count > 0;
 
             public bool Validate()
             {

@@ -1,5 +1,6 @@
-﻿using NUnit.Framework;
-using Bogus;
+﻿using Bogus;
+using NUnit.Framework;
+using static NUnit.Framework.Assert;
 
 namespace MoxiWorks.Platform.Test
 {
@@ -7,53 +8,56 @@ namespace MoxiWorks.Platform.Test
     public class SellerTransactionFixture
     {
         [Test]
-        public void ValidateMoxiWorksContactIdOrPartnerContactID()
+        public void ValidateMoxiWorksContactIdOrPartnerContactId()
         {
-            var fake = GetFakerBuyerTransaction().Generate();
+            var fake = GetFakerSellerTransaction().Generate();
             fake.PartnerContactId = "foo";
             fake.MoxiWorksContactId = "bar";
-            Assert.IsFalse(fake.Validate());
-            Assert.AreEqual(1, fake.Errors.Count); 
+            IsFalse(fake.Validate());
+            AreEqual(1, fake.Errors.Count); 
         }
 
         [Test]
         public void ValidateMlsBuyerTransactionContainsMlsNumber()
         {
-            var fake = GetFakerBuyerTransaction().Generate();
+            var fake = GetFakerSellerTransaction().Generate();
             fake.IsMlsTransaction = true;
             fake.MlsNumber = string.Empty;
             
-            Assert.IsFalse(fake.Validate());
-            Assert.AreEqual(1, fake.Errors.Count); 
+            IsFalse(fake.Validate());
+            AreEqual(1, fake.Errors.Count); 
         }
 
         [Test]
         public void ValidateCommisionPercentageOrCommisionFlatFeeNotBoth()
         {
-            var fake = GetFakerBuyerTransaction().Generate();
+            var fake = GetFakerSellerTransaction().Generate();
             fake.CommissionPercentage = 0.10m;
             fake.CommissionFlatFee = 2000; 
             
-            Assert.IsFalse(fake.Validate());
-            Assert.AreEqual(1, fake.Errors.Count); 
+            IsFalse(fake.Validate());
+            IsTrue(fake.HasErrors);
+            AreEqual(1, fake.Errors);
+             
         }
         
         [Test]
         public void ValidateTargetPriceOrMinMaxPriceButNotBoth()
         {
-            var fake = GetFakerBuyerTransaction().Generate();
+            var fake = GetFakerSellerTransaction().Generate();
             fake.TargetPrice = 1;
             fake.MinPrice = 1;
             fake.MaxPrice = 1;
             
-            Assert.IsFalse(fake.Validate());
-            Assert.AreEqual(1, fake.Errors.Count); 
+            IsFalse(fake.Validate());
+            IsTrue(fake.HasErrors);
+            AreEqual(1, fake.Errors.Count); 
         }
-        
-        
-        public Faker<BuyerTransaction> GetFakerBuyerTransaction()
+
+
+        public Faker<SellerTransaction> GetFakerSellerTransaction()
         {
-            return new Faker<BuyerTransaction>()
+            return new Faker<SellerTransaction>()
                 .RuleFor(b => b.Address, f => f.Address.StreetAddress())
                 .RuleFor(b => b.City, f => f.Address.City())
                 .RuleFor(b => b.State, f => f.Address.State())

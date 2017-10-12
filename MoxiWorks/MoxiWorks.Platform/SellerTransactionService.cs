@@ -17,6 +17,13 @@
 
         public Response<SellerTransaction> UpdateSellerTransaction(SellerTransaction sellerTransaction)
         {
+            sellerTransaction.Validate();
+
+            if (sellerTransaction.HasErrors)
+            {
+                
+
+            }
             var builder =
                 new UriBuilder(
                     $"seller_transactions/{sellerTransaction.MoxiWorksTransactionId}");
@@ -47,6 +54,27 @@
             builder.AddQueryParameter("page_number", pageNumber);
 
             return Client.GetRequest<SellerTransactionResults>(builder.GetUrl());
+        }
+
+        private Response<SellerTransaction> BuilderErrorResponse(SellerTransaction transaction)
+        {
+            var response = new Response<SellerTransaction>
+            {
+                Item = transaction
+            };
+
+            foreach (var error in transaction.Errors)
+            {
+                var e = new MoxiWorksError
+                {
+                    Status = "invalid",
+                    ErrorCode = "0"
+                };
+                e.Messages.Add(error);
+                response.Errors.Add(e);
+
+            }
+            return response; 
         }
 
     }

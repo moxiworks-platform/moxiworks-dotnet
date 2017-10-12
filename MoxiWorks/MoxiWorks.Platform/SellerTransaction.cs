@@ -40,7 +40,7 @@ namespace MoxiWorks.Platform
         [JsonProperty("start_timestamp")]
         public int? StartTimeStamp { get; set; }
         [JsonProperty("commission_percentage")]
-        public decimal? CommisionPercentage { get; set; }
+        public decimal? CommissionPercentage { get; set; }
         [JsonProperty("commission_flat_fee")]
         public decimal? CommissionFlatFee { get; set; }
         [JsonProperty("target_price")]
@@ -53,6 +53,9 @@ namespace MoxiWorks.Platform
         
         [JsonIgnore]
         public List<string> Errors = new List<string>();
+        [JsonIgnore]
+        public  bool HasErrors => Errors.Count > 0;
+
 
         public bool Validate()
         {
@@ -68,7 +71,7 @@ namespace MoxiWorks.Platform
                 Errors.Add("If IsMlsTransaction is true a Mls Number must be included");
             }
 
-            if (CommisionPercentage > 0 && CommissionFlatFee > 0)
+            if (CommissionPercentage > 0 && CommissionFlatFee > 0)
             {
                 Errors.Add("Can only include CommisionPercentage or CommissionFlatFee not both");
             }
