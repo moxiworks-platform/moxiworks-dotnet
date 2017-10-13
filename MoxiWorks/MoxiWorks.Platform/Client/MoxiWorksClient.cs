@@ -17,7 +17,7 @@ namespace MoxiWorks.Platform
         
         public  Response<T> GetRequest<T>(string url)
         {
-            var s = ClientContext.GetRequest<T>(url);
+            var s = ClientContext.GetRequestAsync<T>(url).Result;
             Console.WriteLine(s);
             return DeserializeToResponse<T>(s);
         }

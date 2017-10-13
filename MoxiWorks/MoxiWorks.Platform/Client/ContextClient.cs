@@ -2,6 +2,8 @@
 using System.Net.Http;
 using System.Net;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
+
 namespace MoxiWorks.Platform
 {
     public class ContextClient : IContextClient
@@ -49,22 +51,22 @@ namespace MoxiWorks.Platform
             return client;
         }
         
-        public  string  GetRequest<T>(string url)
+        public async Task<string>  GetRequestAsync<T>(string url)
         {
 
             var client = RequestClient();
             Console.WriteLine(url);
-            var result = client.GetAsync(new Uri(url)).Result;
+            var result = await client.GetAsync(new Uri(url));
             var content = result.Content;
 
-            if (Session.Instance.IsSessionCookieSet) return content.ReadAsStringAsync().Result;
+            if (Session.Instance.IsSessionCookieSet) return await content.ReadAsStringAsync();
 
-
+            
             Session.Instance.SessionCookie =
                 _handler.CookieContainer.GetCookies(new Uri(new UriBuilder().GetUrl()))[
                     "_wms_svc_public_session"];
 
-            return content.ReadAsStringAsync().Result;
+            return await content.ReadAsStringAsync();
         }
 
         public  string PostRequest<T>(string url, T obj)
