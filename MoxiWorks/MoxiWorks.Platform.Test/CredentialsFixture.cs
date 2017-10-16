@@ -7,9 +7,9 @@ namespace MoxiWorks.Platform.Test
         [Test]
         public void ShouldTakeIdentifierAndSecret()
         {
-            var cred = new Credentials("foo", "bar");
-            Assert.AreEqual(cred.Identifier, "foo");
-            Assert.AreEqual(cred.Secret, "bar"); 
+    
+            Assert.AreEqual(Credentials.Identifier, "foo");
+            Assert.AreEqual(Credentials.Secret, "bar"); 
         }
            
     }

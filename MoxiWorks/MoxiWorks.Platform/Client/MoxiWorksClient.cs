@@ -24,18 +24,18 @@ namespace MoxiWorks.Platform
 
         public  Response<T> PostRequest<T>(string url, T obj)
         {
-            return DeserializeToResponse<T>(ClientContext.PostRequest(url,obj));
+            return DeserializeToResponse<T>(ClientContext.PostRequestAsync(url,obj).Result);
         }
 
         public  Response<T> PutRequest<T>(string url, T obj)
         {
-            return DeserializeToResponse<T>(ClientContext.PutRequest(url,obj));
+            return DeserializeToResponse<T>(ClientContext.PutRequestAsync(url,obj).Result);
 
         }
 
         public  Response<T> DeleteRequest<T>(string url)
         {
-            return DeserializeToResponse<T>(ClientContext.DeleteRequest<T>(url));
+            return DeserializeToResponse<T>(ClientContext.DeleteRequestAsync<T>(url).Result);
         }
 
         private Response<T> DeserializeToResponse<T>(string json)

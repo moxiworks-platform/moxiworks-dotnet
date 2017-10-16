@@ -1,11 +1,9 @@
-﻿using System.IO.Pipes;
-using System.Threading.Tasks;
-using MoxiWorks.Platform;
-using Newtonsoft.Json;
-using NUnit.Framework.Internal;
+﻿using System.Threading.Tasks;
+using NUnit.Framework; 
 
 namespace MoxiWorks.Platform.Test
 {
+    
     public class StubContextClient: IContextClient 
     {
         public string Json { get; set; }
@@ -22,19 +20,28 @@ namespace MoxiWorks.Platform.Test
             return  mockTask.Result.get_test_json();
         }
 
-        public string PostRequest<T>(string url, T obj)
+        public async Task<string> PostRequestAsync<T>(string url, T obj)
         {
-            return Json;
+            var mockTask = new Task<FooBar>(() => new FooBar(Json));
+            mockTask.Start();
+
+            return  mockTask.Result.get_test_json();
         }
 
-        public string PutRequest<T>(string url, T obj)
+        public async Task<string> PutRequestAsync<T>(string url, T obj)
         {
-            return Json;
+            var mockTask = new Task<FooBar>(() => new FooBar(Json));
+            mockTask.Start();
+
+            return  mockTask.Result.get_test_json();
         }
 
-        public string DeleteRequest<T>(string url)
+        public async Task<string> DeleteRequestAsync<T>(string url)
         {
-            return Json;
+            var mockTask = new Task<FooBar>(() => new FooBar(Json));
+            mockTask.Start();
+
+            return  mockTask.Result.get_test_json();
         }
 
         

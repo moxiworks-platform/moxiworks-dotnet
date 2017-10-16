@@ -19,9 +19,7 @@ namespace MoxiWorks.Platform
             _context = GetContext();
         }
 
-        private static string Identifier { get; } = Credentials.Identifier;
-
-        private static string Secret { get; } = Credentials.Secret;
+       
 
         private static HttpClientHandler _handler;
 
@@ -38,7 +36,7 @@ namespace MoxiWorks.Platform
         public static HttpClient RequestClient()
         {
             var client = Context;
-            var cred = new Credentials(Identifier, Secret);
+            var cred = new Credentials();
             var auth = AuthenticationHeaderValue.Parse("Basic " + cred.ToBase64());
             client.DefaultRequestHeaders.Authorization = auth;
             client.DefaultRequestHeaders.Add("Accept", "application/vnd.moxi-platform+json;version=1");
@@ -69,10 +67,10 @@ namespace MoxiWorks.Platform
             return await content.ReadAsStringAsync();
         }
 
-        public  string PostRequest<T>(string url, T obj)
+        public async Task<string> PostRequestAsync<T>(string url, T obj)
         {
             var client = RequestClient();
-            var result = client.PostAsJsonAsync(url, obj).Result;
+            var result =  await client.PostAsJsonAsync(url, obj);
             var content = result.Content;
 
 
@@ -83,14 +81,14 @@ namespace MoxiWorks.Platform
                         "_wms_svc_public_session"];
             }
 
-            return content.ReadAsStringAsync().Result;
+            return  await content.ReadAsStringAsync();
 
         }
 
-        public  string PutRequest<T>(string url, T obj)
+        public async Task<string> PutRequestAsync<T>(string url, T obj)
         {
             var client = RequestClient();
-            var result = client.PutAsJsonAsync(url, obj).Result;
+            var result = await client.PutAsJsonAsync(url, obj);
             var content = result.Content;
            
 
@@ -101,26 +99,23 @@ namespace MoxiWorks.Platform
                         "_wms_svc_public_session"];
             }
             
-            return  content.ReadAsStringAsync().Result;
+            return  await content.ReadAsStringAsync();
         }
 
-        public string  DeleteRequest<T>(string url)
+        public async Task<string>  DeleteRequestAsync<T>(string url)
         {
             var client = RequestClient();
-            var result = client.DeleteAsync(new Uri(url)).Result;
+            var result = await client.DeleteAsync(new Uri(url));
             var content = result.Content;
 
             if (!Session.Instance.IsSessionCookieSet)
             {
-              
                 Session.Instance.SessionCookie =
                     _handler.CookieContainer.GetCookies(new Uri(new UriBuilder().GetUrl()))[
                         "_wms_svc_public_session"];
             }
 
-            return  content.ReadAsStringAsync().Result;
-       
-
+            return  await content.ReadAsStringAsync();
         }
 
         
