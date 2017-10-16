@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoxiWorks.Platform
 {
-    public class ContextClient : IContextClient
+    internal class ContextClient : IContextClient
     {
         private static HttpClient _context;
         public static HttpClient Context => _context ?? (_context = GetContext());
@@ -19,9 +19,9 @@ namespace MoxiWorks.Platform
             _context = GetContext();
         }
 
-        private static string Identifier { get; } = "5d39ba58-bfc3-11e5-a4e3-d0e1408e8026";
+        private static string Identifier { get; } = Credentials.Identifier;
 
-        private static string Secret { get; } = "a56sthhidTlUsLyp8eFZBQtt";
+        private static string Secret { get; } = Credentials.Secret;
 
         private static HttpClientHandler _handler;
 
