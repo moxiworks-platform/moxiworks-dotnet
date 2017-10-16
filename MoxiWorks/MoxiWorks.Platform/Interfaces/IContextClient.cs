@@ -7,7 +7,8 @@ namespace MoxiWorks.Platform
 
     {
         Task<string> GetRequestAsync<T>(string url);
-        string PostRequest<T>(string url, T obj);
-        string PutRequest<T>(string url, T obj);
-        string DeleteRequest<T>(string url);
+        Task<string> PostRequestAsync<T>(string url, T obj);
+        Task<string> PutRequestAsync<T>(string url, T obj);
+        Task<string> DeleteRequestAsync<T>(string url);
     }
+}
