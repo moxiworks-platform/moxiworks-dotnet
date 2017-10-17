@@ -1,4 +1,6 @@
 ﻿using System.Threading.Tasks;
+using MoxiWorks.Platform.Interfaces;
+
 namespace MoxiWorks.Platform
 {   
     public class OfficeService : IOfficeService

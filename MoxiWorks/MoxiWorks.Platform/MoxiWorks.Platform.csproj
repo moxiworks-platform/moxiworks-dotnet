@@ -83,6 +83,7 @@
     <Compile Include="Interfaces\IActionLogService.cs" />
     <Compile Include="Interfaces\IAgentService.cs" />
     <Compile Include="Interfaces\IBuyerTransactionService.cs" />
+    <Compile Include="Interfaces\ICompanyService.cs" />
     <Compile Include="Interfaces\IContactService.cs" />
     <Compile Include="Interfaces\IContextClient.cs" />
     <Compile Include="Interfaces\IEventService.cs" />

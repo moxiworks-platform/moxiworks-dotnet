@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using MoxiWorks.Platform.Interfaces;
+
 namespace MoxiWorks.Platform
 {
     public class ContactService : IContactService

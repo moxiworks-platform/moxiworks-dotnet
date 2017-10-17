@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using MoxiWorks.Platform.Interfaces;
 using NUnit.Framework; 
 
 namespace MoxiWorks.Platform.Test

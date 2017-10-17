@@ -1,7 +1,7 @@
 ﻿
 using System.Threading.Tasks;
 
-namespace MoxiWorks.Platform
+namespace MoxiWorks.Platform.Interfaces
 {
     public interface IContextClient
 

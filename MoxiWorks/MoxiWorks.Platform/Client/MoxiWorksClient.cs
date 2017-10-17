@@ -2,6 +2,7 @@
 using System.Linq;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
+using MoxiWorks.Platform.Interfaces;
 
 namespace MoxiWorks.Platform
 {
