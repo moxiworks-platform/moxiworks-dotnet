@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 namespace MoxiWorks.Platform
 {
 
@@ -11,34 +12,34 @@ namespace MoxiWorks.Platform
             Client = client; 
         }
 
-        public Response<Event> CreateEvent(Event cmaEvent)
+        public async Task<Response<Event>> CreateEventAsync(Event cmaEvent)
         {
             var builder = new UriBuilder("events");
 
-            return Client.PostRequest(builder.GetUrl(), cmaEvent);
+            return await Client.PostRequestAsync(builder.GetUrl(), cmaEvent);
         }
 
-        public Response<Event> UpdateEvent(Event updateEvent)
+        public async Task<Response<Event>> UpdateEventAsync(Event updateEvent)
         {
             var builder = new UriBuilder($"events/{updateEvent.PartnerEventId}");
-            return Client.PutRequest(builder.GetUrl(), updateEvent);
+            return await Client.PutRequestAsync(builder.GetUrl(), updateEvent);
         }
 
-        public Response<Event> GetEvent(string agentId, AgentIdType agentIdType, string partnerEventId)
+        public async Task<Response<Event>> GetEventAsync(string agentId, AgentIdType agentIdType, string partnerEventId)
         {
             var builder = new UriBuilder($"events/{partnerEventId}")
             .AddQueryPerameterAgentId(agentId,agentIdType);
-            return Client.GetRequest<Event>(builder.GetUrl());
+            return await Client.GetRequestAsync<Event>(builder.GetUrl());
         }
 
-        public Response<EventResults> GetEventsByDate(string agentId, AgentIdType agentIdType, int eventStart, int eventEnd)
+        public  async Task<Response<EventResults>> GetEventsByDateAsync(string agentId, AgentIdType agentIdType, int eventStart, int eventEnd)
         {
             var builder = new UriBuilder("events")
             .AddQueryPerameterAgentId(agentId, agentIdType)
             .AddQueryParameter("date_start", eventStart)
             .AddQueryParameter("date_end", eventEnd);
 
-            var resultsList = Client.GetRequest<List<EventDateList>>(builder.GetUrl());
+            var resultsList = await Client.GetRequestAsync<List<EventDateList>>(builder.GetUrl());
 
             var results = new EventResults
             {
@@ -52,12 +53,12 @@ namespace MoxiWorks.Platform
             };
         }
 
-        public Response<EventDeleteResult> DeleteEvent(string agentId, AgentIdType agentIdType, string eventId)
+        public async Task<Response<EventDeleteResult>> DeleteEventAsync(string agentId, AgentIdType agentIdType, string eventId)
         {
             var builder = new UriBuilder($"events/{eventId}")
             .AddQueryPerameterAgentId(agentId, agentIdType);
 
-            return Client.DeleteRequest<EventDeleteResult>(builder.GetUrl());
+            return await Client.DeleteRequestAsync<EventDeleteResult>(builder.GetUrl());
 
         }
 

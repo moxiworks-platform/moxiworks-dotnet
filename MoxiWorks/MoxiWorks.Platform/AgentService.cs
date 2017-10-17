@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading.Tasks;
+using MoxiWorks.Platform.Interfaces;
 
 namespace MoxiWorks.Platform
 {
@@ -11,14 +13,14 @@ namespace MoxiWorks.Platform
             Client = client;
         }
 
-        public Response<Agent> GetAgent(string agentId, string moxiWorksCompanyId)
+        public async Task<Response<Agent>> GetAgentAsync(string agentId, string moxiWorksCompanyId)
         {
             var builder = new UriBuilder($"agents/{agentId}")
                 .AddQueryParameter("moxi_works_company_id", moxiWorksCompanyId);
-            return Client.GetRequest<Agent>(builder.GetUrl()); 
+            return await Client.GetRequestAsync<Agent>(builder.GetUrl()); 
         }
 
-        public Response<AgentResults> GetAgents(string moxiWorksCompanyId, string moxiWorksOfficeId = null,
+        public async Task<Response<AgentResults>> GetAgentsAsync(string moxiWorksCompanyId, string moxiWorksOfficeId = null,
             DateTime? updatedSince = null, int? pageNumber = 1)
         {
             var builder = new UriBuilder("agents")
@@ -26,7 +28,7 @@ namespace MoxiWorks.Platform
                 .AddQueryParameter("moxi_works_office_id", moxiWorksOfficeId)
                 .AddQueryParameter("updated_since", updatedSince)
                 .AddQueryParameter("page_number", pageNumber);
-            return Client.GetRequest<AgentResults>(builder.GetUrl());
+            return await  Client.GetRequestAsync<AgentResults>(builder.GetUrl());
         }
         
     }

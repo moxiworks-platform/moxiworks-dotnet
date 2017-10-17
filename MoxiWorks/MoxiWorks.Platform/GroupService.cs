@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MoxiWorks.Platform
 {
@@ -11,21 +12,21 @@ namespace MoxiWorks.Platform
         }
 
 
-        public Response<Group> GetGroup(string agentId, AgentIdType agentIdType, string moxiWorksGroupId)
+        public async Task<Response<Group>> GetGroupAsync(string agentId, AgentIdType agentIdType, string moxiWorksGroupId)
         {
             var builder = new UriBuilder($"groups/{moxiWorksGroupId}")
             .AddQueryPerameterAgentId(agentId,agentIdType);
 
-            return Client.GetRequest<Group>(builder.GetUrl());
+            return await Client.GetRequestAsync<Group>(builder.GetUrl());
 
         }
 
-        public Response<ICollection<GroupItem>> GetGroups(string agentId, AgentIdType agentIdType, string name = null)
+        public async Task<Response<ICollection<GroupItem>>> GetGroupsAsync(string agentId, AgentIdType agentIdType, string name = null)
         {
             var builder = new UriBuilder("groups")
             .AddQueryPerameterAgentId(agentId,agentIdType)
             .AddQueryParameter("name", name);
-            var results = Client.GetRequest<List<GroupItem>>(builder.GetUrl());
+            var results = await Client.GetRequestAsync<List<GroupItem>>(builder.GetUrl());
 
             return new Response<ICollection<GroupItem>>
             {

@@ -1,4 +1,5 @@
-﻿namespace MoxiWorks.Platform
+﻿using System.Threading.Tasks;
+namespace MoxiWorks.Platform
 {
     public class BrandService
     {
@@ -9,10 +10,10 @@
             Client = client; 
         }
         
-        public  Response<Brand> GetCompanyBrand(string moxiWorksCompanyId)
+        public async Task<Response<Brand>> GetCompanyBrandAsync(string moxiWorksCompanyId)
         {
             var builder = new UriBuilder($"brands/{moxiWorksCompanyId}");
-            return Client.GetRequest<Brand>(builder.GetUrl());
+            return await Client.GetRequestAsync<Brand>(builder.GetUrl());
         }
     }
 }

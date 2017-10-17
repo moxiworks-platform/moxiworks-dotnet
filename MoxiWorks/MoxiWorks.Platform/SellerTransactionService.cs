@@ -1,6 +1,8 @@
-﻿namespace MoxiWorks.Platform
+﻿using System.Threading.Tasks;
+
+namespace MoxiWorks.Platform
 {
-    public class SellerTransactionService 
+    public class SellerTransactionService : ISellerTransactionService
     {
         public MoxiWorksClient Client { get; set; }
 
@@ -9,7 +11,7 @@
             Client = client;
         }
 
-        public Response<SellerTransaction> CreateSellerTransaction(SellerTransaction sellerTransaction)
+        public async Task<Response<SellerTransaction>> CreateSellerTransactionAsync(SellerTransaction sellerTransaction)
         {
             sellerTransaction.Validate();
 
@@ -19,10 +21,10 @@
 
             }
             var builder = new UriBuilder("seller_transactions");
-            return Client.PostRequest(builder.GetUrl(), sellerTransaction);
+            return await Client.PostRequestAsync(builder.GetUrl(), sellerTransaction);
         }
 
-        public Response<SellerTransaction> UpdateSellerTransaction(SellerTransaction sellerTransaction)
+        public async Task<Response<SellerTransaction>> UpdateSellerTransactionAsync(SellerTransaction sellerTransaction)
         {
             sellerTransaction.Validate();
 
@@ -34,20 +36,20 @@
             var builder =
                 new UriBuilder(
                     $"seller_transactions/{sellerTransaction.MoxiWorksTransactionId}");
-            return Client.PutRequest(builder.GetUrl(), sellerTransaction);
+            return await Client.PutRequestAsync(builder.GetUrl(), sellerTransaction);
         }
 
-        public Response<SellerTransaction> GetSellerTransaction(string agentId, AgentIdType agentIdType,
+        public async Task<Response<SellerTransaction>> GetSellerTransactionAsync(string agentId, AgentIdType agentIdType,
             string moxiworksTransactionId)
         {
             var builder =
                 new UriBuilder($"seller_transactions/{moxiworksTransactionId}")
             .AddQueryPerameterAgentId(agentId,agentIdType);
 
-            return Client.GetRequest<SellerTransaction>(builder.GetUrl());
+            return await Client.GetRequestAsync<SellerTransaction>(builder.GetUrl());
         }
 
-        public Response<SellerTransactionResults> GetSellerTransactions(string agentId, AgentIdType agentIdType,
+        public async Task<Response<SellerTransactionResults>> GetSellerTransactionsAsync(string agentId, AgentIdType agentIdType,
             string moxiworksContactId = null, string partnerContactId = null, int pageNumber = 1)
         {
             var builder = new UriBuilder("seller_transactions")
@@ -56,7 +58,7 @@
             .AddQueryParameter("moxi_works_contact_id", moxiworksContactId)
             .AddQueryParameter("page_number", pageNumber);
 
-            return Client.GetRequest<SellerTransactionResults>(builder.GetUrl());
+            return await Client.GetRequestAsync<SellerTransactionResults>(builder.GetUrl());
         }
 
         private Response<SellerTransaction> BuilderErrorResponse(SellerTransaction transaction)

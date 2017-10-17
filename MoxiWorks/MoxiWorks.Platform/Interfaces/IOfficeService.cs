@@ -1,9 +1,11 @@
-﻿namespace MoxiWorks.Platform
+﻿using System.Threading.Tasks;
+
+namespace MoxiWorks.Platform
 {
     public interface IOfficeService
     {
         MoxiWorksClient Client { get; set; }
-        Response<Office> GetOffice(string moxiWorksOfficeId, string moxiWorksCompanyId);
-        Response<OfficeResults> GetCompanyOffices(string moxiWorksCompanyId, int pageNumber = 1);
+        Task<Response<Office>> GetOfficeAsync(string moxiWorksOfficeId, string moxiWorksCompanyId);
+        Task<Response<OfficeResults>> GetCompanyOfficesAsync(string moxiWorksCompanyId, int pageNumber = 1);
     }
 }

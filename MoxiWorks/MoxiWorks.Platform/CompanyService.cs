@@ -1,6 +1,12 @@
-﻿
+﻿using System.Threading.Tasks;
 namespace MoxiWorks.Platform
 {
+    public interface ICompanyService
+    {
+        MoxiWorksClient Client { get; set; }
+        Task<Response<Company>> GetCompanyAsync(string moxiWorksCompanyId);
+    }
+
     public class CompanyService : ICompanyService
     {
         public MoxiWorksClient Client { get; set; }
@@ -10,10 +16,10 @@ namespace MoxiWorks.Platform
             Client = client; 
         }
 
-        public Response<Company> GetCompany(string moxiWorksCompanyId)
+        public async Task<Response<Company>> GetCompanyAsync(string moxiWorksCompanyId)
         {
             var builder = new UriBuilder($"/companies/{moxiWorksCompanyId}");
-            return Client.GetRequest<Company>(builder.GetUrl());
+            return await Client.GetRequestAsync<Company>(builder.GetUrl());
         }
 
     }

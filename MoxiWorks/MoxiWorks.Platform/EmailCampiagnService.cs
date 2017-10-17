@@ -1,7 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MoxiWorks.Platform
 {
+    public interface IEmailCampiagnService
+    {
+    }
+
     public class EmailCampiagnService : IEmailCampiagnService
     {
         public MoxiWorksClient Client { get; set; }
@@ -11,14 +16,14 @@ namespace MoxiWorks.Platform
             Client = client; 
         }
 
-        public Response<EmailCampaignResults> GetEmailCampaign(string agentId, AgentIdType agentIdType,
+        public async Task<Response<EmailCampaignResults>> GetEmailCampaignAsync(string agentId, AgentIdType agentIdType,
             string partnerContactId)
         {
             var builder = new UriBuilder("email_campaigns")
             .AddQueryPerameterAgentId(agentId, agentIdType)
             .AddQueryParameter("partner_contact_id", partnerContactId);
 
-            var res = Client.GetRequest<List<EmailCampaign>>(builder.GetUrl());
+            var res =  await Client.GetRequestAsync<List<EmailCampaign>>(builder.GetUrl());
 
             var campaigns = new EmailCampaignResults
             {

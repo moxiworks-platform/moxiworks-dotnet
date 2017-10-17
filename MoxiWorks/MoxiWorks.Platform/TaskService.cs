@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks; 
 
 namespace MoxiWorks.Platform
 {
@@ -11,29 +12,29 @@ namespace MoxiWorks.Platform
             Client = client; 
         }
 
-        public Response<Task> GetTask(string agentId, AgentIdType agentIdType, string partnerContactId,
+        public async Task<Response<Task>> GetTaskAsync(string agentId, AgentIdType agentIdType, string partnerContactId,
             string partnerTaskId)
         {
             var builder = new UriBuilder($"task/{partnerTaskId}")
             .AddQueryPerameterAgentId(agentId,agentIdType)
             .AddQueryParameter("partner_contact_id", partnerContactId);
 
-            return Client.GetRequest<Task>(builder.GetUrl()); 
+            return await Client.GetRequestAsync<Task>(builder.GetUrl()); 
         }
 
-        public Response<Task> UpdateTask(Task task)
+        public async  Task<Response<Task>> UpdateTaskAsync(Task task)
         {
             var builder = new UriBuilder($"task/{task.PartnerTaskId}");
-            return Client.PutRequest(builder.GetUrl(),task);
+            return  await Client.PutRequestAsync(builder.GetUrl(),task);
         }
 
-        public Response<Task> CreateTask(Task task)
+        public async Task<Response<Task>> CreateTaskAsync(Task task)
         {
             var builder = new UriBuilder($"task");
-            return Client.PostRequest(builder.GetUrl(), task);
+            return await Client.PostRequestAsync(builder.GetUrl(), task);
         }
 
-        public Response<TaskResponse> GetTaskDueBetween(string agentId, AgentIdType agentIdType, DateTime startDate,
+        public async Task<Response<TaskResponse>> GetTaskDueBetweenAsync(string agentId, AgentIdType agentIdType, DateTime startDate,
             DateTime endDate, string partnerContactId, int pageNumber =1)
         {
             var builder = new UriBuilder("task")
@@ -43,7 +44,7 @@ namespace MoxiWorks.Platform
             .AddQueryParameter("partner_contact_id", partnerContactId)
             .AddQueryParameter("page_number", pageNumber);
 
-            return Client.GetRequest<TaskResponse>(builder.GetUrl());
+            return await Client.GetRequestAsync<TaskResponse>(builder.GetUrl());
         }
 
     }

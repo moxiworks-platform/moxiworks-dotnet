@@ -83,13 +83,13 @@
     <Compile Include="Interfaces\IActionLogService.cs" />
     <Compile Include="Interfaces\IAgentService.cs" />
     <Compile Include="Interfaces\IBuyerTransactionService.cs" />
-    <Compile Include="Interfaces\ICompanyService.cs" />
     <Compile Include="Interfaces\IContactService.cs" />
     <Compile Include="Interfaces\IContextClient.cs" />
-    <Compile Include="Interfaces\IEmailCampiagnService.cs" />
     <Compile Include="Interfaces\IEventService.cs" />
     <Compile Include="Interfaces\IGroupService.cs" />
+    <Compile Include="Interfaces\IListingService.cs" />
     <Compile Include="Interfaces\IOfficeService.cs" />
+    <Compile Include="Interfaces\ISellerTransactionService.cs" />
     <Compile Include="Interfaces\ITaskService.cs" />
     <Compile Include="Listing.cs" />
     <Compile Include="ListingService.cs" />

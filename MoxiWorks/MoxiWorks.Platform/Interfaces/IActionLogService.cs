@@ -1,11 +1,13 @@
-﻿namespace MoxiWorks.Platform
+﻿using System.Threading.Tasks;
+
+namespace MoxiWorks.Platform
 {
     public interface IActionLogService
     {
         MoxiWorksClient Client { get; set; }
-        Response<ActionLog> CreateActionLog(ActionLog actionLog);
+        Task<Response<ActionLog>> CreateActionLogAsync(ActionLog actionLog);
 
-        Response<ActionLogResults> GetActionLogs(string agentId, AgentIdType agentIdType,
+        Task<Response<ActionLogResults>> GetActionLogsAsync(string agentId, AgentIdType agentIdType,
             string moxiWorksContactId, string partnerContactId);
     }
 }
