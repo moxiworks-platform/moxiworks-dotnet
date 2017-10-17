@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace MoxiWorks.Platform
+namespace MoxiWorks.Platform.Interfaces
 {
     public interface IGroupService
     {
         MoxiWorksClient Client { get; set; }
-        Response<Group> GetGroup(string agentId, AgentIdType agentIdType, string moxiWorksGroupId);
-        Response<ICollection<GroupItem>> GetGroups(string agentId, AgentIdType agentIdType, string name = null);
+        Task<Response<Group>> GetGroupAsync(string agentId, AgentIdType agentIdType, string moxiWorksGroupId);
+        Task<Response<ICollection<GroupItem>>> GetGroupsAsync(string agentId, AgentIdType agentIdType, string name = null);
     }
 }

@@ -12,7 +12,7 @@ namespace MoxiWorks.Platform.Test
             var taskJson = StubDataLoader.LoadJsonFile("Task.json");  
            
             var service = new TaskService(new MoxiWorksClient(new StubContextClient(taskJson)));
-            var response = service.GetTask("foo", AgentIdType.AgentUuid, "1234", "12345"); 
+            var response = service.GetTaskAsync("foo", AgentIdType.AgentUuid, "1234", "12345").Result; 
             IsInstanceOf<Task>(response.Item);
         }
 
@@ -21,7 +21,7 @@ namespace MoxiWorks.Platform.Test
         {
             var json = StubDataLoader.LoadJsonFile("FailureResponse.json"); 
             var service = new TaskService(new MoxiWorksClient(new StubContextClient(json)));
-            var response = service.GetTask("foo", AgentIdType.AgentUuid, "1234", "12345");
+            var response = service.GetTaskAsync("foo", AgentIdType.AgentUuid, "1234", "12345").Result;
             IsTrue(response.HasErrors); 
             
         }

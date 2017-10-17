@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
+using MoxiWorks.Platform.Interfaces;
 
 namespace MoxiWorks.Platform
 {
@@ -15,27 +17,27 @@ namespace MoxiWorks.Platform
                 ClientContext = context;
         }
         
-        public  Response<T> GetRequest<T>(string url)
+        public async Task<Response<T>> GetRequestAsync<T>(string url)
         {
-            var s = ClientContext.GetRequestAsync<T>(url).Result;
-            Console.WriteLine(s);
+            var s =  await ClientContext.GetRequestAsync<T>(url);
+
             return DeserializeToResponse<T>(s);
         }
 
-        public  Response<T> PostRequest<T>(string url, T obj)
+        public  async Task<Response<T>> PostRequestAsync<T>(string url, T obj)
         {
-            return DeserializeToResponse<T>(ClientContext.PostRequestAsync(url,obj).Result);
+            return DeserializeToResponse<T>( await ClientContext.PostRequestAsync(url,obj));
+        }
+        
+        public async  Task<Response<T>> PutRequestAsync<T>(string url, T obj)
+        {
+            return DeserializeToResponse<T>( await ClientContext.PutRequestAsync(url,obj));
+
         }
 
-        public  Response<T> PutRequest<T>(string url, T obj)
+        public  async Task<Response<T>> DeleteRequestAsync<T>(string url)
         {
-            return DeserializeToResponse<T>(ClientContext.PutRequestAsync(url,obj).Result);
-
-        }
-
-        public  Response<T> DeleteRequest<T>(string url)
-        {
-            return DeserializeToResponse<T>(ClientContext.DeleteRequestAsync<T>(url).Result);
+            return DeserializeToResponse<T>(await ClientContext.DeleteRequestAsync<T>(url));
         }
 
         private Response<T> DeserializeToResponse<T>(string json)

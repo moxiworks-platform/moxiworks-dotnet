@@ -1,13 +1,14 @@
 ﻿using System;
+using System.Threading.Tasks;
 
-namespace MoxiWorks.Platform
+namespace MoxiWorks.Platform.Interfaces
 {
     public interface IAgentService
     {
         MoxiWorksClient Client { get; set; }
-        Response<Agent> GetAgent(string agentId, string moxiWorksCompanyId);
+        Task<Response<Agent>> GetAgentAsync(string agentId, string moxiWorksCompanyId);
 
-        Response<AgentResults> GetAgents(string moxiWorksCompanyId, string moxiWorksOfficeId = null,
+        Task<Response<AgentResults>> GetAgentsAsync(string moxiWorksCompanyId, string moxiWorksOfficeId = null,
             DateTime? updatedSince = null, int? pageNumber = 1);
     }
 }

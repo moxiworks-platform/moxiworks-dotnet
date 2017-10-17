@@ -1,21 +1,22 @@
 ﻿using System;
+using System.Threading.Tasks;
 
-namespace MoxiWorks.Platform
+namespace MoxiWorks.Platform.Interfaces
 {
     public interface IContactService
     {
         MoxiWorksClient Client { get; set; }
-        Response<Contact> GetContact(string agentId, AgentIdType agentIdType, string partnerContactId);
-        Response<Contact> CreateContact(Contact contact);
-        Response<Contact> UpdateContact(Contact contact);
+        Task<Response<Contact>> GetContactAsync(string agentId, AgentIdType agentIdType, string partnerContactId);
+        Task<Response<Contact>> CreateContactAsync(Contact contact);
+        Task<Response<Contact>> UpdateContactAsync(Contact contact);
 
-        Response<ContactResults> GetContactResultsAgentUuid(string AgentId, string emailAddress = null,
+        Task<Response<ContactResults>> GetContactResultsAgentUuidAsync(string AgentId, string emailAddress = null,
             string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1);
 
-        Response<ContactResults> GetContactResultsMoxiWorksagentId(string AgentId, string emailAddress = null,
+        Task<Response<ContactResults>> GetContactResultsMoxiWorksagentId(string AgentId, string emailAddress = null,
             string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1);
 
-        Response<ContactResults> GetContactsUpdatedSince(string AgentId, AgentIdType agentIdType,
+        Task<Response<ContactResults>> GetContactsUpdatedSinceAsync(string agentId, AgentIdType agentIdType,
             string emailAddress = null,
             string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1);
     }

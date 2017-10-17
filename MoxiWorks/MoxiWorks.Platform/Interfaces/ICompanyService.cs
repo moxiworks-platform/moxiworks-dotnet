@@ -1,8 +1,9 @@
-﻿namespace MoxiWorks.Platform
+﻿using System.Threading.Tasks;
+namespace MoxiWorks.Platform.Interfaces
 {
     public interface ICompanyService
     {
         MoxiWorksClient Client { get; set; }
-        Response<Company> GetCompany(string moxiWorksCompanyId);
+        Task<Response<Company>> GetCompanyAsync(string moxiWorksCompanyId);
     }
 }

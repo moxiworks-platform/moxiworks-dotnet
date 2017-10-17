@@ -1,15 +1,17 @@
-﻿namespace MoxiWorks.Platform
+﻿using System.Threading.Tasks;
+
+namespace MoxiWorks.Platform.Interfaces
 {
     public interface IBuyerTransactionService
     {
         MoxiWorksClient Client { get; set; }
-        Response<BuyerTransaction> CreateBuyerTransaction(BuyerTransaction buyerTransaction);
-        Response<BuyerTransaction> UpdateBuyerTransaction(BuyerTransaction buyerTransaction);
+        Task<Response<BuyerTransaction>> CreateBuyerTransactionAsync(BuyerTransaction buyerTransaction);
+        Task<Response<BuyerTransaction>> UpdateBuyerTransactionAsync(BuyerTransaction buyerTransaction);
 
-        Response<BuyerTransaction> GetBuyerTransaction(string agentId, AgentIdType agentIdType,
+        Task<Response<BuyerTransaction>> GetBuyerTransactionAsync(string agentId, AgentIdType agentIdType,
             string moxiworksTransactionId);
 
-        Response<BuyerTransactionResults> GetBuyerTransactions(string agentId, AgentIdType agentIdType,
+        Task<Response<BuyerTransactionResults>> GetBuyerTransactionsAsync(string agentId, AgentIdType agentIdType,
             string moxiworksContactId = null, string partnerContactId = null, int pageNumber = 1);
     }
 }
