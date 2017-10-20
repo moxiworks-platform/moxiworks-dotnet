@@ -42,17 +42,17 @@ namespace MoxiWorks.Platform
         /// <param name="agentId">
         /// Must include either:
         /// AgentUuid
-        /// This is the Moxi Works Platform ID of the agent which an ActionLog entry is associated 
+        /// This is the Moxi Works Platform ID of the agent which an Buyer Transaction entry is associated 
         /// with. This will be an RFC 4122 compliant UUID. 
         /// agent_uuid or moxi_works_agent_id is required and must reference a 
-        /// valid Moxi Works Agent ID for your ActionLog request to be accepted.
+        /// valid Moxi Works Agent ID for your Buyer Transaction entry  request to be accepted.
         ///
         /// MoxiWorksAgentId
-        /// This is the Moxi Works Platform ID of the agent which an ActionLog entry is associated 
+        /// This is the Moxi Works Platform ID of the agent which an  Buyer Transaction  entry is associated 
         /// with. This will be a string that may take the form of an email address, 
         /// or a unique identification string. agent_uuid or moxi_works_agent_id is required 
-        /// and must reference a valid Moxi Works Agent ID for your ActionLog request to be accepted.
-        /// Agent ID for your ActionLog request to be accepted.
+        /// and must reference a valid Moxi Works Agent ID for your  Buyer Transaction  request to be accepted.
+        /// Agent ID for your  Buyer Transaction  request to be accepted.
         /// </param>
         /// <param name="agentIdType">What agentId type you are using.</param>
         /// <param name="moxiworksTransactionId">
@@ -75,17 +75,17 @@ namespace MoxiWorks.Platform
         /// <param name="agentId">
         /// Must include either:
         /// AgentUuid
-        /// This is the Moxi Works Platform ID of the agent which an ActionLog entry is associated 
+        /// This is the Moxi Works Platform ID of the agent which an Buyer Transaction entry  entry is associated 
         /// with. This will be an RFC 4122 compliant UUID. 
         /// agent_uuid or moxi_works_agent_id is required and must reference a 
-        /// valid Moxi Works Agent ID for your ActionLog request to be accepted.
+        /// valid Moxi Works Agent ID for your Buyer Transaction entry  request to be accepted.
         ///
         /// MoxiWorksAgentId
-        /// This is the Moxi Works Platform ID of the agent which an ActionLog entry is associated 
+        /// This is the Moxi Works Platform ID of the agent which an Buyer Transaction entry  entry is associated 
         /// with. This will be a string that may take the form of an email address, 
         /// or a unique identification string. agent_uuid or moxi_works_agent_id is required 
-        /// and must reference a valid Moxi Works Agent ID for your ActionLog request to be accepted.
-        /// Agent ID for your ActionLog request to be accepted.
+        /// and must reference a valid Moxi Works Agent ID for your Buyer Transaction entry  request to be accepted.
+        /// Agent ID for your Buyer Transaction entry  request to be accepted.
         /// </param>
         /// <param name="agentIdType">What agentId type you are using.</param>
         /// <param name="moxiworksContactId">
