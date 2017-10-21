@@ -94,6 +94,7 @@
     <Compile Include="Interfaces\ISellerTransactionService.cs" />
     <Compile Include="Interfaces\ITaskService.cs" />
     <Compile Include="Listing.cs" />
+    <Compile Include="ListingImage.cs" />
     <Compile Include="ListingService.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="OfficeResults.cs" />

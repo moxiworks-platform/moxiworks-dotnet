@@ -4,7 +4,10 @@ using MoxiWorks.Platform.Interfaces;
 
 namespace MoxiWorks.Platform
 {
-
+    /// <summary>
+    /// Moxi Works Platform Event entities represent appointments, 
+    /// meetings or other events scheduled for an agent.
+    /// </summary>
     public class EventService : IEventService
     {
         public MoxiWorksClient Client { get; set; }
