@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Entity representing seller-side of transactions that agents are working on.
+    /// </summary>
     public class SellerTransaction
     {
         /// <summary>

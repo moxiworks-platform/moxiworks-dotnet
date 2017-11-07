@@ -2,6 +2,9 @@
 
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Moxi Works Platform Contact entities represent an agent’s contacts in the Moxi Works Platform.
+    /// </summary>
     public class Contact
     {
         /// <summary>

@@ -4,6 +4,9 @@ using Newtonsoft.Json;
 
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// An entity that returns a collection of EmailCampaigns.
+    /// </summary>
     public class ContactResults
     {
         

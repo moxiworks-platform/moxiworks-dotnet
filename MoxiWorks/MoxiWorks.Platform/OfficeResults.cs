@@ -2,6 +2,9 @@
 using Newtonsoft.Json;
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Collection of Offices returned from a search.
+    /// </summary>
     public class OfficeResults
     {
         /// <summary>

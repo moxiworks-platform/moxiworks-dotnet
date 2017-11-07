@@ -2,6 +2,9 @@
 using Newtonsoft.Json;
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Container for returning a SellerTransaction Collection. 
+    /// </summary>
     public class SellerTransactionResults
     {
         /// <summary>

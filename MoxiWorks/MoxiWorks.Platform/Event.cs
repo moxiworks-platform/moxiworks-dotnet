@@ -2,6 +2,10 @@
 using Newtonsoft.Json;
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Moxi Works Platform Event entity represents appointments, 
+    /// meetings or other events scheduled for an agent.
+    /// </summary>
     public class Event
     {
         /// <summary>

@@ -1,8 +1,10 @@
-﻿
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace MoxiWorks.Platform.Interfaces
 {
+    /// <summary>
+    ///  Wrapper around the Client to allow stubbing of client interactions.
+    /// </summary>
     public interface IContextClient
 
     {

@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 
 namespace MoxiWorks.Platform.Interfaces
 {
+    /// <summary>
+    /// Wrapper around the service to allow stubbing of the service.
+    /// </summary>
     public interface IListingService
     {
         MoxiWorksClient Client { get; set; }

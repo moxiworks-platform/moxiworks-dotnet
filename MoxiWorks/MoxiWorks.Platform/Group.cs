@@ -3,6 +3,9 @@ using Newtonsoft.Json;
 
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Group entity represent groupings of an agent’s contacts.
+    /// </summary>
     public class Group
     {
         /// <summary>

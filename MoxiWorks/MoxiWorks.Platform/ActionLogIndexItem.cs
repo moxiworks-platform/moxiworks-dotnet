@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Entity to record actions that contacts take, that an agent might want to see. 
+    /// </summary>
     public class ActionLogIndexItem
     {
         /// <summary>

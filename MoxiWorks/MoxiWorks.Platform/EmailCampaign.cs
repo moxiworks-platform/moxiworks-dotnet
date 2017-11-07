@@ -1,6 +1,10 @@
 ﻿using Newtonsoft.Json;
 namespace MoxiWorks.Platform
 {
+
+    /// <summary>
+    /// Entity that represents the email campaign established between agents and contact via Moxi Works.
+    /// </summary>
     public class EmailCampaign
     {
         /// <summary>

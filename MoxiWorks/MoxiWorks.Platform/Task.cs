@@ -1,6 +1,10 @@
 ﻿using Newtonsoft.Json;
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Entity that represents a task that agents need to perform on behalf of, 
+    /// or in relation to their contacts.
+    /// </summary>
     public class Task
     {
         

@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Listing Collection of returned by an listing query.
+    /// </summary>
     public class ListingResults
     {
         /// <summary>

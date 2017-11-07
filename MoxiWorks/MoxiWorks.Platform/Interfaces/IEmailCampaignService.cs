@@ -1,12 +1,13 @@
 ﻿using System.Threading.Tasks;
+
 namespace MoxiWorks.Platform.Interfaces
 {
     /// <summary>
     /// Wrapper around the service to allow stubbing of the service.
     /// </summary>
-    public interface ICompanyService
+    interface IEmailCampaignService
     {
-        MoxiWorksClient Client { get; set; }
-        Task<Response<Company>> GetCompanyAsync(string moxiWorksCompanyId);
+         Task<Response<EmailCampaignResults>> GetEmailCampaignAsync(string agentId, AgentIdType agentIdType,
+            string partnerContactId);
     }
 }

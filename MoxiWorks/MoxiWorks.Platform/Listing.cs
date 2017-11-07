@@ -2,6 +2,9 @@
 
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Listing entity representing a Brokerage’s listing.
+    /// </summary>
     public class Listing
     {
         /// <summary>
