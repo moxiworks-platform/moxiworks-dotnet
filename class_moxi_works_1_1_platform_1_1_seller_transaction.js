@@ -1,0 +1,28 @@
+var class_moxi_works_1_1_platform_1_1_seller_transaction =
+[
+    [ "Validate", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#af9a45af9100ceddaf10aff9851e70ee7", null ],
+    [ "Errors", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#abaed5f89ab77627b7c21186caf9dd92d", null ],
+    [ "HasErrors", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#ac406e89cdf9bb509a43bb3d4b61e11d9", null ],
+    [ "Address", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a8e49e9b40f7f911e0be25afe2003ab30", null ],
+    [ "AgentUuid", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#afece7753b61dc7a67fb8ee923cf78e48", null ],
+    [ "Baths", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a51edbfb90a0c64fad0dc3d2771150bb0", null ],
+    [ "Beds", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a42432709e6b7223d929cfd49f5f9bc9c", null ],
+    [ "City", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a2a0991c6ec94ae645355cdf9e7ba8d7e", null ],
+    [ "CommissionFlatFee", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a027ae62f19919432f8aa6415b49f3474", null ],
+    [ "CommissionPercentage", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a15b15afa6499eca77ba4a203190b2b67", null ],
+    [ "IsMlsTransaction", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#abe16d9858c25fce3dfd430a2adb6af82", null ],
+    [ "MaxPrice", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a6876adb2c47085d0cd119ec7892cebc2", null ],
+    [ "MinPrice", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#adfe94a5bb73d8d2b66dae2b83a391d6b", null ],
+    [ "MlsNumber", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a600089812b4e3b10b759573e7ba12d67", null ],
+    [ "MoxiWorksAgentId", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a2793f969d809916fe63b506b2c511c3d", null ],
+    [ "MoxiWorksContactId", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#ac87b796b81d78745b231a532aa6caa8c", null ],
+    [ "MoxiWorksTransactionId", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#aa5c2420b60041dfe1903deb26700953b", null ],
+    [ "Notes", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a9bf81eea4e6c9fdc6e8871eb810563d3", null ],
+    [ "PartnerContactId", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a9081ffbb9f1d615db9f8b5294ab1fa26", null ],
+    [ "SQFT", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a5f00d678d531400a8056458ecbdb3e47", null ],
+    [ "StartTimeStamp", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#af7c6f80af7da494c18056443d699d802", null ],
+    [ "State", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a6bdeb645b362f9f22967593d545a9ef1", null ],
+    [ "TargetPrice", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a41ae69bb51ad3ae7997719b987d47553", null ],
+    [ "TransactionName", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#aaa147a8acd0fa17c1f0d4ed5a672bdca", null ],
+    [ "ZipCode", "class_moxi_works_1_1_platform_1_1_seller_transaction.html#a1ac88892c7fb5e387defe1df095a0b03", null ]
+];
