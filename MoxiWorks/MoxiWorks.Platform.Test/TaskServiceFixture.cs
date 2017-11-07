@@ -22,7 +22,7 @@ namespace MoxiWorks.Platform.Test
             var json = StubDataLoader.LoadJsonFile("FailureResponse.json"); 
             var service = new TaskService(new MoxiWorksClient(new StubContextClient(json)));
             var response = service.GetTaskAsync("foo", AgentIdType.AgentUuid, "1234", "12345").Result;
-            IsTrue(response.HasErrors); 
+            Assert.IsTrue((bool?) response.HasErrors); 
             
         }
 

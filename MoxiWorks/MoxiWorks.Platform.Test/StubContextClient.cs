@@ -1,6 +1,8 @@
 ﻿using System.Threading.Tasks;
 using MoxiWorks.Platform.Interfaces;
-using NUnit.Framework; 
+using NUnit.Framework;
+using System.Net.Http.Headers;
+
 
 namespace MoxiWorks.Platform.Test
 {
@@ -18,7 +20,7 @@ namespace MoxiWorks.Platform.Test
             var mockTask = new Task<FooBar>(() => new FooBar(Json));
             mockTask.Start();
 
-            return  mockTask.Result.get_test_json();
+            return  mockTask.Result.GetTestJson();
         }
 
         public async Task<string> PostRequestAsync<T>(string url, T obj)
@@ -26,7 +28,7 @@ namespace MoxiWorks.Platform.Test
             var mockTask = new Task<FooBar>(() => new FooBar(Json));
             mockTask.Start();
 
-            return  mockTask.Result.get_test_json();
+            return  mockTask.Result.GetTestJson();
         }
 
         public async Task<string> PutRequestAsync<T>(string url, T obj)
@@ -34,7 +36,7 @@ namespace MoxiWorks.Platform.Test
             var mockTask = new Task<FooBar>(() => new FooBar(Json));
             mockTask.Start();
 
-            return  mockTask.Result.get_test_json();
+            return  mockTask.Result.GetTestJson();
         }
 
         public async Task<string> DeleteRequestAsync<T>(string url)
@@ -42,7 +44,7 @@ namespace MoxiWorks.Platform.Test
             var mockTask = new Task<FooBar>(() => new FooBar(Json));
             mockTask.Start();
 
-            return  mockTask.Result.get_test_json();
+            return  mockTask.Result.GetTestJson();
         }
 
         
@@ -52,13 +54,13 @@ namespace MoxiWorks.Platform.Test
 
     internal class FooBar
     {
-        private string Json = null;
+        private readonly string Json = null;
 
         public FooBar(string json)
         {
             Json = json; 
         }
-        public string get_test_json()
+        public string GetTestJson()
         {
             return Json;
         }
