@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>MoxiWorks.Platform</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.0.0</PackageVersion>
     <Authors>Anthony Hatch</Authors>
     <Description>SDK for accessing the Moxi Works API in a .NET application.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -11,7 +11,7 @@
     <Copyright>Copyright 2017 (c) Moxi Works Corporation. All rights reserved.</Copyright>
     <PackageTags>sdk moxiworks Moxi</PackageTags>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
