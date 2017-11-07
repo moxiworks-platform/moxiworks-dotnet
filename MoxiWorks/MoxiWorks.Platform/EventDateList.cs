@@ -3,6 +3,9 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Event Collection sorted by date. 
+    /// </summary>
     public class EventDateList
     {
        

@@ -1,6 +1,10 @@
 ﻿using System.Collections.Generic;
 namespace MoxiWorks.Platform
 {
+
+    /// <summary>
+    /// Email Campaign Collection that includes information for paging.
+    /// </summary>
     public class EmailCampaignResults
     {
         /// <summary>

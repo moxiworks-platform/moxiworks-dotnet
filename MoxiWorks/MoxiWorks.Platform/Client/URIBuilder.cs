@@ -8,6 +8,9 @@ using System.Configuration;
 
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// used internaly to generate urls to the moxiworks api
+    /// </summary>
     public class UriBuilder
     {
 

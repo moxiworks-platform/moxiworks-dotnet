@@ -2,6 +2,9 @@
 
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Entity returned when a Event is deleted.
+    /// </summary>
     public class EventDeleteResult
     {
         /// <summary>

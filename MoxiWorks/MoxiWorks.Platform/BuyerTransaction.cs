@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
     namespace MoxiWorks.Platform
     {
+
+        /// <summary>
+        /// Entity representing buyer-side of transactions that agents are working on.
+        /// </summary>
         public class BuyerTransaction
         {
 

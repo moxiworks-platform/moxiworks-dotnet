@@ -1,6 +1,9 @@
 ﻿using Newtonsoft.Json;
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Moxi Works Brand objects contain data about brand colors & logos associated with a company. 
+    /// </summary>
     public class Brand 
     {
         /// <summary>

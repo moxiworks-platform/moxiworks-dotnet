@@ -3,6 +3,9 @@ using MoxiWorks.Platform.Interfaces;
 
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Moxi Works Platform BuyerTransaction entities represent buyer-side transactions that agents are working on.
+    /// </summary>
     public class BuyerTransactionService : IBuyerTransactionService
     {
         public MoxiWorksClient Client { get; set; }

@@ -1,16 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using MoxiWorks.Platform.Interfaces;
 namespace MoxiWorks.Platform
 {
-    public interface IEmailCampiagnService
-    {
-    }
+  
 
     /// <summary>
     /// Moxi Works Platform EmailCampign entities represent email campaigns established between agents and contacts via Moxi Works.
     /// </summary>
-    public class EmailCampiagnService : IEmailCampiagnService
+    public class EmailCampiagnService //: IEmailCampiagnService
     {
         public MoxiWorksClient Client { get; set; }
 

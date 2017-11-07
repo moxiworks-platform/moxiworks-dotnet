@@ -2,6 +2,9 @@
 
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Holds authentication data between api calls.
+    /// </summary>
     public sealed class Session
     {
         private static readonly Session instance = new Session();

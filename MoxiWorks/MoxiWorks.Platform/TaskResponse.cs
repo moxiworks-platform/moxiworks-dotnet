@@ -2,6 +2,9 @@
 using Newtonsoft.Json;
 namespace MoxiWorks.Platform
 {
+    /// <summary>
+    /// Container for returning a Task Collection. 
+    /// </summary>
     public class TaskResponse
     {
         /// <summary>
