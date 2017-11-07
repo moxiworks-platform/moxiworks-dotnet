@@ -9,7 +9,7 @@ namespace MoxiWorks.Platform.Test
         public void ShouldTakeTheUrl()
         {
             var expected = "https://api-qa.moxiworks.com/api/goo";
-            var builder = new UriBuilder("/goo");
+            var builder = new UriBuilder("goo");
             Assert.AreEqual(expected, builder.GetUrl()); 
         }
 
@@ -18,7 +18,7 @@ namespace MoxiWorks.Platform.Test
         {
             var expected = "https://api-qa.moxiworks.com/api/goo?foo=bar&ding=dong&boo=bam";
 
-            var builder = new UriBuilder("/goo");
+            var builder = new UriBuilder("goo");
             builder.QueryParameters.Add("foo","bar");
             builder.QueryParameters.Add("ding","dong");
             builder.QueryParameters.Add("boo","bam");

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Configuration;
+using System.Configuration;
 
 
 namespace MoxiWorks.Platform
@@ -17,7 +17,7 @@ namespace MoxiWorks.Platform
         {
             get
             {
-               _host = _host ??  WebConfigurationManager.AppSettings["MoxiWorksApiHost"];
+               _host = _host ?? ConfigurationManager.AppSettings["MoxiWorksApiHost"];
                _host = _host ?? DEFAULT_HOST;
 
                return _host;

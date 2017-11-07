@@ -1,4 +1,5 @@
-﻿using Bogus;
+﻿using System.Text;
+using Bogus;
 using NUnit.Framework;
 using static NUnit.Framework.Assert;
 
@@ -37,7 +38,7 @@ namespace MoxiWorks.Platform.Test
             
             IsFalse(fake.Validate());
             IsTrue(fake.HasErrors);
-            AreEqual(1, fake.Errors);
+            AreEqual(1, fake.Errors.Count);
              
         }
         

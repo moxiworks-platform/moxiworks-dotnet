@@ -72,7 +72,7 @@ namespace MoxiWorks.Platform
         /// <returns>The Response containing the created Task </returns>
         public async Task<Response<Task>> CreateTaskAsync(Task task)
         {
-            var builder = new UriBuilder($"task");
+            var builder = new UriBuilder("task");
             return await Client.PostRequestAsync(builder.GetUrl(), task);
         }
 
