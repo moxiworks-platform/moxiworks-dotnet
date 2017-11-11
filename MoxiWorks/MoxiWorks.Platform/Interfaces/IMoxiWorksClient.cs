@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace MoxiWorks.Platform.Interfaces
 {
-     public interface IMoxiWorksClient
+    /// <summary>
+    /// Wrapper around the service for allow better Dependancy Injection.
+    /// </summary>
+    public interface IMoxiWorksClient
     {
         Task<Response<T>> GetRequestAsync<T>(string url);
         Task<Response<T>> PostRequestAsync<T>(string url, T obj);
