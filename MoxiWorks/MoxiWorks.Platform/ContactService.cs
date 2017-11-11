@@ -11,8 +11,8 @@ namespace MoxiWorks.Platform
     /// </summary>
     public class ContactService : IContactService
     {
-        public MoxiWorksClient Client { get; set; }
-        public ContactService(MoxiWorksClient client)
+        public IMoxiWorksClient Client { get; set; }
+        public ContactService(IMoxiWorksClient client)
         {
             Client = client;
         }

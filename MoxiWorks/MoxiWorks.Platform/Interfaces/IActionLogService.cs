@@ -7,7 +7,7 @@ namespace MoxiWorks.Platform.Interfaces
     /// </summary>
     public interface IActionLogService
     {
-        MoxiWorksClient Client { get; set; }
+        IMoxiWorksClient Client { get; set; }
         Task<Response<ActionLog>> CreateActionLogAsync(ActionLog actionLog);
 
         Task<Response<ActionLogResults>> GetActionLogsAsync(string agentId, AgentIdType agentIdType,

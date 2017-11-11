@@ -8,7 +8,7 @@ namespace MoxiWorks.Platform.Interfaces
     /// </summary>
     public interface IContactService
     {
-        MoxiWorksClient Client { get; set; }
+        IMoxiWorksClient Client { get; set; }
         Task<Response<Contact>> GetContactAsync(string agentId, AgentIdType agentIdType, string partnerContactId);
         Task<Response<Contact>> CreateContactAsync(Contact contact);
         Task<Response<Contact>> UpdateContactAsync(Contact contact);

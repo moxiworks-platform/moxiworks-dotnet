@@ -10,9 +10,9 @@ namespace MoxiWorks.Platform
     /// </summary>
     public class ListingService : IListingService
     {
-        public MoxiWorksClient Client { get; set; }
+        public IMoxiWorksClient Client { get; set; }
         
-        public ListingService(MoxiWorksClient client)
+        public ListingService(IMoxiWorksClient client)
         {
             Client = client;
         }

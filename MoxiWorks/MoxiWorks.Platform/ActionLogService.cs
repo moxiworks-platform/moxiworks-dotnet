@@ -13,9 +13,9 @@ namespace MoxiWorks.Platform
     public class ActionLogService : IActionLogService
     {
 
-        public MoxiWorksClient Client { get; set; }
+        public IMoxiWorksClient Client { get; set; }
         
-        public ActionLogService(MoxiWorksClient client)
+        public ActionLogService(IMoxiWorksClient client)
         {
             Client = client;
         }

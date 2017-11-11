@@ -10,9 +10,9 @@ namespace MoxiWorks.Platform
     /// </summary>
     public class EventService : IEventService
     {
-        public MoxiWorksClient Client { get; set; }
+        public IMoxiWorksClient Client { get; set; }
 
-        public EventService(MoxiWorksClient client)
+        public EventService(IMoxiWorksClient client)
         {
             Client = client; 
         }

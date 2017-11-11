@@ -9,9 +9,9 @@ namespace MoxiWorks.Platform
     /// </summary>
     public class GroupService : IGroupService
     {
-        public MoxiWorksClient Client { get; set; }
+        public IMoxiWorksClient Client { get; set; }
 
-        public GroupService(MoxiWorksClient client)
+        public GroupService(IMoxiWorksClient client)
         {
             Client = client; 
         }

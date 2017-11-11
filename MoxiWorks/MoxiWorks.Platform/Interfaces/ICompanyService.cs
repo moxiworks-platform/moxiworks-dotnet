@@ -6,7 +6,7 @@ namespace MoxiWorks.Platform.Interfaces
     /// </summary>
     public interface ICompanyService
     {
-        MoxiWorksClient Client { get; set; }
+        IMoxiWorksClient Client { get; set; }
         Task<Response<Company>> GetCompanyAsync(string moxiWorksCompanyId);
     }
 }
