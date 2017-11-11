@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using MoxiWorks.Platform.Interfaces;
 namespace MoxiWorks.Platform
 {
     /// <summary>
@@ -8,9 +9,9 @@ namespace MoxiWorks.Platform
     /// </summary>
     public class BrandService
     {
-        public MoxiWorksClient Client { get; set; }
+        public IMoxiWorksClient Client { get; set; }
 
-        public BrandService(MoxiWorksClient client)
+        public BrandService(IMoxiWorksClient client)
         {
             Client = client; 
         }

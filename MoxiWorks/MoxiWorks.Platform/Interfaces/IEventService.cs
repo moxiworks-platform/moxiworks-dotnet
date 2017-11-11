@@ -7,7 +7,7 @@ namespace MoxiWorks.Platform.Interfaces
     /// </summary>
     public interface IEventService
     {
-        MoxiWorksClient Client { get; set; }
+        IMoxiWorksClient Client { get; set; }
         Task<Response<Event>> CreateEventAsync(Event cmaEvent);
         Task<Response<Event>> UpdateEventAsync(Event updateEvent);
         Task<Response<Event>> GetEventAsync(string agentId, AgentIdType agentIdType, string partnerEventId);

@@ -10,9 +10,9 @@ namespace MoxiWorks.Platform
     /// </summary>
     public class EmailCampiagnService //: IEmailCampiagnService
     {
-        public MoxiWorksClient Client { get; set; }
+        public IMoxiWorksClient Client { get; set; }
 
-        public EmailCampiagnService(MoxiWorksClient client)
+        public EmailCampiagnService(IMoxiWorksClient client)
         {
             Client = client; 
         }

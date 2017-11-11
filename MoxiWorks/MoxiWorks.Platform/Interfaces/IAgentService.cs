@@ -8,7 +8,7 @@ namespace MoxiWorks.Platform.Interfaces
     /// </summary>
     public interface IAgentService
     {
-        MoxiWorksClient Client { get; set; }
+        IMoxiWorksClient Client { get; set; }
         Task<Response<Agent>> GetAgentAsync(string agentId, string moxiWorksCompanyId);
 
         Task<Response<AgentResults>> GetAgentsAsync(string moxiWorksCompanyId, string moxiWorksOfficeId = null,

@@ -7,7 +7,7 @@ namespace MoxiWorks.Platform.Interfaces
     /// </summary>
     public interface IBuyerTransactionService
     {
-        MoxiWorksClient Client { get; set; }
+        IMoxiWorksClient Client { get; set; }
         Task<Response<BuyerTransaction>> CreateBuyerTransactionAsync(BuyerTransaction buyerTransaction);
         Task<Response<BuyerTransaction>> UpdateBuyerTransactionAsync(BuyerTransaction buyerTransaction);
 

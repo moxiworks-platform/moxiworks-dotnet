@@ -8,9 +8,9 @@ namespace MoxiWorks.Platform
     /// </summary>
     public class OfficeService : IOfficeService
     {
-        public MoxiWorksClient Client {get;set;}
+        public IMoxiWorksClient Client {get;set;}
 
-        public OfficeService(MoxiWorksClient client)
+        public OfficeService(IMoxiWorksClient client)
         {
             Client = client;
         }

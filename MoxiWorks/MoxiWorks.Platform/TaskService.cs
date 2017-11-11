@@ -10,9 +10,9 @@ namespace MoxiWorks.Platform
     /// </summary>
     public class TaskService : ITaskService
     {
-        private readonly MoxiWorksClient Client; 
+        private readonly IMoxiWorksClient Client; 
 
-        public TaskService(MoxiWorksClient client)
+        public TaskService(IMoxiWorksClient client)
         {
             Client = client; 
         }

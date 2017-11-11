@@ -6,10 +6,12 @@ using MoxiWorks.Platform.Interfaces;
 
 namespace MoxiWorks.Platform
 {
+
+
     /// <summary>
     /// Generic point of interaction to the IClientContext  
     /// </summary>
-    public class MoxiWorksClient
+    public class MoxiWorksClient : IMoxiWorksClient
     {
       
         protected IContextClient ClientContext { get; set; } = new ContextClient();

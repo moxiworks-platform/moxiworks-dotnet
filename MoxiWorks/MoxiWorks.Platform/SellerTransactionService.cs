@@ -8,9 +8,9 @@ namespace MoxiWorks.Platform
     /// </summary>
     public class SellerTransactionService : ISellerTransactionService
     {
-        public MoxiWorksClient Client { get; set; }
+        public IMoxiWorksClient Client { get; set; }
 
-        public SellerTransactionService(MoxiWorksClient client)
+        public SellerTransactionService(IMoxiWorksClient client)
         {
             Client = client;
         }

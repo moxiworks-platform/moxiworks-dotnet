@@ -8,7 +8,7 @@ namespace MoxiWorks.Platform.Interfaces
     /// </summary>
     public interface IListingService
     {
-        MoxiWorksClient Client { get; set; }
+        IMoxiWorksClient Client { get; set; }
         Task<Response<Listing>> GetListingAsync(string moxiWorksListingId, string moxiWorksCompanyId);
 
         Task<Response<ListingResults>> GetListingsUpdatedSinceAsync(string moxiWorksCompanyId
