@@ -60,5 +60,11 @@ namespace MoxiWorks.Platform
         /// MIME or media type of the image.
         /// </summary>
         public string MimeType { get; set; }
+        
+        /// <summary>
+        /// Embedded HTML that can be placed into a webpage – this will be used for embedded movies.
+        /// </summary>
+        public string EmbededHTMLContent { get; set; }
+        
     }
 }
