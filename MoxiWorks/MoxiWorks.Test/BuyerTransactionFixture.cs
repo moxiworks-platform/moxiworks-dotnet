@@ -14,7 +14,7 @@ namespace MoxiWorks.Test
             fake.PartnerContactId = "foo";
             fake.MoxiWorksContactId = "bar";
             Assert.False(fake.Validate());
-            Assert.Equal(1, fake.Errors.Count); 
+            Assert.StrictEqual(1, fake.Errors.Count); 
         }
 
         [Fact]
@@ -25,7 +25,7 @@ namespace MoxiWorks.Test
             fake.MlsNumber = string.Empty;
             
             Assert.False(fake.Validate());
-            Assert.Equal(1, fake.Errors.Count); 
+            Assert.StrictEqual(1, fake.Errors.Count); 
         }
 
         [Fact]
@@ -36,7 +36,7 @@ namespace MoxiWorks.Test
             fake.CommissionFlatFee = 2000; 
             
             Assert.False(fake.Validate());
-            Assert.Equal(1, fake.Errors.Count); 
+            Assert.StrictEqual(1, fake.Errors.Count); 
         }
         
         [Fact]
@@ -48,7 +48,7 @@ namespace MoxiWorks.Test
             fake.MaxPrice = 1;
             
             Assert.False(fake.Validate());
-            Assert.Equal(1, fake.Errors.Count); 
+            Assert.StrictEqual(1, fake.Errors.Count); 
         }
         
         

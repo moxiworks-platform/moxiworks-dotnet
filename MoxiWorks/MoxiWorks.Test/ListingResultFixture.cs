@@ -11,7 +11,7 @@ namespace MoxiWorks.Test
         public void ShouldReturnNullIfNoListingsExists()
         {
             var results = new ListingResults();
-            Assert.Equal(results.LastMoxiWorksID, null);  
+            Assert.Null(results.LastMoxiWorksID);  
         }
 
         [Fact]
@@ -26,7 +26,7 @@ namespace MoxiWorks.Test
             }
             results.Listings = listings;
 
-            Assert.Equal(results.LastMoxiWorksID, results.Listings[99].MoxiWorksListingId); 
+            Assert.Matches(results.LastMoxiWorksID, results.Listings[99].MoxiWorksListingId); 
 
         }
     }

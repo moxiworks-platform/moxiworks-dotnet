@@ -14,7 +14,7 @@ namespace MoxiWorks.Test
             fake.PartnerContactId = "foo";
             fake.MoxiWorksContactId = "bar";
             False(fake.Validate());
-            Equal(1, fake.Errors.Count); 
+            StrictEqual(1, fake.Errors.Count); 
         }
 
         [Fact]
@@ -25,7 +25,7 @@ namespace MoxiWorks.Test
             fake.MlsNumber = string.Empty;
             
             False(fake.Validate());
-            Equal(1, fake.Errors.Count); 
+            StrictEqual(1, fake.Errors.Count); 
         }
 
         [Fact]
@@ -37,7 +37,7 @@ namespace MoxiWorks.Test
             
             False(fake.Validate());
             True(fake.HasErrors);
-            Equal(1, fake.Errors.Count);
+            StrictEqual(1, fake.Errors.Count);
              
         }
         
@@ -51,7 +51,7 @@ namespace MoxiWorks.Test
             
             False(fake.Validate());
             True(fake.HasErrors);
-            Equal(1, fake.Errors.Count); 
+            StrictEqual(1, fake.Errors.Count); 
         }
 
 
