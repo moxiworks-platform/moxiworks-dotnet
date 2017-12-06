@@ -20,7 +20,10 @@ namespace MoxiWorks.Test
         public void ShouldTakeIdentifierAndSecret()
         {
            
-    
+            // lame dependancy on Configuration Manager
+            ConfigurationManager.AppSettings["Identifier"] = "foo";
+            ConfigurationManager.AppSettings["Secret"] = "bar";
+            
             Assert.Equal("foo",Credentials.Identifier);
             Assert.Equal("bar",Credentials.Secret ); 
         }

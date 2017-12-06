@@ -40,7 +40,7 @@ namespace MoxiWorks.Platform
         /// This is the unique identifer you use in your system that has been associated with the Contact that this Task regards.
         /// </param>
         /// <param name="partnerTaskId"></param>
-        /// <returns>Task Response emptu if task does not exist</returns>
+        /// <returns>Task Response empty if task does not exist</returns>
         public async Task<Response<Task>> GetTaskAsync(string agentId, AgentIdType agentIdType, string partnerContactId,
             string partnerTaskId)
         {
