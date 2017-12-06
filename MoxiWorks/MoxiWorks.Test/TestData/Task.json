@@ -1,0 +1,12 @@
+﻿{
+    "moxi_works_agent_id":"abc1234",
+    "partner_contact_id":"mySystemIDForContact2",
+    "name":"Reach Out to this other person!",
+    "description":"Call",
+    "due_at":"1465858694",
+    "duration":20,
+    "custom":false,
+    "status":"active",
+    "created_at":"1465772312",
+    "completed_at":null
+}
