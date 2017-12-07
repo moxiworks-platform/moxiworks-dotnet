@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>MoxiWorks.Platform</id>
-    <version>1.1.0</version>
+    <version>1.1.2</version>
     <title>Moxi Works Platform</title>
     <authors>Anthony Hatch</authors>
     <owners>Moxi Works</owners>
-    <projectUrl>"https://github.com/moxiworks-platform/moxiworks-dotnet"</projectUrl>
+    <projectUrl>https://github.com/moxiworks-platform/moxiworks-dotnet</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>SDK for interaction with the Moxi Works API platform.</description>
-    <releaseNotes>Initial  Release</releaseNotes>
+    <description>"DK for interaction with the Moxi Works API platform.</description>
+    <releaseNotes>Adding Gallery End Point 2</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>moxiworks api sdk</tags>
   </metadata>
