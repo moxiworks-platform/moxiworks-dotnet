@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Moxi Works Platform: MoxiWorks.Platform.ActionLogService Class Reference</title>
+<title>MoxiWork Platform: MoxiWorks.Platform.ActionLogService Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -19,9 +19,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { init_search(); });
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -30,28 +27,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="moxi_circle.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="moxiworks_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Moxi Works Platform
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">MoxiWork Platform
    </div>
-   <div id="projectbrief">.Net SDK for Moxi API</div>
+   <div id="projectbrief">.NET SDK For Moxi Works Public API</div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -61,6 +42,15 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -102,14 +92,21 @@ $(document).ready(function(){initNavTree('class_moxi_works_1_1_platform_1_1_acti
 
 <p>Moxi Works <a class="el" href="class_moxi_works_1_1_platform_1_1_action_log.html" title="Moxi Works ActionLog entries record actions that contacts take that an agent might want to see to inc...">ActionLog</a> entries record actions that contacts take that an agent might want to see to increase their effectivity. For example, if a contact sends an email to an agent asking a question, Moxi Works <a class="el" href="class_moxi_works_1_1_platform_1_1_action_log.html" title="Moxi Works ActionLog entries record actions that contacts take that an agent might want to see to inc...">ActionLog</a> will record that interaction and display it to the agent.  
  <a href="class_moxi_works_1_1_platform_1_1_action_log_service.html#details">More...</a></p>
-
-<p>Inherits <a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_action_log_service.html">MoxiWorks.Platform.Interfaces.IActionLogService</a>.</p>
+<div class="dynheader">
+Inheritance diagram for MoxiWorks.Platform.ActionLogService:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_moxi_works_1_1_platform_1_1_action_log_service.png" usemap="#MoxiWorks.Platform.ActionLogService_map" alt=""/>
+  <map id="MoxiWorks.Platform.ActionLogService_map" name="MoxiWorks.Platform.ActionLogService_map">
+<area href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_action_log_service.html" title="Wrapper around the service to allow stubbing of the service. " alt="MoxiWorks.Platform.Interfaces.IActionLogService" shape="rect" coords="0,0,292,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a69af114864fd754e85dbd15a645aaa05"><td class="memItemLeft" align="right" valign="top"><a id="a69af114864fd754e85dbd15a645aaa05"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ActionLogService</b> (<a class="el" href="class_moxi_works_1_1_platform_1_1_moxi_works_client.html">MoxiWorksClient</a> client)</td></tr>
-<tr class="separator:a69af114864fd754e85dbd15a645aaa05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c305b9ca17f1d2ae5bdc28fb7614143"><td class="memItemLeft" align="right" valign="top"><a id="a7c305b9ca17f1d2ae5bdc28fb7614143"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ActionLogService</b> (<a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html">IMoxiWorksClient</a> client)</td></tr>
+<tr class="separator:a7c305b9ca17f1d2ae5bdc28fb7614143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacf0242063ee7000877c44d02134bd39"><td class="memItemLeft" align="right" valign="top">async <a class="el" href="class_moxi_works_1_1_platform_1_1_task.html">Task</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_response.html">Response</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_action_log.html">ActionLog</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moxi_works_1_1_platform_1_1_action_log_service.html#aacf0242063ee7000877c44d02134bd39">CreateActionLogAsync</a> (<a class="el" href="class_moxi_works_1_1_platform_1_1_action_log.html">ActionLog</a> actionLog)</td></tr>
 <tr class="memdesc:aacf0242063ee7000877c44d02134bd39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create New Action Log.  <a href="#aacf0242063ee7000877c44d02134bd39">More...</a><br /></td></tr>
 <tr class="separator:aacf0242063ee7000877c44d02134bd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,13 +116,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a57acf6730c9ba8aad13cf05ed745210c"><td class="memItemLeft" align="right" valign="top"><a id="a57acf6730c9ba8aad13cf05ed745210c"></a>
-<a class="el" href="class_moxi_works_1_1_platform_1_1_moxi_works_client.html">MoxiWorksClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Client</b><code> [get, set]</code></td></tr>
-<tr class="separator:a57acf6730c9ba8aad13cf05ed745210c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0e5ac3a0b04cdb2979ca60d193848f"><td class="memItemLeft" align="right" valign="top"><a id="a0a0e5ac3a0b04cdb2979ca60d193848f"></a>
+<a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html">IMoxiWorksClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Client</b><code> [get, set]</code></td></tr>
+<tr class="separator:a0a0e5ac3a0b04cdb2979ca60d193848f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_action_log_service"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_action_log_service')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_action_log_service.html">MoxiWorks.Platform.Interfaces.IActionLogService</a></td></tr>
-<tr class="memitem:a20247f6f1a742a3811bb922c70487cd1 inherit properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_action_log_service"><td class="memItemLeft" align="right" valign="top"><a id="a20247f6f1a742a3811bb922c70487cd1"></a>
-<a class="el" href="class_moxi_works_1_1_platform_1_1_moxi_works_client.html">MoxiWorksClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Client</b><code> [get, set]</code></td></tr>
-<tr class="separator:a20247f6f1a742a3811bb922c70487cd1 inherit properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_action_log_service"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47df0266ba3296d7bc652a46bc7e88fb inherit properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_action_log_service"><td class="memItemLeft" align="right" valign="top"><a id="a47df0266ba3296d7bc652a46bc7e88fb"></a>
+<a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html">IMoxiWorksClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Client</b><code> [get, set]</code></td></tr>
+<tr class="separator:a47df0266ba3296d7bc652a46bc7e88fb inherit properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_action_log_service"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Moxi Works <a class="el" href="class_moxi_works_1_1_platform_1_1_action_log.html" title="Moxi Works ActionLog entries record actions that contacts take that an agent might want to see to inc...">ActionLog</a> entries record actions that contacts take that an agent might want to see to increase their effectivity. For example, if a contact sends an email to an agent asking a question, Moxi Works <a class="el" href="class_moxi_works_1_1_platform_1_1_action_log.html" title="Moxi Works ActionLog entries record actions that contacts take that an agent might want to see to inc...">ActionLog</a> will record that interaction and display it to the agent. </p>

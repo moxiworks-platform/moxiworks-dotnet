@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "Moxi Works Platform", "index.html", [
+  [ "MoxiWork Platform", "index.html", [
     [ "Packages", null, [
       [ "Packages", "namespaces.html", "namespaces" ],
       [ "Package Functions", "namespacemembers.html", [
@@ -25,8 +25,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_moxi_works_1_1_platform_1_1_group.html#a3437d87bb8565442dcefc4d629e42703",
-"functions_prop_y.html"
+"class_moxi_works_1_1_platform_1_1_gallery_results.html#aab4839c766425cbed9b1ffa44b5a1c7c",
+"functions_prop_i.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

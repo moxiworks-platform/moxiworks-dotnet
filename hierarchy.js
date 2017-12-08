@@ -20,6 +20,8 @@ var hierarchy =
     [ "MoxiWorks.Platform.EventDateList", "class_moxi_works_1_1_platform_1_1_event_date_list.html", null ],
     [ "MoxiWorks.Platform.EventDeleteResult", "class_moxi_works_1_1_platform_1_1_event_delete_result.html", null ],
     [ "MoxiWorks.Platform.EventResults", "class_moxi_works_1_1_platform_1_1_event_results.html", null ],
+    [ "MoxiWorks.Platform.Gallery", "class_moxi_works_1_1_platform_1_1_gallery.html", null ],
+    [ "MoxiWorks.Platform.GalleryResults", "class_moxi_works_1_1_platform_1_1_gallery_results.html", null ],
     [ "MoxiWorks.Platform.Group", "class_moxi_works_1_1_platform_1_1_group.html", null ],
     [ "MoxiWorks.Platform.GroupItem", "class_moxi_works_1_1_platform_1_1_group_item.html", null ],
     [ "MoxiWorks.Platform.GroupResults", "class_moxi_works_1_1_platform_1_1_group_results.html", null ],
@@ -43,11 +45,17 @@ var hierarchy =
     [ "MoxiWorks.Platform.Interfaces.IEventService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_event_service.html", [
       [ "MoxiWorks.Platform.EventService", "class_moxi_works_1_1_platform_1_1_event_service.html", null ]
     ] ],
+    [ "MoxiWorks.Platform.Interfaces.IGalleryService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_gallery_service.html", [
+      [ "MoxiWorks.Platform.GalleryService", "class_moxi_works_1_1_platform_1_1_gallery_service.html", null ]
+    ] ],
     [ "MoxiWorks.Platform.Interfaces.IGroupService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_group_service.html", [
       [ "MoxiWorks.Platform.GroupService", "class_moxi_works_1_1_platform_1_1_group_service.html", null ]
     ] ],
     [ "MoxiWorks.Platform.Interfaces.IListingService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_listing_service.html", [
       [ "MoxiWorks.Platform.ListingService", "class_moxi_works_1_1_platform_1_1_listing_service.html", null ]
+    ] ],
+    [ "MoxiWorks.Platform.Interfaces.IMoxiWorksClient", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html", [
+      [ "MoxiWorks.Platform.MoxiWorksClient", "class_moxi_works_1_1_platform_1_1_moxi_works_client.html", null ]
     ] ],
     [ "MoxiWorks.Platform.Interfaces.IOfficeService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_office_service.html", [
       [ "MoxiWorks.Platform.OfficeService", "class_moxi_works_1_1_platform_1_1_office_service.html", null ]
@@ -61,7 +69,6 @@ var hierarchy =
     [ "MoxiWorks.Platform.Listing", "class_moxi_works_1_1_platform_1_1_listing.html", null ],
     [ "MoxiWorks.Platform.ListingImage", "class_moxi_works_1_1_platform_1_1_listing_image.html", null ],
     [ "MoxiWorks.Platform.ListingResults", "class_moxi_works_1_1_platform_1_1_listing_results.html", null ],
-    [ "MoxiWorks.Platform.MoxiWorksClient", "class_moxi_works_1_1_platform_1_1_moxi_works_client.html", null ],
     [ "MoxiWorks.Platform.MoxiWorksError", "class_moxi_works_1_1_platform_1_1_moxi_works_error.html", null ],
     [ "MoxiWorks.Platform.Office", "class_moxi_works_1_1_platform_1_1_office.html", null ],
     [ "MoxiWorks.Platform.OfficeResults", "class_moxi_works_1_1_platform_1_1_office_results.html", null ],

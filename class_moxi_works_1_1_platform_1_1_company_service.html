@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Moxi Works Platform: MoxiWorks.Platform.CompanyService Class Reference</title>
+<title>MoxiWork Platform: MoxiWorks.Platform.CompanyService Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -19,9 +19,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { init_search(); });
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -30,28 +27,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="moxi_circle.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="moxiworks_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Moxi Works Platform
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">MoxiWork Platform
    </div>
-   <div id="projectbrief">.Net SDK for Moxi API</div>
+   <div id="projectbrief">.NET SDK For Moxi Works Public API</div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -61,6 +42,15 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -102,27 +92,34 @@ $(document).ready(function(){initNavTree('class_moxi_works_1_1_platform_1_1_comp
 
 <p>Finding an <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> using the Moxi Works platform.  
  <a href="class_moxi_works_1_1_platform_1_1_company_service.html#details">More...</a></p>
-
-<p>Inherits <a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_company_service.html">MoxiWorks.Platform.Interfaces.ICompanyService</a>.</p>
+<div class="dynheader">
+Inheritance diagram for MoxiWorks.Platform.CompanyService:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_moxi_works_1_1_platform_1_1_company_service.png" usemap="#MoxiWorks.Platform.CompanyService_map" alt=""/>
+  <map id="MoxiWorks.Platform.CompanyService_map" name="MoxiWorks.Platform.CompanyService_map">
+<area href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_company_service.html" title="Wrapper around the service to allow stubbing of the service. " alt="MoxiWorks.Platform.Interfaces.ICompanyService" shape="rect" coords="0,0,288,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7b834317d20aec91dc34564a9407f5c3"><td class="memItemLeft" align="right" valign="top"><a id="a7b834317d20aec91dc34564a9407f5c3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CompanyService</b> (<a class="el" href="class_moxi_works_1_1_platform_1_1_moxi_works_client.html">MoxiWorksClient</a> client)</td></tr>
-<tr class="separator:a7b834317d20aec91dc34564a9407f5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652604bb822cc59a8f610a71cd2a6905"><td class="memItemLeft" align="right" valign="top"><a id="a652604bb822cc59a8f610a71cd2a6905"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CompanyService</b> (<a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html">IMoxiWorksClient</a> client)</td></tr>
+<tr class="separator:a652604bb822cc59a8f610a71cd2a6905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f7e55f8deaf8bd1a8f07c08ef832669"><td class="memItemLeft" align="right" valign="top">async <a class="el" href="class_moxi_works_1_1_platform_1_1_task.html">Task</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_response.html">Response</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html">Company</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moxi_works_1_1_platform_1_1_company_service.html#a3f7e55f8deaf8bd1a8f07c08ef832669">GetCompanyAsync</a> (string moxiWorksCompanyId)</td></tr>
 <tr class="memdesc:a3f7e55f8deaf8bd1a8f07c08ef832669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finding an <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> using the Moxi Works platform.  <a href="#a3f7e55f8deaf8bd1a8f07c08ef832669">More...</a><br /></td></tr>
 <tr class="separator:a3f7e55f8deaf8bd1a8f07c08ef832669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a4654d811b0b4afb1c98c0222fb0541ba"><td class="memItemLeft" align="right" valign="top"><a id="a4654d811b0b4afb1c98c0222fb0541ba"></a>
-<a class="el" href="class_moxi_works_1_1_platform_1_1_moxi_works_client.html">MoxiWorksClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Client</b><code> [get, set]</code></td></tr>
-<tr class="separator:a4654d811b0b4afb1c98c0222fb0541ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d19e0538fe6f631ba25133fd48ac0ee"><td class="memItemLeft" align="right" valign="top"><a id="a9d19e0538fe6f631ba25133fd48ac0ee"></a>
+<a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html">IMoxiWorksClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Client</b><code> [get, set]</code></td></tr>
+<tr class="separator:a9d19e0538fe6f631ba25133fd48ac0ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_company_service"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_company_service')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_company_service.html">MoxiWorks.Platform.Interfaces.ICompanyService</a></td></tr>
-<tr class="memitem:a24047c42a9b45f40e2b20f7ed41a27a5 inherit properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_company_service"><td class="memItemLeft" align="right" valign="top"><a id="a24047c42a9b45f40e2b20f7ed41a27a5"></a>
-<a class="el" href="class_moxi_works_1_1_platform_1_1_moxi_works_client.html">MoxiWorksClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Client</b><code> [get, set]</code></td></tr>
-<tr class="separator:a24047c42a9b45f40e2b20f7ed41a27a5 inherit properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_company_service"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba5c44c7ab02725917d430b62876c1b inherit properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_company_service"><td class="memItemLeft" align="right" valign="top"><a id="a3ba5c44c7ab02725917d430b62876c1b"></a>
+<a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html">IMoxiWorksClient</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Client</b><code> [get, set]</code></td></tr>
+<tr class="separator:a3ba5c44c7ab02725917d430b62876c1b inherit properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_company_service"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Finding an <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> using the Moxi Works platform. </p>

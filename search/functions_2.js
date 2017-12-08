@@ -2,6 +2,7 @@ var searchData=
 [
   ['getactionlogsasync',['GetActionLogsAsync',['../class_moxi_works_1_1_platform_1_1_action_log_service.html#a917074a99da1c657b0f0cbdc01ba9c43',1,'MoxiWorks::Platform::ActionLogService']]],
   ['getagentasync',['GetAgentAsync',['../class_moxi_works_1_1_platform_1_1_agent_service.html#ab0f1316db7ea0706780d2b63c614ea95',1,'MoxiWorks::Platform::AgentService']]],
+  ['getagentgalleries',['GetAgentGalleries',['../class_moxi_works_1_1_platform_1_1_gallery_service.html#aab23305795542424f8077a885af8ddd3',1,'MoxiWorks::Platform::GalleryService']]],
   ['getagentsasync',['GetAgentsAsync',['../class_moxi_works_1_1_platform_1_1_agent_service.html#afa0add85754eb14c1936ddce60562d92',1,'MoxiWorks::Platform::AgentService']]],
   ['getbuyertransactionasync',['GetBuyerTransactionAsync',['../class_moxi_works_1_1_platform_1_1_buyer_transaction_service.html#aa504964e9b02dd6b0945c8ae9f32f57c',1,'MoxiWorks::Platform::BuyerTransactionService']]],
   ['getbuyertransactionsasync',['GetBuyerTransactionsAsync',['../class_moxi_works_1_1_platform_1_1_buyer_transaction_service.html#aaa47480c0eb12c25deb1eca986b92e37',1,'MoxiWorks::Platform::BuyerTransactionService']]],

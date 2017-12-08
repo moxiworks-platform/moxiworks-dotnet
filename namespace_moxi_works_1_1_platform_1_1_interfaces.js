@@ -8,8 +8,10 @@ var namespace_moxi_works_1_1_platform_1_1_interfaces =
     [ "IContextClient", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_context_client.html", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_context_client" ],
     [ "IEmailCampaignService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_email_campaign_service.html", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_email_campaign_service" ],
     [ "IEventService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_event_service.html", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_event_service" ],
+    [ "IGalleryService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_gallery_service.html", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_gallery_service" ],
     [ "IGroupService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_group_service.html", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_group_service" ],
     [ "IListingService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_listing_service.html", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_listing_service" ],
+    [ "IMoxiWorksClient", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client" ],
     [ "IOfficeService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_office_service.html", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_office_service" ],
     [ "ISellerTransactionService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_seller_transaction_service.html", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_seller_transaction_service" ],
     [ "ITaskService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_task_service.html", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_task_service" ]

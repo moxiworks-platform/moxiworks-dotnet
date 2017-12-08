@@ -8,8 +8,10 @@ var searchData=
   ['icontextclient',['IContextClient',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_context_client.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['iemailcampaignservice',['IEmailCampaignService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_email_campaign_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['ieventservice',['IEventService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_event_service.html',1,'MoxiWorks::Platform::Interfaces']]],
+  ['igalleryservice',['IGalleryService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_gallery_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['igroupservice',['IGroupService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_group_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['ilistingservice',['IListingService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_listing_service.html',1,'MoxiWorks::Platform::Interfaces']]],
+  ['imoxiworksclient',['IMoxiWorksClient',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['iofficeservice',['IOfficeService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_office_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['isellertransactionservice',['ISellerTransactionService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_seller_transaction_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['itaskservice',['ITaskService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_task_service.html',1,'MoxiWorks::Platform::Interfaces']]]

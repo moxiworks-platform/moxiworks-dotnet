@@ -9,6 +9,7 @@ var searchData=
   ['emailcampaigns',['EmailCampaigns',['../class_moxi_works_1_1_platform_1_1_email_campaign_results.html#a7a78010cfcbff44accfba27fbad06074',1,'MoxiWorks::Platform::EmailCampaignResults']]],
   ['emailcampiagnservice',['EmailCampiagnService',['../class_moxi_works_1_1_platform_1_1_email_campiagn_service.html',1,'MoxiWorks::Platform']]],
   ['emailelementbackgroundcolor',['EmailElementBackGroundColor',['../class_moxi_works_1_1_platform_1_1_brand.html#af9bae26a1cccae9f1c298f5d7a8b19b4',1,'MoxiWorks::Platform::Brand']]],
+  ['embededhtmlcontent',['EmbededHTMLContent',['../class_moxi_works_1_1_platform_1_1_listing_image.html#ae1c9f371240c1d06f8375fd962025389',1,'MoxiWorks::Platform::ListingImage']]],
   ['errorcode',['ErrorCode',['../class_moxi_works_1_1_platform_1_1_moxi_works_error.html#a22a116a132a490b45c286dd9ca8977c3',1,'MoxiWorks::Platform::MoxiWorksError']]],
   ['errors',['Errors',['../class_moxi_works_1_1_platform_1_1_buyer_transaction.html#a8eb885faa8c6f4d7c25523fb3ac92fdd',1,'MoxiWorks.Platform.BuyerTransaction.Errors()'],['../class_moxi_works_1_1_platform_1_1_response.html#af49308b5768b3497b605049a5f65e2af',1,'MoxiWorks.Platform.Response.Errors()']]],
   ['event',['Event',['../class_moxi_works_1_1_platform_1_1_event.html',1,'MoxiWorks::Platform']]],
