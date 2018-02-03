@@ -40,7 +40,7 @@ namespace MoxiWorks.Platform
         }
         
         /// <summary>
-        /// Get a BuyerTransactoin
+        /// Get a BuyerTransaction
         /// </summary>
         /// <param name="agentId">
         /// Must include either:
@@ -58,15 +58,15 @@ namespace MoxiWorks.Platform
         /// Agent ID for your  Buyer Transaction  request to be accepted.
         /// </param>
         /// <param name="agentIdType">What agentId type you are using.</param>
-        /// <param name="moxiworksTransactionId">
+        /// <param name="moxiWorksTransactionId">
         /// This is the Moxi Works Platform ID of the BuyerTransaction. 
         /// This will be an RFC 4122 compliant UUID.
         /// </param>
         /// <returns>Response containing the expected BuyerTransaction of an empty transaction object </returns>
         public async Task<Response<BuyerTransaction>> GetBuyerTransactionAsync(string agentId, AgentIdType agentIdType,
-            string moxiworksTransactionId)
+            string moxiWorksTransactionId)
         {
-            var builder = new UriBuilder($"buyer_transactions/{moxiworksTransactionId}")
+            var builder = new UriBuilder($"buyer_transactions/{moxiWorksTransactionId}")
                 .AddQueryPerameterAgentId(agentId,agentIdType);
 
             return await Client.GetRequestAsync<BuyerTransaction>(builder.GetUrl());
