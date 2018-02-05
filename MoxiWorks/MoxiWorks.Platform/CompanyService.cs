@@ -28,6 +28,17 @@ namespace MoxiWorks.Platform
             var builder = new UriBuilder($"/companies/{moxiWorksCompanyId}");
             return await Client.GetRequestAsync<Company>(builder.GetUrl());
         }
+        
+        /// <summary>
+        /// Returns CompanyResults that contains associated Companies for the request query
+        /// </summary>
+        /// <returns>List of Companies and associated company ids that you can use.</returns>
+        public async Task<Response<CompanyResults>> GetCompaniesAsync()
+        {
+            var builder = new UriBuilder($"companies");
+            return await Client.GetRequestAsync<CompanyResults>(builder.GetUrl());
+        }
+        
 
     }
 }
