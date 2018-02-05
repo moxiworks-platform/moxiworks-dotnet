@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace MoxiWorks.Platform
 {
     /// <summary>
-    /// Collection of Brands dates returned by a brand query.
+    /// Collection of Brands returned by a brand query.
     /// </summary>
     public class BrandResults
     {

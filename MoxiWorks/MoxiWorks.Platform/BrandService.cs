@@ -43,11 +43,11 @@ namespace MoxiWorks.Platform
         /// A valid Moxi Works Company ID. Use Company Endpoint to 
         /// determine what MoxiWorksCompanyID you can use.
         /// </param>
-        /// <returns>List of contact's logged actions</returns>
+        /// <returns>List of brands associated with the requested Agent or Company</returns>
         public async Task<Response<BrandResults>> GetBrandsAsync(string agentId,
             string moxiWorksCompanyId)
         {
-            var builder = new UriBuilder($"brands");
+            var builder = new UriBuilder($"brands")
                 .AddQueryPerameterAgentId("moxi_works_agent_id", agentId)
                 .AddQueryParameter("moxi_works_company_id", moxiWorksCompanyId);
             return await Client.GetRequestAsync<BrandResults>(builder.GetUrl());
