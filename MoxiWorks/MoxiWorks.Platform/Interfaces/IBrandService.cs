@@ -9,7 +9,6 @@ namespace MoxiWorks.Platform.Interfaces
 
         Task<Response<Brand>> GetCompanyBrandAsync(string moxiWorksCompanyId);
 
-        Task<Response<BrandResults>> GetBrandsAsync(string agentId, AgentIdType agentIdType,
-            string moxiWorksCompanyId);
+        Task<Response<BrandResults>> GetBrandsAsync(string moxiWorksCompanyId, string moxiWorksAgentId = null);
     }
 }
