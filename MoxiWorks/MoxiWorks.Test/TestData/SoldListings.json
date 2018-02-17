@@ -1,0 +1,235 @@
+{
+"FinalPage":true,
+"Listings": [
+{
+  "LotSizeAcres":0.0,
+  "BathroomsFull":3,
+  "BathroomsHalf":0,
+  "BathroomsOneQuarter":null,
+  "BathroomsPartial":null,
+  "BathroomsThreeQuarter":null,
+  "BathroomsTotalInteger":3,
+  "BathroomsTotal":3.0,
+  "BedroomsTotal":8,
+  "PublicRemarks":"Publicalistically Remarkabalistically! REMARKABLE!!",
+  "ModificationTimestamp":"11/01/2016",
+  "InternetAddressDisplayYN":true,
+  "DaysOnMarket":0,
+  "ListingContractDate":"07/27/2016",
+  "CreatedDate":"11/01/2016",
+  "ElementarySchool":"Elementary My Dear School",
+  "GarageSpaces":4,
+  "WaterfrontYN":false,
+  "HighSchool":"Higher Than Junior",
+  "AssociationFee":null,
+  "ListOfficeName":"Realty Valley United",
+  "ListPrice":599000,
+  "ListingID":"12323",
+  "ListAgentFullName":"Bob Agentson",
+  "ListAgentUUID":"8675309e9-1234-dead-beef-deadbeefdead",
+  "SecondaryListAgentFullName":"Richard Agent",
+  "SecondaryListAgentUUID":"8675309e9-2345-dead-beef-deadbeefdead",
+  "Address":"97 Hilltop Road",
+  "Address2":null,
+  "City":"Montecarlo",
+  "CountyOrParish":"Counting Parishes",
+  "Latitude":"47.723251",
+  "Longitude":"-122.171745",
+  "StateOrProvince":"NV",
+  "PostalCode":"87654",
+  "LotSizeSquareFeet":null,
+  "InternetEntireListingDisplayYN":true,
+  "MiddleOrJuniorSchool":"*The* Junior High" ,
+  "ListOfficeAOR":"WHATEVERS MLS",
+  "PoolYN":false,
+  "PropertyType":"Residential",
+  "TaxAnnualAmount":13652,
+  "TaxYear":2015,
+  "SingleStory":false,
+  "LivingArea":3640,
+  "ViewYN":false,
+  "YearBuilt":1989,
+  "OnMarket":true,
+  "Status":"active",
+  "MoxiWorksListingId":"abc123",
+  "AgentCreatedListing":false,
+  "VirtualTourURL":"http://the.virtual.tour.url",
+  "SoldDate":"11/04/2016",
+  "SoldPrice":192349,
+  "PropertyFeatures":[
+    {
+      "PropertyFeatureName": "Kitchen Information",
+      "PropertyFeatureValues": [
+        "Dishwasher",
+        "Microwave",
+        "Oven/Range Freestanding"
+      ]
+      },
+        {
+      "PropertyFeatureName": "Roof Description",
+      "PropertyFeatureValues": [
+        "Comp Shingle"
+      ]
+      },
+        {
+      "PropertyFeatureName": "Number Of Stories",
+      "PropertyFeatureValues": [
+        "Two Story"
+      ]
+      },
+        {
+      "PropertyFeatureName": "Interior Features",
+      "PropertyFeatureValues": [
+        "Bath Master",
+        "Broadband Internet",
+        "Cable/Satellite Tv",
+        "Dishwasher",
+        "Microwave",
+        "Oven/Range Freestanding"
+      ]
+    }
+  ],
+  "CompanyListingAttributes": [
+    {
+      "AttributeId": "the collection",
+      "AttributeName": "The Collection"
+    },
+      {
+        "AttributeId": "destination",
+        "AttributeName": "Destination"
+    }
+  ],
+  "ListingImages":[
+    {
+      "FullURL":"http://images.moxiworks.com/static/images/br/imagoo/default_property_image_wre-326x250.png",
+      "GalleryURL":"http://images.moxiworks.com/static/images/br/imagoo/default_property_image_wre-326x250.png",
+      "RawURL":"http://images.moxiworks.com/static/images/br/imagoo/default_property_image_wre-326x250.png",
+      "SmallURL":"http://images.moxiworks.com/static/images/br/imagoo/default_property_image_wre-326x250.png",
+      "ThumbURL":"http://images.moxiworks.com/static/images/br/imagoo/default_property_image_wre-326x250.png",
+      "Title":"Image Title",
+      "IsMainListingImage":true,
+      "Caption":"Image Caption",
+      "Description":"Image Description",
+      "Width":1024,
+      "Height":768,
+      "MimeType":"image/jpeg"
+    }
+  ]
+},
+{
+  "LotSizeAcres":0.0,
+  "BathroomsFull":2,
+  "BathroomsHalf":0,
+  "BathroomsOneQuarter":null,
+  "BathroomsPartial":null,
+  "BathroomsThreeQuarter":null,
+  "BathroomsTotalInteger":3,
+  "BathroomsTotal":3.0,
+  "BedroomsTotal":8,
+  "PublicRemarks":"SupervDuper Remarkabalistically! REMARKABLE!!",
+  "ModificationTimestamp":"11/01/2016",
+  "InternetAddressDisplayYN":true,
+  "DaysOnMarket":0,
+  "ListingContractDate":"07/27/2016",
+  "CreatedDate":"11/01/2016",
+  "ElementarySchool":"Elementary My Dear School",
+  "GarageSpaces":4,
+  "WaterfrontYN":false,
+  "HighSchool":"Higher Than Junior",
+  "AssociationFee":null,
+  "ListOfficeName":"Realty Valley United",
+  "ListPrice":299000,
+  "ListingID":"12325",
+  "ListAgentFullName":"Bob Agentson",
+  "ListAgentUUID":"8675309e9-1234-dead-beef-deadbeefdead",
+  "SecondaryListAgentFullName":"Richard Agent",
+  "SecondaryListAgentUUID":"8675309e9-2345-dead-beef-deadbeefdead",
+  "Address":"97 Hilltop Road",
+  "Address2":null,
+  "City":"Montecarlo",
+  "CountyOrParish":"Counting Parishes",
+  "Latitude":"47.723251",
+  "Longitude":"-122.171745",
+  "StateOrProvince":"NV",
+  "PostalCode":"87654",
+  "LotSizeSquareFeet":null,
+  "InternetEntireListingDisplayYN":true,
+  "MiddleOrJuniorSchool":"*The* Junior High" ,
+  "ListOfficeAOR":"WHATEVERS MLS",
+  "PoolYN":false,
+  "PropertyType":"Residential",
+  "TaxAnnualAmount":13652,
+  "TaxYear":2015,
+  "SingleStory":false,
+  "LivingArea":3640,
+  "ViewYN":false,
+  "YearBuilt":1989,
+  "OnMarket":true,
+  "Status":"active",
+  "MoxiWorksListingId":"abc123",
+  "AgentCreatedListing":false,
+  "VirtualTourURL":"http://the.virtual.tour.url",
+  "SoldDate":"11/04/2016",
+  "SoldPrice":499999,
+  "PropertyFeatures":[
+    {
+      "PropertyFeatureName": "Kitchen Information",
+      "PropertyFeatureValues": [
+        "Dishwasher",
+        "Microwave",
+        "Oven/Range Freestanding"
+      ]
+      },
+        {
+      "PropertyFeatureName": "Roof Description",
+      "PropertyFeatureValues": [
+        "Comp Shingle"
+      ]
+      },
+        {
+      "PropertyFeatureName": "Number Of Stories",
+      "PropertyFeatureValues": [
+        "Two Story"
+      ]
+      },
+        {
+      "PropertyFeatureName": "Interior Features",
+      "PropertyFeatureValues": [
+        "Bath Master",
+        "Broadband Internet",
+        "Cable/Satellite Tv",
+        "Dishwasher",
+        "Microwave",
+        "Oven/Range Freestanding"
+      ]
+    }
+  ],
+  "CompanyListingAttributes": [
+    {
+      "AttributeId": "the collection",
+      "AttributeName": "The Collection"
+    },
+      {
+        "AttributeId": "destination",
+        "AttributeName": "Destination"
+    }
+  ],
+  "ListingImages":[
+    {
+      "FullURL":"http://images.moxiworks.com/static/images/br/imagoo/default_property_image_wre-326x250.png",
+      "GalleryURL":"http://images.moxiworks.com/static/images/br/imagoo/default_property_image_wre-326x250.png",
+      "RawURL":"http://images.moxiworks.com/static/images/br/imagoo/default_property_image_wre-326x250.png",
+      "SmallURL":"http://images.moxiworks.com/static/images/br/imagoo/default_property_image_wre-326x250.png",
+      "ThumbURL":"http://images.moxiworks.com/static/images/br/imagoo/default_property_image_wre-326x250.png",
+      "Title":"Image Title",
+      "IsMainListingImage":true,
+      "Caption":"Image Caption",
+      "Description":"Image Description",
+      "Width":1024,
+      "Height":768,
+      "MimeType":"image/jpeg"
+    }
+  ]
+}    
+]
+}
