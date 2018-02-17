@@ -7,7 +7,7 @@ namespace MoxiWorks.Platform
     /// with a company. For example, you can get a Company’s logo for use within 
     /// your own product.
     /// </summary>
-    public class BrandService
+    public class BrandService : IBrandService
     {
         public IMoxiWorksClient Client { get; set; }
 

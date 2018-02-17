@@ -63,7 +63,8 @@ namespace MoxiWorks.Test
                 .RuleFor(b => b.State, f => f.Address.State())
                 .RuleFor(b => b.ZipCode, f => f.Address.ZipCode())
                 .RuleFor(b => b.Notes, f => f.Lorem.Paragraph());
-
         }
+        
+        
     }
 }
