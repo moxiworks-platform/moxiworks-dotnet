@@ -13,10 +13,14 @@ namespace MoxiWorks.Platform.Interfaces
         Task<Response<Contact>> CreateContactAsync(Contact contact);
         Task<Response<Contact>> UpdateContactAsync(Contact contact);
 
+               
+        Task<Response<ContactResults>> GetContactsAsync(string agentId, AgentIdType agentIdType, string emailAddress = null,
+            string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1); 
+        
         Task<Response<ContactResults>> GetContactResultsAgentUuidAsync(string AgentId, string emailAddress = null,
             string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1);
 
-        Task<Response<ContactResults>> GetContactResultsMoxiWorksagentId(string AgentId, string emailAddress = null,
+        Task<Response<ContactResults>> GetContactResultsMoxiWorksAgentIdAsync(string AgentId, string emailAddress = null,
             string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1);
 
         Task<Response<ContactResults>> GetContactsUpdatedSinceAsync(string agentId, AgentIdType agentIdType,
