@@ -9,4 +9,6 @@ The current implemtation uses the [HttpClient](https://msdn.microsoft.com/en-us/
 
 > **HttpClient** is intended to be instantiated once and re-used throughout the life of an application. Especially in server applications, creating a new HttpClient instance for every request will exhaust the number of sockets available under heavy loads. This will result in SocketException errors.
 
-Like the HttpClient only an instance of the MoxiWorks.Platform SDK sould be re-used for the life of the application. 
+Like the HttpClient only a single instance of the MoxiWorks.Platform SDK sould be created then re-used for the life of the application. 
+
+
