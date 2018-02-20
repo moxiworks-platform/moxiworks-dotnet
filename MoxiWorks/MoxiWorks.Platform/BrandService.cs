@@ -44,10 +44,10 @@ namespace MoxiWorks.Platform
         /// determine what MoxiWorksCompanyID you can use.
         /// </param>
         /// <returns>List of brands associated with the requested Agent or Company</returns>
-        public async Task<Response<BrandResults>> GetBrandsAsync(string moxiWorksCompanyId, string moxiWorksAgentId = null)
+        public async Task<Response<BrandResults>> GetBrandsAsync(string moxiWorksCompanyId, string agentId = null)
         {
             var builder = new UriBuilder($"brands")
-                .AddQueryParameter("moxi_works_agent_id", moxiWorksAgentId)
+                .AddQueryPerameterAgentId(agentId, AgentIdType.MoxiWorksagentId)
                 .AddQueryParameter("moxi_works_company_id", moxiWorksCompanyId);
             return await Client.GetRequestAsync<BrandResults>(builder.GetUrl());
         }

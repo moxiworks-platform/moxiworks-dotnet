@@ -77,6 +77,29 @@ namespace MoxiWorks.Platform
             return await Client.PutRequestAsync(builder.GetUrl(), contact);
 
         }
+        /// <summary>
+        /// Gets Contact through the specified ID type.
+        /// </summary>
+        /// <param name="agentId">
+        /// AgentUuid
+        /// This is the Moxi Works Platform ID of the agent which an ActionLog entry is associated 
+        /// with. This will be an RFC 4122 compliant UUID. 
+        /// agent_uuid or moxi_works_agent_id is required and must reference a 
+        /// valid Moxi Works Agent ID for your ActionLog request to be accepted.
+        /// </param>
+        /// <param name="emailAddress">An email address associated with the Contact record. May be primary or secondary.</param>
+        /// <param name="contactName">The full name of the contact which you are trying to find the Contact record for.</param>
+        /// <param name="phoneNumber">A phone number associated with the Contact record. May be primary or secondary.</param>
+        /// <param name="updatedSince">Paged responses of all Contact objects updated after this Unix timestamp will be returned in the response.</param>
+        /// <param name="pageNumber">Page of Contact records to return. Use if total_pages indicates that there is more than one page of data available.</param>
+        /// <returns>response of contacts</returns>
+        public async Task<Response<ContactResults>> GetContactsAsync(string agentId, AgentIdType agentIdType, string emailAddress = null,
+            string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1)
+        {
+            return await GetContactsUpdatedSinceAsync(agentId, agentIdType, emailAddress, contactName, phoneNumber,
+                updatedSince, pageNumber);
+        }
+        
         
         /// <summary>
         /// Gets Contact through the AgentUuid.
@@ -118,7 +141,7 @@ namespace MoxiWorks.Platform
         /// <param name="updatedSince">Paged responses of all Contact objects updated after this Unix timestamp will be returned in the response.</param>
         /// <param name="pageNumber">Page of Contact records to return. Use if total_pages indicates that there is more than one page of data available.</param>
         /// <returns>response of contacts</returns>
-        public async Task<Response<ContactResults>> GetContactResultsMoxiWorksagentId(string AgentId, string emailAddress = null,
+        public async Task<Response<ContactResults>> GetContactResultsMoxiWorksAgentIdAsync(string AgentId, string emailAddress = null,
             string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1)
         {
             return await GetContactsUpdatedSinceAsync(AgentId, AgentIdType.MoxiWorksagentId, emailAddress, contactName,
