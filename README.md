@@ -1,4 +1,5 @@
 # moxiworks-dotnet
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d3e46b3d41624fea8f61b1da33cb7139)](https://www.codacy.com/app/moxiworks/moxiworks-dotnet?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=moxiworks-platform/moxiworks-dotnet&amp;utm_campaign=Badge_Grade)
  SDK for interacting with Moxi Works API.
  
  Currently based on the [.NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md)
