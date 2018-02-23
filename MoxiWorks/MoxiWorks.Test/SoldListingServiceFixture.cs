@@ -15,6 +15,8 @@ namespace MoxiWorks.Test
             var response = service.GetSoldListingAsync("moxiworks_listing_id","moxi_works_company_id").Result; 
             
             Assert.IsType<SoldListing>(response.Item);
+        
+            
         }
         
         
@@ -24,20 +26,12 @@ namespace MoxiWorks.Test
             var soldListingsJson = StubDataLoader.LoadJsonFile("SoldListings.json");  
            
             var service = new SoldListingService(new MoxiWorksClient(new StubContextClient(soldListingsJson)));
-            var response = service.GetListingsUpdatedSinceAsync("moxi_works_company_id", AgentIdType.MoxiWorksagentId,"MoxiWorksagentId", DateTime.Now).Result; 
+            var response = service.GetSoldListingsUpdatedSinceAsync("moxi_works_company_id", AgentIdType.MoxiWorksagentId,"MoxiWorksagentId", DateTime.Now).Result; 
             
             Assert.IsType<SoldListingResults>(response.Item);
+            Assert.True(response.Item.Listings.Count == 2);
           
         }
 
-//       [Fact]
-//        public void ShouldHanldeApiReturnedErrors()
-//        {
-//            var json = StubDataLoader.LoadJsonFile("FailureResponse.json"); 
-//            var service = new TaskService(new MoxiWorksClient(new StubContextClient(json)));
-//            var response = service.GetTaskAsync("foo", AgentIdType.AgentUuid, "1234", "12345").Result;
-//            Assert.True((bool?) response.HasErrors); 
-//            
-//        }
     }
 }

@@ -45,7 +45,7 @@ namespace MoxiWorks.Platform
         /// the Contact record does not exist.
         /// </param>
         /// <returns></returns>
-        public async Task<Response<EmailCampaignResults>> GetEmailCampaignAsync(string agentId, AgentIdType agentIdType,
+        public async Task<Response<EmailCampaignResults>> GetEmailCampaignsAsync(string agentId, AgentIdType agentIdType,
             string partnerContactId)
         {
             var builder = new UriBuilder("email_campaigns")

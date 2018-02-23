@@ -84,6 +84,9 @@ namespace MoxiWorks.Platform
 
         public UriBuilder AddQueryPerameterAgentId(string agentId, AgentIdType agentIdType)
         {
+            if (agentIdType == AgentIdType.NotAvaliable)
+                return this; 
+                
             AddQueryParameter(agentIdType == AgentIdType.AgentUuid ? "agent_uuid" : "moxi_works_agent_id",
                 agentId);
             return this; 

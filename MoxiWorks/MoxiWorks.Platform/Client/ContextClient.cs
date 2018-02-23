@@ -41,7 +41,7 @@ namespace MoxiWorks.Platform
             var auth = AuthenticationHeaderValue.Parse("Basic " + cred.ToBase64());
             client.DefaultRequestHeaders.Authorization = auth;
             client.DefaultRequestHeaders.Add("Accept", "application/vnd.moxi-platform+json;version=1");
-
+            client.DefaultRequestHeaders.Add("User-Agent", "moxiworks_platform dotnet client");
             if (!Session.Instance.IsSessionCookieSet) return client;
 
             var cookie = Session.Instance.SessionCookie;
