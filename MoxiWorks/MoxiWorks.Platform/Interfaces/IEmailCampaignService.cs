@@ -7,7 +7,7 @@ namespace MoxiWorks.Platform.Interfaces
     /// </summary>
     interface IEmailCampaignService
     {
-         Task<Response<EmailCampaignResults>> GetEmailCampaignAsync(string agentId, AgentIdType agentIdType,
+         Task<Response<EmailCampaignResults>> GetEmailCampaignsAsync(string agentId, AgentIdType agentIdType,
             string partnerContactId);
     }
 }

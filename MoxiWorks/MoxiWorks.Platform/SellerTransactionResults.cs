@@ -14,6 +14,7 @@ namespace MoxiWorks.Platform
         /// </summary>
         [JsonProperty("page_number")]
         public int? PageNumber { get; set; }
+        
         /// <summary>
         /// If there is more than one page of SellerTransaction objects to return, total_pages will denote how many 
         /// pages of SellerTransaction objects there are to be returned fo the current query. Subsequent pages can 

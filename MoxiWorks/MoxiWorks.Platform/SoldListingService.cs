@@ -64,8 +64,8 @@ namespace MoxiWorks.Platform
         /// <param name="lastMoxiWorksListingId">
         /// If fetching a multi-page response, this should be the MoxiWorksListingId found in the last Listing object of the previously fetched page.</param>
         /// <returns></returns>
-        public async Task<Response<SoldListingResults>> GetListingsUpdatedSinceAsync(string moxiWorksCompanyId
-            ,AgentIdType agentIdType, string agentId = null,DateTime? updatedSince = null  
+        public async Task<Response<SoldListingResults>> GetSoldListingsUpdatedSinceAsync(string moxiWorksCompanyId
+            ,AgentIdType agentIdType , string agentId = null,DateTime? updatedSince = null  
              ,string lastMoxiWorksListingId = null)
         {
             var builder = new UriBuilder("sold_listings/")
