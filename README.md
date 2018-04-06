@@ -1,14 +1,85 @@
 # moxiworks-dotnet ![Codacy Badge](https://api.codacy.com/project/badge/Grade/d3e46b3d41624fea8f61b1da33cb7139)
 
- SDK for interacting with Moxi Works API.
- 
- Currently based on the [.NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md)
+ .net Standards 2.0 SDK for interacting with Moxi Works API.
+
+## Getting Started
 
 
-The current implemtation uses the [HttpClient](https://msdn.microsoft.com/en-us/library/system.net.http.httpclient(v=vs.118).aspx) for session handling.
+### Prerequisites
 
-> **HttpClient** is intended to be instantiated once and re-used throughout the life of an application. Especially in server applications, creating a new HttpClient instance for every request will exhaust the number of sockets available under heavy loads. This will result in SocketException errors.
-
-Like the HttpClient only a single instance of the MoxiWorks.Platform SDK sould be created then re-used for the life of the application. 
+  Access to NuGet Package Manger or .NET CLI
 
 
+### Installing
+
+Install through Package Manager
+
+```
+PM> Install-Package MoxiWorks.Platform -Version 1.2.2
+
+```
+
+Install through .NET CLI
+
+```
+> dotnet add package MoxiWorks.Platform --version 1.2.2
+
+```
+###### ASP.NET Core  
+
+appsettings.json
+```
+{
+    "AppSettings": {
+        "Secret": "the_secret",
+        "Identifier": "the_identifier"
+    }
+}
+```
+.Net Core requires AppSettings to be passed to the  ConfigurationManager in Startup.cs .
+```
+public class Startup
+{
+   public Startup(IConfiguration configuration)
+   {
+       Configuration = configuration;
+       ConfigurationManager.AppSettings["Secret"] = Configuration["Secret"];
+       ConfigurationManager.AppSettings["Identifier"] = Configuration["Identifier"];
+   }
+
+}
+```
+Inject services as singletons
+```
+public void ConfigureServices(IServiceCollection services)
+{
+
+    services.AddSingleton<IMoxiWorksClient, MoxiWorksClient>();
+    services.AddSingleton<IAgentService, AgentService>();
+    services.AddSingleton<ICompanyService, CompanyService>();
+    services.AddSingleton<IOfficeService, OfficeService>();
+    services.AddMvc();
+
+}
+```
+
+## Built With
+
+* [.NET Stardard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) uses
+* [NuGet](https://www.nuget.org/) - Dependency Management
+* [Visual Studio](https://www.visualstudio.com/) - Coding
+* [Rider](https://www.jetbrains.com/rider/) - Coding
+
+
+## Versioning
+For the versions available, see the [tags on this repository](https://github.com/moxiworks-platform/moxiworks-dotnet/tags).
+
+## Authors
+
+* **Anthony Hatch** - *Initial work* - [ahatch1490](https://github.com/ahatch1490/)
+
+See also the list of [contributors](https://github.com/moxiworks-platform/moxiworks-dotnet/graphs/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License 

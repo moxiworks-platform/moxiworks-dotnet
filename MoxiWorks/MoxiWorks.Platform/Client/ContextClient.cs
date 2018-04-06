@@ -50,7 +50,7 @@ namespace MoxiWorks.Platform
             return client;
         }
         
-        public async Task<string>  GetRequestAsync<T>(string url)
+        public async Task<string>  GetRequestAsync(string url)
         {
 
             var client = RequestClient();
@@ -103,7 +103,7 @@ namespace MoxiWorks.Platform
             return  await content.ReadAsStringAsync();
         }
 
-        public async Task<string>  DeleteRequestAsync<T>(string url)
+        public async Task<string>  DeleteRequestAsync(string url)
         {
             var client = RequestClient();
             var result = await client.DeleteAsync(new Uri(url));

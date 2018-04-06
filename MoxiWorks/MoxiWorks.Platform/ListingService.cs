@@ -11,7 +11,7 @@ namespace MoxiWorks.Platform
     public class ListingService : IListingService
     {
         public IMoxiWorksClient Client { get; set; }
-        
+
         public ListingService(IMoxiWorksClient client)
         {
             Client = client;
@@ -31,7 +31,7 @@ namespace MoxiWorks.Platform
         public async Task<Response<Listing>> GetListingAsync(string moxiWorksListingId, string moxiWorksCompanyId)
         {
             var builder = new UriBuilder($"listings/{moxiWorksListingId}");
-            builder.AddQueryParameter("moxi_works_company_id",moxiWorksCompanyId);
+            builder.AddQueryParameter("moxi_works_company_id", moxiWorksCompanyId);
 
             return await Client.GetRequestAsync<Listing>(builder.GetUrl());
         }
@@ -67,8 +67,8 @@ namespace MoxiWorks.Platform
         /// If fetching a multi-page response, this should be the MoxiWorksListingId found in the last Listing object of the previously fetched page.</param>
         /// <returns></returns>
         public async Task<Response<ListingResults>> GetListingsUpdatedSinceAsync(string moxiWorksCompanyId
-            ,AgentIdType agentIdType, string agentId = null,DateTime? updatedSince = null  
-             ,string lastMoxiWorksListingId = null)
+            , AgentIdType agentIdType, string agentId = null, DateTime? updatedSince = null
+            , string lastMoxiWorksListingId = null)
         {
             var builder = new UriBuilder("listings/")
                 .AddQueryPerameterAgentId(agentId, agentIdType)
@@ -76,8 +76,25 @@ namespace MoxiWorks.Platform
                 .AddQueryParameter("updated_since", updatedSince)
                 .AddQueryParameter("last_moxi_works_listing_id", lastMoxiWorksListingId);
 
-            return await Client.GetRequestAsync<ListingResults>(builder.GetUrl()); 
+            return await Client.GetRequestAsync<ListingResults>(builder.GetUrl());
         }
+
         
+        
+        /// <summary>
+        /// Updates the listing data specified in ListingUpdatableData of the ListingUpdate object
+        /// </summary>
+        /// <param name="listingUpdate"></param>
+        /// <returns>ListingResu</returns>
+        public async Task<Response<ListingResults>> UpdateListingData(ListingUpdate listingUpdate)
+        {
+            var builder = new UriBuilder($"listings/{listingUpdate.MoxWorksListingId}")
+                .AddQueryParameter("moxi_works_company_id", listingUpdate.MoxiWorksCompanyId);
+
+
+
+            return await Client.PutRequestAsync<ListingResults, ListingUpdate>(builder.GetUrl(), listingUpdate);
+        }
+
     }
 }

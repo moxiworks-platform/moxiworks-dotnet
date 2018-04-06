@@ -24,7 +24,7 @@ namespace MoxiWorks.Platform
         
         public async Task<Response<T>> GetRequestAsync<T>(string url)
         {
-            var s =  await ClientContext.GetRequestAsync<T>(url);
+            var s =  await ClientContext.GetRequestAsync(url);
 
             return DeserializeToResponse<T>(s);
         }
@@ -33,21 +33,25 @@ namespace MoxiWorks.Platform
         {
             return DeserializeToResponse<T>( await ClientContext.PostRequestAsync(url,obj));
         }
-        
+
+        public async Task<Response<T>> PutRequestAsync<T, U>(string url, U obj)
+        {
+            return DeserializeToResponse<T>( await ClientContext.PutRequestAsync(url,obj));
+        }
+
         public async  Task<Response<T>> PutRequestAsync<T>(string url, T obj)
         {
             return DeserializeToResponse<T>( await ClientContext.PutRequestAsync(url,obj));
-
         }
 
         public  async Task<Response<T>> DeleteRequestAsync<T>(string url)
         {
-            return DeserializeToResponse<T>(await ClientContext.DeleteRequestAsync<T>(url));
+            return DeserializeToResponse<T>(await ClientContext.DeleteRequestAsync(url));
         }
 
         private Response<T> DeserializeToResponse<T>(string json)
         {
-            var error = JsonConvert.DeserializeObject<MoxiWorksError>(json);
+            var error = DeserializeErrors(json);
             Response<T> response;
 
             if (error.Messages.Any())
@@ -66,6 +70,21 @@ namespace MoxiWorks.Platform
             }
            
             return response;
+        }
+
+        private MoxiWorksError DeserializeErrors(string json)
+        {
+            MoxiWorksError error; 
+            try
+            {
+                error = JsonConvert.DeserializeObject<MoxiWorksError>(json);
+            }
+            catch(JsonSerializationException)
+            {
+                error = new MoxiWorksError(); 
+            }
+
+            return error;
         }
 
     }
