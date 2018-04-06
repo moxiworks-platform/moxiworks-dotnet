@@ -1,0 +1,20 @@
+{
+  "uuid":"feedface-dead-beef-aadf-baddeedc645",
+  "name": "New Team One",
+  "email": "email@address",
+  "address1": "1234 Here St.",
+  "address2": "Suite: 1234",
+  "city": "Sweetville",
+  "zipcode": "91820",
+  "state": "OR",
+  "phone": "666-555-1234",
+  "fax": "666-867-5309",
+  "logo_url": "http://website.url/logo.png",
+  "photo_url": "http://website.url/image.jpg",
+  "description": "<h1>Heading 1</h1><ol><li>a</li></ol><h1><br />This team is the <em><strong>teamiest</strong> </em>of all the <sub>teams</sub>, <span style='text-decoration: underline;'>hands</span> down!</h1>",
+  "social_media_urls": null,
+  "alt_phone": "666-555-4444",
+  "alt_email": "alternate@email.address",
+  "website_url": "http://the.team.website",
+  "active": true
+}

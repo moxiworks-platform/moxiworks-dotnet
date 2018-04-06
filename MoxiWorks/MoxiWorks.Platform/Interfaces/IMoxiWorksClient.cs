@@ -12,6 +12,7 @@ namespace MoxiWorks.Platform.Interfaces
     {
         Task<Response<T>> GetRequestAsync<T>(string url);
         Task<Response<T>> PostRequestAsync<T>(string url, T obj);
+        Task<Response<T>> PutRequestAsync<T,U>(string url, U obj);
         Task<Response<T>> PutRequestAsync<T>(string url, T obj);
         Task<Response<T>> DeleteRequestAsync<T>(string url);
     }

@@ -14,7 +14,15 @@ namespace MoxiWorks.Platform.Interfaces
         Task<Response<Task>> UpdateTaskAsync(Task task);
         Task<Response<Task>> CreateTaskAsync(Task task);
 
+        Task<Response<TaskResponse>> GetTasksDueForContactForAsync(string agentId, AgentIdType agentIdType,
+            string partnerContactId, int pageNumber = 1);
+        
         Task<Response<TaskResponse>> GetTaskDueBetweenAsync(string agentId, AgentIdType agentIdType, DateTime startDate,
-            DateTime endDate, string partnerContactId, int pageNumber =1);
+            DateTime endDate,  int pageNumber =1);
+
+        Task<Response<TaskResponse>> GetTasksAsync(string agentId, AgentIdType agentIdType, DateTime? startDate,
+            DateTime? endDate, string partnerContactId, int pageNumber = 1);
+        
+        
     }
 }
