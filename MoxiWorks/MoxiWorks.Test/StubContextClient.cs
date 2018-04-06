@@ -14,7 +14,7 @@ namespace MoxiWorks.Test
         {
             Json = json;
         }
-        public async Task<string> GetRequestAsync<T>(string url)
+        public async Task<string> GetRequestAsync(string url)
         {
             
             var mockTask = new Task<FooBar>(() => new FooBar(Json));
@@ -39,7 +39,7 @@ namespace MoxiWorks.Test
             return  mockTask.Result.GetTestJson();
         }
 
-        public async Task<string> DeleteRequestAsync<T>(string url)
+        public async Task<string> DeleteRequestAsync(string url)
         {
             var mockTask = new Task<FooBar>(() => new FooBar(Json));
             mockTask.Start();

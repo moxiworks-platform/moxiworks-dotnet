@@ -24,7 +24,7 @@ namespace MoxiWorks.Platform
         
         public async Task<Response<T>> GetRequestAsync<T>(string url)
         {
-            var s =  await ClientContext.GetRequestAsync<T>(url);
+            var s =  await ClientContext.GetRequestAsync(url);
 
             return DeserializeToResponse<T>(s);
         }
@@ -46,7 +46,7 @@ namespace MoxiWorks.Platform
 
         public  async Task<Response<T>> DeleteRequestAsync<T>(string url)
         {
-            return DeserializeToResponse<T>(await ClientContext.DeleteRequestAsync<T>(url));
+            return DeserializeToResponse<T>(await ClientContext.DeleteRequestAsync(url));
         }
 
         private Response<T> DeserializeToResponse<T>(string json)
