@@ -17,7 +17,7 @@ namespace MoxiWorks.Platform
        
         public int? TotalPages { get; set; } = 1;
         /// <summary>
-        /// List of a brockerages offices 
+        /// List of Teams within a company 
         /// </summary>
         public List<Team>Teams{ get; set; } = new List<Team>();
 
