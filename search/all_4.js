@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['elementaryschool',['ElementarySchool',['../class_moxi_works_1_1_platform_1_1_listing.html#a854212ed3f1d6fa84428f6693efe7097',1,'MoxiWorks::Platform::Listing']]],
-  ['email',['Email',['../class_moxi_works_1_1_platform_1_1_office.html#a2dfd1f1aaea38ef1192d35b7fae21810',1,'MoxiWorks::Platform::Office']]],
+  ['edited',['Edited',['../class_moxi_works_1_1_platform_1_1_presentation_log.html#af5ae74825a42b21856c196dd6d99a1e0',1,'MoxiWorks::Platform::PresentationLog']]],
+  ['elementaryschool',['ElementarySchool',['../class_moxi_works_1_1_platform_1_1_listing_base.html#afbb58b3eebaba2ec1f860f96548b23bb',1,'MoxiWorks::Platform::ListingBase']]],
+  ['email',['Email',['../class_moxi_works_1_1_platform_1_1_office.html#a2dfd1f1aaea38ef1192d35b7fae21810',1,'MoxiWorks.Platform.Office.Email()'],['../class_moxi_works_1_1_platform_1_1_team.html#a239fa3f82d447668ce1e91d01a97737f',1,'MoxiWorks.Platform.Team.Email()']]],
   ['emailaddress',['EmailAddress',['../class_moxi_works_1_1_platform_1_1_email_campaign.html#a6b3b08b703e85e119e3f0e945ea50f8f',1,'MoxiWorks::Platform::EmailCampaign']]],
   ['emailbackgroundfontcolor',['EmailBackGroundFontColor',['../class_moxi_works_1_1_platform_1_1_brand.html#ad885a8d6d19efe3aef2fe660bd139318',1,'MoxiWorks::Platform::Brand']]],
   ['emailcampaign',['EmailCampaign',['../class_moxi_works_1_1_platform_1_1_email_campaign.html',1,'MoxiWorks::Platform']]],
@@ -10,6 +11,7 @@ var searchData=
   ['emailcampiagnservice',['EmailCampiagnService',['../class_moxi_works_1_1_platform_1_1_email_campiagn_service.html',1,'MoxiWorks::Platform']]],
   ['emailelementbackgroundcolor',['EmailElementBackGroundColor',['../class_moxi_works_1_1_platform_1_1_brand.html#af9bae26a1cccae9f1c298f5d7a8b19b4',1,'MoxiWorks::Platform::Brand']]],
   ['embededhtmlcontent',['EmbededHTMLContent',['../class_moxi_works_1_1_platform_1_1_listing_image.html#ae1c9f371240c1d06f8375fd962025389',1,'MoxiWorks::Platform::ListingImage']]],
+  ['endtime',['EndTime',['../class_moxi_works_1_1_platform_1_1_open_house.html#a43a5466ce3cc75e6885be05fc533a12c',1,'MoxiWorks::Platform::OpenHouse']]],
   ['errorcode',['ErrorCode',['../class_moxi_works_1_1_platform_1_1_moxi_works_error.html#a22a116a132a490b45c286dd9ca8977c3',1,'MoxiWorks::Platform::MoxiWorksError']]],
   ['errors',['Errors',['../class_moxi_works_1_1_platform_1_1_buyer_transaction.html#a8eb885faa8c6f4d7c25523fb3ac92fdd',1,'MoxiWorks.Platform.BuyerTransaction.Errors()'],['../class_moxi_works_1_1_platform_1_1_response.html#af49308b5768b3497b605049a5f65e2af',1,'MoxiWorks.Platform.Response.Errors()']]],
   ['event',['Event',['../class_moxi_works_1_1_platform_1_1_event.html',1,'MoxiWorks::Platform']]],
@@ -22,5 +24,7 @@ var searchData=
   ['events',['Events',['../class_moxi_works_1_1_platform_1_1_event_date_list.html#a41606e5186c0357d45a5de24b852d895',1,'MoxiWorks::Platform::EventDateList']]],
   ['eventservice',['EventService',['../class_moxi_works_1_1_platform_1_1_event_service.html',1,'MoxiWorks::Platform']]],
   ['eventstart',['EventStart',['../class_moxi_works_1_1_platform_1_1_event.html#a8f5ecda501f33799f06819fae41aa8dd',1,'MoxiWorks::Platform::Event']]],
-  ['eventsubject',['EventSubject',['../class_moxi_works_1_1_platform_1_1_event.html#a938214a50d9ee68e56837365b38de30f',1,'MoxiWorks::Platform::Event']]]
+  ['eventsubject',['EventSubject',['../class_moxi_works_1_1_platform_1_1_event.html#a938214a50d9ee68e56837365b38de30f',1,'MoxiWorks::Platform::Event']]],
+  ['externalidentifier',['ExternalIdentifier',['../class_moxi_works_1_1_platform_1_1_presentation_log.html#acf21779b999c6aa1370fc4d54531fe43',1,'MoxiWorks::Platform::PresentationLog']]],
+  ['externalofficeid',['ExternalOfficeId',['../class_moxi_works_1_1_platform_1_1_presentation_log.html#ab77906a3ebd70d5d306c0b2218cd0068',1,'MoxiWorks::Platform::PresentationLog']]]
 ];

@@ -2,6 +2,7 @@ var searchData=
 [
   ['iactionlogservice',['IActionLogService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_action_log_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['iagentservice',['IAgentService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_agent_service.html',1,'MoxiWorks::Platform::Interfaces']]],
+  ['ibrandservice',['IBrandService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_brand_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['ibuyertransactionservice',['IBuyerTransactionService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_buyer_transaction_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['icompanyservice',['ICompanyService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_company_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['icontactservice',['IContactService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_contact_service.html',1,'MoxiWorks::Platform::Interfaces']]],
@@ -19,12 +20,15 @@ var searchData=
   ['imageprescoverlogo',['ImagePresCoverLogo',['../class_moxi_works_1_1_platform_1_1_brand.html#ae67b7dcfc7e7a8462eb2526a9c27cbe5',1,'MoxiWorks::Platform::Brand']]],
   ['imageurl',['ImageUrl',['../class_moxi_works_1_1_platform_1_1_office.html#a316b6ae0963ca21a28ed7a1e2766920f',1,'MoxiWorks::Platform::Office']]],
   ['imoxiworksclient',['IMoxiWorksClient',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html',1,'MoxiWorks::Platform::Interfaces']]],
-  ['internetaddressdisplayyn',['InternetAddressDisplayYN',['../class_moxi_works_1_1_platform_1_1_listing.html#a9704c081b71a1df3d9867ac370e974af',1,'MoxiWorks::Platform::Listing']]],
-  ['internetentirelistingdisplayyn',['InternetEntireListingDisplayYN',['../class_moxi_works_1_1_platform_1_1_listing.html#a12669445d538b2300d291305b93ed78d',1,'MoxiWorks::Platform::Listing']]],
+  ['internetaddressdisplayyn',['InternetAddressDisplayYN',['../class_moxi_works_1_1_platform_1_1_listing_base.html#aeceb9089f0f4d76a99139479285257e2',1,'MoxiWorks::Platform::ListingBase']]],
+  ['internetentirelistingdisplayyn',['InternetEntireListingDisplayYN',['../class_moxi_works_1_1_platform_1_1_listing_base.html#add3b45f8c070462a37c3d47cbc5c4915',1,'MoxiWorks::Platform::ListingBase']]],
   ['iofficeservice',['IOfficeService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_office_service.html',1,'MoxiWorks::Platform::Interfaces']]],
+  ['ipresentationlogservice',['IPresentationLogService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_presentation_log_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['isellertransactionservice',['ISellerTransactionService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_seller_transaction_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['ismainlistingimage',['IsMainListingImage',['../class_moxi_works_1_1_platform_1_1_listing_image.html#a238fe2f76c3125949a3b84c30cebc5bf',1,'MoxiWorks::Platform::ListingImage']]],
   ['ismlstransaction',['IsMlsTransaction',['../class_moxi_works_1_1_platform_1_1_buyer_transaction.html#ae34f9e87a20414061c29dff3d23ce812',1,'MoxiWorks.Platform.BuyerTransaction.IsMlsTransaction()'],['../class_moxi_works_1_1_platform_1_1_seller_transaction.html#abe16d9858c25fce3dfd430a2adb6af82',1,'MoxiWorks.Platform.SellerTransaction.IsMlsTransaction()']]],
+  ['isoldlistingservice',['ISoldListingService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_sold_listing_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['itaskservice',['ITaskService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_task_service.html',1,'MoxiWorks::Platform::Interfaces']]],
+  ['iteamservice',['ITeamService',['../interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_team_service.html',1,'MoxiWorks::Platform::Interfaces']]],
   ['item',['Item',['../class_moxi_works_1_1_platform_1_1_response.html#a3f95175c01f6c6e5fa002355e45db219',1,'MoxiWorks::Platform::Response']]]
 ];

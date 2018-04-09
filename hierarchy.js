@@ -6,10 +6,11 @@ var hierarchy =
     [ "MoxiWorks.Platform.Agent", "class_moxi_works_1_1_platform_1_1_agent.html", null ],
     [ "MoxiWorks.Platform.AgentResults", "class_moxi_works_1_1_platform_1_1_agent_results.html", null ],
     [ "MoxiWorks.Platform.Brand", "class_moxi_works_1_1_platform_1_1_brand.html", null ],
-    [ "MoxiWorks.Platform.BrandService", "class_moxi_works_1_1_platform_1_1_brand_service.html", null ],
+    [ "MoxiWorks.Platform.BrandResults", "class_moxi_works_1_1_platform_1_1_brand_results.html", null ],
     [ "MoxiWorks.Platform.BuyerTransaction", "class_moxi_works_1_1_platform_1_1_buyer_transaction.html", null ],
     [ "MoxiWorks.Platform.BuyerTransactionResults", "class_moxi_works_1_1_platform_1_1_buyer_transaction_results.html", null ],
     [ "MoxiWorks.Platform.Company", "class_moxi_works_1_1_platform_1_1_company.html", null ],
+    [ "MoxiWorks.Platform.CompanyResults", "class_moxi_works_1_1_platform_1_1_company_results.html", null ],
     [ "MoxiWorks.Platform.Contact", "class_moxi_works_1_1_platform_1_1_contact.html", null ],
     [ "MoxiWorks.Platform.ContactResults", "class_moxi_works_1_1_platform_1_1_contact_results.html", null ],
     [ "MoxiWorks.Platform.Credentials", "class_moxi_works_1_1_platform_1_1_credentials.html", null ],
@@ -30,6 +31,9 @@ var hierarchy =
     ] ],
     [ "MoxiWorks.Platform.Interfaces.IAgentService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_agent_service.html", [
       [ "MoxiWorks.Platform.AgentService", "class_moxi_works_1_1_platform_1_1_agent_service.html", null ]
+    ] ],
+    [ "MoxiWorks.Platform.Interfaces.IBrandService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_brand_service.html", [
+      [ "MoxiWorks.Platform.BrandService", "class_moxi_works_1_1_platform_1_1_brand_service.html", null ]
     ] ],
     [ "MoxiWorks.Platform.Interfaces.IBuyerTransactionService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_buyer_transaction_service.html", [
       [ "MoxiWorks.Platform.BuyerTransactionService", "class_moxi_works_1_1_platform_1_1_buyer_transaction_service.html", null ]
@@ -60,24 +64,44 @@ var hierarchy =
     [ "MoxiWorks.Platform.Interfaces.IOfficeService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_office_service.html", [
       [ "MoxiWorks.Platform.OfficeService", "class_moxi_works_1_1_platform_1_1_office_service.html", null ]
     ] ],
+    [ "MoxiWorks.Platform.Interfaces.IPresentationLogService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_presentation_log_service.html", [
+      [ "MoxiWorks.Platform.PresentationLogService", "class_moxi_works_1_1_platform_1_1_presentation_log_service.html", null ]
+    ] ],
     [ "MoxiWorks.Platform.Interfaces.ISellerTransactionService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_seller_transaction_service.html", [
       [ "MoxiWorks.Platform.SellerTransactionService", "class_moxi_works_1_1_platform_1_1_seller_transaction_service.html", null ]
+    ] ],
+    [ "MoxiWorks.Platform.Interfaces.ISoldListingService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_sold_listing_service.html", [
+      [ "MoxiWorks.Platform.SoldListingService", "class_moxi_works_1_1_platform_1_1_sold_listing_service.html", null ]
     ] ],
     [ "MoxiWorks.Platform.Interfaces.ITaskService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_task_service.html", [
       [ "MoxiWorks.Platform.TaskService", "class_moxi_works_1_1_platform_1_1_task_service.html", null ]
     ] ],
-    [ "MoxiWorks.Platform.Listing", "class_moxi_works_1_1_platform_1_1_listing.html", null ],
+    [ "MoxiWorks.Platform.Interfaces.ITeamService", "interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_team_service.html", [
+      [ "MoxiWorks.Platform.TeamService", "class_moxi_works_1_1_platform_1_1_team_service.html", null ]
+    ] ],
+    [ "MoxiWorks.Platform.ListingBase", "class_moxi_works_1_1_platform_1_1_listing_base.html", [
+      [ "MoxiWorks.Platform.Listing", "class_moxi_works_1_1_platform_1_1_listing.html", null ],
+      [ "MoxiWorks.Platform.SoldListing", "class_moxi_works_1_1_platform_1_1_sold_listing.html", null ]
+    ] ],
     [ "MoxiWorks.Platform.ListingImage", "class_moxi_works_1_1_platform_1_1_listing_image.html", null ],
     [ "MoxiWorks.Platform.ListingResults", "class_moxi_works_1_1_platform_1_1_listing_results.html", null ],
+    [ "MoxiWorks.Platform.ListingUpdatableData", "class_moxi_works_1_1_platform_1_1_listing_updatable_data.html", null ],
+    [ "MoxiWorks.Platform.ListingUpdate", "class_moxi_works_1_1_platform_1_1_listing_update.html", null ],
     [ "MoxiWorks.Platform.MoxiWorksError", "class_moxi_works_1_1_platform_1_1_moxi_works_error.html", null ],
     [ "MoxiWorks.Platform.Office", "class_moxi_works_1_1_platform_1_1_office.html", null ],
     [ "MoxiWorks.Platform.OfficeResults", "class_moxi_works_1_1_platform_1_1_office_results.html", null ],
+    [ "MoxiWorks.Platform.OpenHouse", "class_moxi_works_1_1_platform_1_1_open_house.html", null ],
+    [ "MoxiWorks.Platform.PresentationLog", "class_moxi_works_1_1_platform_1_1_presentation_log.html", null ],
+    [ "MoxiWorks.Platform.PresentationLogResults", "class_moxi_works_1_1_platform_1_1_presentation_log_results.html", null ],
     [ "MoxiWorks.Platform.PropertyFeatures", "class_moxi_works_1_1_platform_1_1_property_features.html", null ],
     [ "MoxiWorks.Platform.Response< T >", "class_moxi_works_1_1_platform_1_1_response.html", null ],
     [ "MoxiWorks.Platform.SellerTransaction", "class_moxi_works_1_1_platform_1_1_seller_transaction.html", null ],
     [ "MoxiWorks.Platform.SellerTransactionResults", "class_moxi_works_1_1_platform_1_1_seller_transaction_results.html", null ],
     [ "MoxiWorks.Platform.Session", "class_moxi_works_1_1_platform_1_1_session.html", null ],
+    [ "MoxiWorks.Platform.SoldListingResults", "class_moxi_works_1_1_platform_1_1_sold_listing_results.html", null ],
     [ "MoxiWorks.Platform.Task", "class_moxi_works_1_1_platform_1_1_task.html", null ],
     [ "MoxiWorks.Platform.TaskResponse", "class_moxi_works_1_1_platform_1_1_task_response.html", null ],
+    [ "MoxiWorks.Platform.Team", "class_moxi_works_1_1_platform_1_1_team.html", null ],
+    [ "MoxiWorks.Platform.TeamResults", "class_moxi_works_1_1_platform_1_1_team_results.html", null ],
     [ "MoxiWorks.Platform.UriBuilder", "class_moxi_works_1_1_platform_1_1_uri_builder.html", null ]
 ];

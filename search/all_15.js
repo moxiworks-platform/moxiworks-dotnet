@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yearbuilt',['YearBuilt',['../class_moxi_works_1_1_platform_1_1_listing.html#a80a4f60a085790d911d95f6fc97d9b71',1,'MoxiWorks::Platform::Listing']]]
+  ['yearbuilt',['YearBuilt',['../class_moxi_works_1_1_platform_1_1_listing_base.html#aeba4c5c414aa3eca708566f72e21db95',1,'MoxiWorks::Platform::ListingBase']]]
 ];

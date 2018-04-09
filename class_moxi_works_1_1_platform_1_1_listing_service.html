@@ -113,6 +113,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4c3ed18dfc7b700cdf4332e9e4d1c5e"><td class="memItemLeft" align="right" valign="top">async <a class="el" href="class_moxi_works_1_1_platform_1_1_task.html">Task</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_response.html">Response</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_listing_results.html">ListingResults</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moxi_works_1_1_platform_1_1_listing_service.html#ab4c3ed18dfc7b700cdf4332e9e4d1c5e">GetListingsUpdatedSinceAsync</a> (string moxiWorksCompanyId, <a class="el" href="namespace_moxi_works_1_1_platform.html#a6d330a4d370e1cbcecea9f088d0c8a71">AgentIdType</a> agentIdType, string agentId=null, DateTime? updatedSince=null, string lastMoxiWorksListingId=null)</td></tr>
 <tr class="memdesc:ab4c3ed18dfc7b700cdf4332e9e4d1c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index will return a paged response of listings that have been updated since a given timestamp for a specified company. For a list of company IDs that you can request listings for, use the <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> Endpoint.  <a href="#ab4c3ed18dfc7b700cdf4332e9e4d1c5e">More...</a><br /></td></tr>
 <tr class="separator:ab4c3ed18dfc7b700cdf4332e9e4d1c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6f74e82f28c30964a985d40503c6ed"><td class="memItemLeft" align="right" valign="top">async <a class="el" href="class_moxi_works_1_1_platform_1_1_task.html">Task</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_response.html">Response</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_listing_results.html">ListingResults</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moxi_works_1_1_platform_1_1_listing_service.html#a0e6f74e82f28c30964a985d40503c6ed">UpdateListingData</a> (<a class="el" href="class_moxi_works_1_1_platform_1_1_listing_update.html">ListingUpdate</a> listingUpdate)</td></tr>
+<tr class="memdesc:a0e6f74e82f28c30964a985d40503c6ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the listing data specified in <a class="el" href="class_moxi_works_1_1_platform_1_1_listing_updatable_data.html" title="Used to hold properties updatable for listings ">ListingUpdatableData</a> of the <a class="el" href="class_moxi_works_1_1_platform_1_1_listing_update.html">ListingUpdate</a> object  <a href="#a0e6f74e82f28c30964a985d40503c6ed">More...</a><br /></td></tr>
+<tr class="separator:a0e6f74e82f28c30964a985d40503c6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -231,6 +234,33 @@ Properties</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implements <a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_listing_service.html">MoxiWorks.Platform.Interfaces.IListingService</a>.</p>
+
+</div>
+</div>
+<a id="a0e6f74e82f28c30964a985d40503c6ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6f74e82f28c30964a985d40503c6ed">&#9670;&nbsp;</a></span>UpdateListingData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async <a class="el" href="class_moxi_works_1_1_platform_1_1_task.html">Task</a>&lt;<a class="el" href="class_moxi_works_1_1_platform_1_1_response.html">Response</a>&lt;<a class="el" href="class_moxi_works_1_1_platform_1_1_listing_results.html">ListingResults</a>&gt; &gt; MoxiWorks.Platform.ListingService.UpdateListingData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_moxi_works_1_1_platform_1_1_listing_update.html">ListingUpdate</a>&#160;</td>
+          <td class="paramname"><em>listingUpdate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the listing data specified in <a class="el" href="class_moxi_works_1_1_platform_1_1_listing_updatable_data.html" title="Used to hold properties updatable for listings ">ListingUpdatableData</a> of the <a class="el" href="class_moxi_works_1_1_platform_1_1_listing_update.html">ListingUpdate</a> object </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listingUpdate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ListingResu</dd></dl>
 
 </div>
 </div>

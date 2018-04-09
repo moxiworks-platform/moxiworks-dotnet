@@ -12,5 +12,6 @@ var searchData=
   ['officeresults',['OfficeResults',['../class_moxi_works_1_1_platform_1_1_office_results.html',1,'MoxiWorks::Platform']]],
   ['offices',['Offices',['../class_moxi_works_1_1_platform_1_1_office_results.html#adc2adca70b9f5b9c9dda77a55d54baab',1,'MoxiWorks::Platform::OfficeResults']]],
   ['officeservice',['OfficeService',['../class_moxi_works_1_1_platform_1_1_office_service.html',1,'MoxiWorks::Platform']]],
-  ['onmarket',['OnMarket',['../class_moxi_works_1_1_platform_1_1_listing.html#ab1d41e6d44bd9c4b9e1601cf19a108cb',1,'MoxiWorks::Platform::Listing']]]
+  ['onmarket',['OnMarket',['../class_moxi_works_1_1_platform_1_1_listing_base.html#a6f761d0d6dd5f7ea649dd9853aa69003',1,'MoxiWorks::Platform::ListingBase']]],
+  ['openhouse',['OpenHouse',['../class_moxi_works_1_1_platform_1_1_open_house.html',1,'MoxiWorks.Platform.OpenHouse'],['../class_moxi_works_1_1_platform_1_1_listing.html#aa7053651ccb6b6096bd5f72897bfb650',1,'MoxiWorks.Platform.Listing.OpenHouse()']]]
 ];
