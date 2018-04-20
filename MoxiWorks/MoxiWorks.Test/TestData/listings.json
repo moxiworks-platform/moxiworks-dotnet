@@ -40,6 +40,7 @@
   "LotSizeSquareFeet":null,
   "InternetEntireListingDisplayYN":true,
   "MiddleOrJuniorSchool":"*The* Junior High" ,
+  "ListAgentMoxiWorksOfficeID":"1234567890",
   "ListOfficeAOR":"WHATEVERS MLS",
   "PoolYN":false,
   "PropertyType":"Residential",
@@ -55,6 +56,7 @@
   "AgentCreatedListing":false,
   "VirtualTourURL":"http://the.virtual.tour.url",
   "ListingURL":"http://the.listing.url",
+  
   "PropertyFeatures":[
     {
       "PropertyFeatureName": "Kitchen Information",
