@@ -26,6 +26,8 @@ namespace MoxiWorks.Platform
         /// Open house data
         /// </summary>
         public List<OpenHouse> OpenHouse { get; set; }
+        
+        
     }
 
 
