@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"class_moxi_works_1_1_platform_1_1_sold_listing_service.html#ae802bdc69cf0da246f200f3f5b875f8e":[1,0,0,0,60,0],
 "class_moxi_works_1_1_platform_1_1_task.html":[1,0,0,0,61],
 "class_moxi_works_1_1_platform_1_1_task.html#a0ae1350a75a8d6e08a4a60ad61209f1b":[1,0,0,0,61,4],
 "class_moxi_works_1_1_platform_1_1_task.html#a310e26b0471c7c3d19ead47936756dda":[1,0,0,0,61,8],
@@ -82,8 +83,8 @@ var NAVTREEINDEX2 =
 "functions_n.html":[1,3,0,12],
 "functions_o.html":[1,3,0,13],
 "functions_p.html":[1,3,0,14],
-"functions_prop.html":[1,3,3,0],
 "functions_prop.html":[1,3,3],
+"functions_prop.html":[1,3,3,0],
 "functions_prop_b.html":[1,3,3,1],
 "functions_prop_c.html":[1,3,3,2],
 "functions_prop_d.html":[1,3,3,3],
@@ -209,8 +210,8 @@ var NAVTREEINDEX2 =
 "namespace_moxi_works.html":[0,0,0],
 "namespace_moxi_works_1_1_platform.html":[1,0,0,0],
 "namespace_moxi_works_1_1_platform.html":[0,0,0,0],
-"namespace_moxi_works_1_1_platform_1_1_interfaces.html":[0,0,0,0,0],
 "namespace_moxi_works_1_1_platform_1_1_interfaces.html":[1,0,0,0,0],
+"namespace_moxi_works_1_1_platform_1_1_interfaces.html":[0,0,0,0,0],
 "namespacemembers.html":[0,1,0],
 "namespacemembers_enum.html":[0,1,1],
 "namespaces.html":[0,0],

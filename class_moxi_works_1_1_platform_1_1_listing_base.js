@@ -23,6 +23,7 @@ var class_moxi_works_1_1_platform_1_1_listing_base =
     [ "Latitude", "class_moxi_works_1_1_platform_1_1_listing_base.html#acdd390eff1bdd758ff512b4d52a45983", null ],
     [ "LisingImages", "class_moxi_works_1_1_platform_1_1_listing_base.html#a4c61fbb68f36eb7c7be95d715c80a256", null ],
     [ "ListAgentFullName", "class_moxi_works_1_1_platform_1_1_listing_base.html#af55fe8718617a58a891508c8ff60aa9a", null ],
+    [ "ListAgentMoxiWorksOfficeID", "class_moxi_works_1_1_platform_1_1_listing_base.html#ae9571707d638c2d3758d292dc2e3ca71", null ],
     [ "ListAgentUUID", "class_moxi_works_1_1_platform_1_1_listing_base.html#af351c3fca864a8d94a87357f384d17fc", null ],
     [ "ListOfficeAOR", "class_moxi_works_1_1_platform_1_1_listing_base.html#a7df1beb856d1510a8eab49dcac5ffde9", null ],
     [ "ListOfficeName", "class_moxi_works_1_1_platform_1_1_listing_base.html#a0f5ee2b23f97cfc8c1c5117fc3a66e0b", null ],

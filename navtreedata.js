@@ -26,7 +26,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "class_moxi_works_1_1_platform_1_1_event_service.html#ad5199734942e61ac2ea7095cf34db955",
-"class_moxi_works_1_1_platform_1_1_task.html"
+"class_moxi_works_1_1_platform_1_1_sold_listing_service.html#ae802bdc69cf0da246f200f3f5b875f8e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
