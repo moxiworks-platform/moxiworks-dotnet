@@ -211,5 +211,13 @@ namespace MoxiWorks.Platform
         /// Any images of the property.
         /// </summary>
         public List<ListingImage> LisingImages { get; set; }
+        
+        /// <summary>
+        /// ID of listing agent office
+        /// </summary>
+        public string ListAgentMoxiWorksOfficeID { get; set; }
+
+         
+        
     }
 }
