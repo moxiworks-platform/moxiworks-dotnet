@@ -15,17 +15,19 @@
 Install through Package Manager
 
 ```
-PM> Install-Package MoxiWorks.Platform -Version 1.2.2
+PM> Install-Package MoxiWorks.Platform -Version 1.2.3
 
 ```
 
 Install through .NET CLI
 
 ```
-> dotnet add package MoxiWorks.Platform --version 1.2.2
+> dotnet add package MoxiWorks.Platform --version 1.2.3
 
 ```
 ###### ASP.NET Core  
+MVC Application Example [Here](https://github.com/ahatch1490/moxiworks_platform_example).
+
 
 appsettings.json
 ```
@@ -82,4 +84,4 @@ See also the list of [contributors](https://github.com/moxiworks-platform/moxiwo
 
 ## License
 
-This project is licensed under the MIT License 
+This project is licensed under the MIT License
