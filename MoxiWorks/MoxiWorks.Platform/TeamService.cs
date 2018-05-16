@@ -19,9 +19,10 @@ namespace MoxiWorks.Platform
         /// <param name="moxiWorksCompanyId">A valid Moxi Works Company ID. Use Company Endpoint to determine what moxi_works_company_id you can use.
         ///</param>
         /// <returns>Returns the team in the compang if it exists.</returns>
-        public async Task<Response<Team>> GetTeamAsync(string moxiWorksTeamId)
+        public async Task<Response<Team>> GetTeamAsync(string moxiWorksTeamId, string moxiWorksCompanyId)
         {
-            var builder = new UriBuilder($"teams/{moxiWorksTeamId}");
+            var builder = new UriBuilder($"teams/{moxiWorksTeamId}").
+                AddQueryParameter("moxi_works_company_id",moxiWorksCompanyId);
             return await Client.GetRequestAsync<Team>(builder.GetUrl());
         }
 

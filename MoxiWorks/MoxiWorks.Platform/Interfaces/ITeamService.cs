@@ -9,7 +9,7 @@ namespace MoxiWorks.Platform.Interfaces
 
         Task<Response<List<Team>>> GetCompanyTeamsAync(string moxiWorksCompanyId);
 
-        Task<Response<Team>> GetTeamAsync(string moxiWorksTeamId);
+        Task<Response<Team>> GetTeamAsync(string moxiWorksTeamId,string moxiWorksCompanyId);
 
     }
 

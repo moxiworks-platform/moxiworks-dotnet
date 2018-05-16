@@ -14,7 +14,7 @@ namespace MoxiWorks.Test
         {
             var taskJson = StubDataLoader.LoadJsonFile("Team.json");  
             ITeamService service = new TeamService(new MoxiWorksClient(new StubContextClient(taskJson)));
-            var response = service.GetTeamAsync("some_team_id").Result;
+            var response = service.GetTeamAsync("some_team_id","some_company_id").Result;
             Assert.IsType<Team>(response.Item);
             Assert.True(response.Item.Actve);
             Assert.True(response.Item.ZipCode == "91820");
