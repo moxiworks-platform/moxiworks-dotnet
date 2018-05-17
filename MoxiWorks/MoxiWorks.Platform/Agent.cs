@@ -208,5 +208,13 @@ namespace MoxiWorks.Platform
         /// </summary>
         [JsonProperty("alternate_offices")]
         public List<Office>  AlternateOffices { get; set; }
+        
+        /// <summary>
+        /// Indicates whether the agent has access to Moxiworks Engage.
+        /// </summary>
+        [JsonProperty("has_engage_access")]
+        public bool  HasEngageAccess { get; set; }
+        
+        
     }
 }
