@@ -11,6 +11,7 @@ var class_moxi_works_1_1_platform_1_1_agent =
     [ "FaxPhoneNumber", "class_moxi_works_1_1_platform_1_1_agent.html#aee7375bdae7d5b103620f8095ed02d0b", null ],
     [ "FirstName", "class_moxi_works_1_1_platform_1_1_agent.html#af07f6c84005d2adc9875c45680d24af6", null ],
     [ "GooglePlus", "class_moxi_works_1_1_platform_1_1_agent.html#a7dd1849731a1e1571edceb87bb6c1d01", null ],
+    [ "HasEngageAccess", "class_moxi_works_1_1_platform_1_1_agent.html#ab3b4c5779ad12202f51195e48de948fa", null ],
     [ "HomePage", "class_moxi_works_1_1_platform_1_1_agent.html#a11f7c664eb2b4f9ee6afdbe3f42b6e4f", null ],
     [ "LastName", "class_moxi_works_1_1_platform_1_1_agent.html#a4a682ca2aae3b16c0da10e505b1e84ae", null ],
     [ "LeadRoutingEmailAddress", "class_moxi_works_1_1_platform_1_1_agent.html#ad44ba3969734d30e6796f6be2f2bd61c", null ],

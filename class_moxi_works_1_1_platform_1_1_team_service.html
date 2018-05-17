@@ -30,6 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="moxiworks_logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MoxiWork Platform
+   &#160;<span id="projectnumber">1.2.5</span>
    </div>
    <div id="projectbrief">.NET SDK For Moxi Works Public API</div>
   </td>
@@ -104,9 +105,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7a9693c48288b0554fbb10817725a14"><td class="memItemLeft" align="right" valign="top"><a id="ab7a9693c48288b0554fbb10817725a14"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TeamService</b> (<a class="el" href="interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_moxi_works_client.html">IMoxiWorksClient</a> client)</td></tr>
 <tr class="separator:ab7a9693c48288b0554fbb10817725a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a259c932180aa6f10e21dd67b69de4c07"><td class="memItemLeft" align="right" valign="top">async <a class="el" href="class_moxi_works_1_1_platform_1_1_task.html">Task</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_response.html">Response</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_team.html">Team</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moxi_works_1_1_platform_1_1_team_service.html#a259c932180aa6f10e21dd67b69de4c07">GetTeamAsync</a> (string moxiWorksTeamId)</td></tr>
-<tr class="memdesc:a259c932180aa6f10e21dd67b69de4c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="class_moxi_works_1_1_platform_1_1_team.html">Team</a> in a company.  <a href="#a259c932180aa6f10e21dd67b69de4c07">More...</a><br /></td></tr>
-<tr class="separator:a259c932180aa6f10e21dd67b69de4c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca0668a3f69c4ed84ea1bff7c9764e8c"><td class="memItemLeft" align="right" valign="top">async <a class="el" href="class_moxi_works_1_1_platform_1_1_task.html">Task</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_response.html">Response</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_team.html">Team</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moxi_works_1_1_platform_1_1_team_service.html#aca0668a3f69c4ed84ea1bff7c9764e8c">GetTeamAsync</a> (string moxiWorksTeamId, string moxiWorksCompanyId)</td></tr>
+<tr class="memdesc:aca0668a3f69c4ed84ea1bff7c9764e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="class_moxi_works_1_1_platform_1_1_team.html">Team</a> in a company.  <a href="#aca0668a3f69c4ed84ea1bff7c9764e8c">More...</a><br /></td></tr>
+<tr class="separator:aca0668a3f69c4ed84ea1bff7c9764e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84785ff069b5d35656a3c975d2b08180"><td class="memItemLeft" align="right" valign="top">async <a class="el" href="class_moxi_works_1_1_platform_1_1_task.html">Task</a>&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_response.html">Response</a>&lt; List&lt; <a class="el" href="class_moxi_works_1_1_platform_1_1_team.html">Team</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_moxi_works_1_1_platform_1_1_team_service.html#a84785ff069b5d35656a3c975d2b08180">GetCompanyTeamsAync</a> (string moxiWorksCompanyId)</td></tr>
 <tr class="memdesc:a84785ff069b5d35656a3c975d2b08180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a List of Teams in a company.  <a href="#a84785ff069b5d35656a3c975d2b08180">More...</a><br /></td></tr>
 <tr class="separator:a84785ff069b5d35656a3c975d2b08180"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,8 +148,8 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a id="a259c932180aa6f10e21dd67b69de4c07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a259c932180aa6f10e21dd67b69de4c07">&#9670;&nbsp;</a></span>GetTeamAsync()</h2>
+<a id="aca0668a3f69c4ed84ea1bff7c9764e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0668a3f69c4ed84ea1bff7c9764e8c">&#9670;&nbsp;</a></span>GetTeamAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,8 +158,18 @@ Properties</h2></td></tr>
           <td class="memname">async <a class="el" href="class_moxi_works_1_1_platform_1_1_task.html">Task</a>&lt;<a class="el" href="class_moxi_works_1_1_platform_1_1_response.html">Response</a>&lt;<a class="el" href="class_moxi_works_1_1_platform_1_1_team.html">Team</a>&gt; &gt; MoxiWorks.Platform.TeamService.GetTeamAsync </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>moxiWorksTeamId</em></td><td>)</td>
+          <td class="paramname"><em>moxiWorksTeamId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>moxiWorksCompanyId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

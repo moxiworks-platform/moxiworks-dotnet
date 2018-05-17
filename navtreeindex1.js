@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"class_moxi_works_1_1_platform_1_1_event_service.html#a88fc43e748c52e6d7f586b20b6dc1ca6":[1,0,0,0,28,5],
 "class_moxi_works_1_1_platform_1_1_event_service.html#ad5199734942e61ac2ea7095cf34db955":[1,0,0,0,28,2],
 "class_moxi_works_1_1_platform_1_1_gallery.html":[1,0,0,0,29],
 "class_moxi_works_1_1_platform_1_1_gallery.html#a4f4d2526417e9dfe08ec3cb8b6b84b97":[1,0,0,0,29,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "class_moxi_works_1_1_platform_1_1_sold_listing_results.html#a54288043a543949070dc34d5f00725f5":[1,0,0,0,59,0],
 "class_moxi_works_1_1_platform_1_1_sold_listing_results.html#ae3f52350cbf08b20ed73f5ed4f03766d":[1,0,0,0,59,2],
 "class_moxi_works_1_1_platform_1_1_sold_listing_service.html":[1,0,0,0,60],
-"class_moxi_works_1_1_platform_1_1_sold_listing_service.html#a1c94abc505dfc385a55fd5cad4eabba5":[1,0,0,0,60,2],
-"class_moxi_works_1_1_platform_1_1_sold_listing_service.html#a5706a6c146a93f0c933a2b6589fd4c6a":[1,0,0,0,60,1]
+"class_moxi_works_1_1_platform_1_1_sold_listing_service.html#a1c94abc505dfc385a55fd5cad4eabba5":[1,0,0,0,60,2]
 };
