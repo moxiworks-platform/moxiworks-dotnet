@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"class_moxi_works_1_1_platform_1_1_sold_listing_results.html#ae3f52350cbf08b20ed73f5ed4f03766d":[1,0,0,0,59,2],
+"class_moxi_works_1_1_platform_1_1_sold_listing_service.html":[1,0,0,0,60],
+"class_moxi_works_1_1_platform_1_1_sold_listing_service.html#a1c94abc505dfc385a55fd5cad4eabba5":[1,0,0,0,60,2],
 "class_moxi_works_1_1_platform_1_1_sold_listing_service.html#a5706a6c146a93f0c933a2b6589fd4c6a":[1,0,0,0,60,1],
 "class_moxi_works_1_1_platform_1_1_sold_listing_service.html#ae802bdc69cf0da246f200f3f5b875f8e":[1,0,0,0,60,0],
 "class_moxi_works_1_1_platform_1_1_task.html":[1,0,0,0,61],
@@ -67,8 +70,8 @@ var NAVTREEINDEX2 =
 "class_moxi_works_1_1_platform_1_1_uri_builder.html#af27b17c076724905f7786be7118ce9d7":[1,0,0,0,67,3],
 "class_moxi_works_1_1_platform_1_1_uri_builder.html#af775d3eba0da9b4cc38aaa2fa5dea939":[1,0,0,0,67,4],
 "classes.html":[1,1],
-"functions.html":[1,3,0,0],
 "functions.html":[1,3,0],
+"functions.html":[1,3,0,0],
 "functions_b.html":[1,3,0,1],
 "functions_c.html":[1,3,0,2],
 "functions_d.html":[1,3,0,3],

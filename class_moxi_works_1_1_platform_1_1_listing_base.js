@@ -2,6 +2,7 @@ var class_moxi_works_1_1_platform_1_1_listing_base =
 [
     [ "Address", "class_moxi_works_1_1_platform_1_1_listing_base.html#a47b72ca2d980eeda7c49489515e7e335", null ],
     [ "Address2", "class_moxi_works_1_1_platform_1_1_listing_base.html#a3f609acda57121ba634cf88acaffc795", null ],
+    [ "AgentCreatedListing", "class_moxi_works_1_1_platform_1_1_listing_base.html#a1aa27cdc02d5d8e7a88c8c9dfa7be741", null ],
     [ "AssociationFee", "class_moxi_works_1_1_platform_1_1_listing_base.html#a0a7ee589df01d5872d1f53b33f1bad70", null ],
     [ "BathroomsFull", "class_moxi_works_1_1_platform_1_1_listing_base.html#ad9e6e1e6dd2fbf9fb9e0838c5c617f1e", null ],
     [ "BathroomsHalf", "class_moxi_works_1_1_platform_1_1_listing_base.html#ad470d4787db9e0c897dd0777a195363b", null ],
@@ -50,6 +51,7 @@ var class_moxi_works_1_1_platform_1_1_listing_base =
     [ "TaxYear", "class_moxi_works_1_1_platform_1_1_listing_base.html#a84119911b6c5ed9e754b5070bc870a7b", null ],
     [ "Title", "class_moxi_works_1_1_platform_1_1_listing_base.html#a37b1a8988d745554d94aea5ae02beea1", null ],
     [ "ViewYN", "class_moxi_works_1_1_platform_1_1_listing_base.html#a965eaf4f34920869eb073def75b42f9d", null ],
+    [ "VirtualTourURL", "class_moxi_works_1_1_platform_1_1_listing_base.html#a8ad8a0150721088f5b0af36a6117eed3", null ],
     [ "WaterfrontYN", "class_moxi_works_1_1_platform_1_1_listing_base.html#a2c650519e8907d4ce612139d8d61861e", null ],
     [ "YearBuilt", "class_moxi_works_1_1_platform_1_1_listing_base.html#aeba4c5c414aa3eca708566f72e21db95", null ]
 ];
