@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MoxiWorks.Platform
 {
@@ -216,8 +217,17 @@ namespace MoxiWorks.Platform
         /// ID of listing agent office
         /// </summary>
         public string ListAgentMoxiWorksOfficeID { get; set; }
-
-         
+            
+        /// <summary>
+        /// Whether the agent created this listing.
+        /// </summary>
+        public bool? AgentCreatedListing { get; set; }
         
+        /// <summary>
+        /// Virtual tour URL for this listing.
+        /// </summary>
+        public string VirtualTourURL { get; set; }
+        
+            
     }
 }

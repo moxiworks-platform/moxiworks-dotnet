@@ -86,7 +86,19 @@ namespace MoxiWorks.Platform
         /// </summary>
         /// <param name="listingUpdate"></param>
         /// <returns>ListingResu</returns>
+        [Obsolete("Use UpdateListingDataAsync instead")]
         public async Task<Response<ListingResults>> UpdateListingData(ListingUpdate listingUpdate)
+        {
+            return await UpdateListingDataAsync(listingUpdate);
+        }
+        
+        
+        /// <summary>
+        /// Updates the listing data specified in ListingUpdatableData of the ListingUpdate object
+        /// </summary>
+        /// <param name="listingUpdate"></param>
+        /// <returns>ListingResu</returns>
+        public async Task<Response<ListingResults>> UpdateListingDataAsync(ListingUpdate listingUpdate)
         {
             var builder = new UriBuilder($"listings/{listingUpdate.MoxWorksListingId}")
                 .AddQueryParameter("moxi_works_company_id", listingUpdate.MoxiWorksCompanyId);
