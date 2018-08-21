@@ -19,7 +19,7 @@ namespace MoxiWorks.Platform
         }
         
         /// <summary>
-        /// 
+        /// When finding an Agent using the Moxi Works platform API
         /// </summary>
         /// <param name="agentId">
         /// Must include either:
@@ -43,7 +43,39 @@ namespace MoxiWorks.Platform
         /// <returns> the Agent if exists or an empty Agent Object </returns>
         public async Task<Response<Agent>> GetAgentAsync(string agentId,string moxiWorksCompanyId)
         {
+            return await GetAgentWithGoalsAsync(agentId, moxiWorksCompanyId, false);
+        }
+        
+        /// <summary>
+        /// When finding an Agent using the Moxi Works platform API and optionaly include an agents gci goals.
+        /// </summary>
+        /// <param name="agentId">
+        /// Must include either:
+        /// AgentUuid
+        /// This is the Moxi Works Platform ID of the agent which an ActionLog entry is associated 
+        /// with. This will be an RFC 4122 compliant UUID. 
+        /// agent_uuid or moxi_works_agent_id is required and must reference a 
+        /// valid Moxi Works Agent ID for your ActionLog request to be accepted.
+        ///
+        /// MoxiWorksAgentId
+        /// This is the Moxi Works Platform ID of the agent which an ActionLog entry is associated 
+        /// with. This will be a string that may take the form of an email address, 
+        /// or a unique identification string. agent_uuid or moxi_works_agent_id is required 
+        /// and must reference a valid Moxi Works Agent ID for your ActionLog request to be accepted.
+        /// Agent ID for your ActionLog request to be accepted.
+        /// </param>
+        /// <param name="moxiWorksCompanyId">
+        /// A valid Moxi Works Company ID. Use Company Endpoint to determine what 
+        /// moxi_works_company_id you can use
+        /// </param>
+        /// <param name="includeGciGoals">
+        /// Whether to include agent’s GCI goals and commissions data in the response data.
+        /// </param>
+        /// <returns> the Agent if exists or an empty Agent Object </returns>
+        public async Task<Response<Agent>> GetAgentWithGoalsAsync(string agentId, string moxiWorksCompanyId, bool includeGciGoals)
+        {
             var builder = new UriBuilder($"agents/{agentId}")
+                .AddQueryParameter("include_gci_goals", includeGciGoals)
                 .AddQueryParameter("moxi_works_company_id", moxiWorksCompanyId);
             return await Client.GetRequestAsync<Agent>(builder.GetUrl()); 
         }

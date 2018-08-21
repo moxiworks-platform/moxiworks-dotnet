@@ -201,19 +201,37 @@ namespace MoxiWorks.Platform
         /// If no agent image has been uploaded for this agent a default image url will be provided.
         /// </summary>
         [JsonProperty("profile_thumb_url")]
-        public string ProfileThumbUrl { get; set; }
-        /// <summary>
-        /// The alternate_offices array contains Dictionary objects representing AlternateOffice entries. 
-        /// The structure of each AlternateOffice entry is shown below.
-        /// </summary>
-        [JsonProperty("alternate_offices")]
-        public List<Office>  AlternateOffices { get; set; }
-        
+        public string ProfileThumbUrl { get; set; }      
         /// <summary>
         /// Indicates whether the agent has access to Moxiworks Engage.
         /// </summary>
         [JsonProperty("has_engage_access")]
         public bool  HasEngageAccess { get; set; }
+        /// <summary>
+        /// AlternateOffices contains a collection of objects representing AlternateOffice entries. 
+        /// </summary>
+        [JsonProperty("alternate_offices")]
+        public List<AlternateOffice> AlternateOffices { get; set; }
+        /// <summary>
+        /// The AvailableMls collection contains objects representing MlsEntries.
+        /// </summary>
+        [JsonProperty("available_mls")]
+        public List<MlsEntry> AvailableMls { get; set; }
+        /// <summary>
+        /// The agent’s stated gross commission income goal.
+        /// </summary>
+        [JsonProperty("gci_goal")]
+        public int? GciGoal { get; set;}  
+        /// <summary>
+        /// Percentage commission rate for the agent when acting as a buyer’s agent.
+        /// </summary>
+        [JsonProperty("buyer_commission_rate")]
+        public float? BuyerCommissionRate { get; set; }
+        /// <summary>
+        /// Percentage commission rate for the agent when acting as a seller’s agent.
+        /// </summary>
+        [JsonProperty("seller_commission_rate")]
+        public float? SellerCommisionRate { get; set; }
         
         
     }
