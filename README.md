@@ -15,14 +15,14 @@
 Install through Package Manager
 
 ```
-PM> Install-Package MoxiWorks.Platform -Version 1.2.5
+PM> Install-Package MoxiWorks.Platform -Version 1.2.6
 
 ```
 
 Install through .NET CLI
 
 ```
-> dotnet add package MoxiWorks.Platform --version 1.2.5
+> dotnet add package MoxiWorks.Platform --version 1.2.6
 
 ```
 ###### ASP.NET Core  
@@ -67,7 +67,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ## Built With
 
-* [.NET Stardard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) uses
+* Uses [.NET Stardard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) 
 * [NuGet](https://www.nuget.org/) - Dependency Management
 * [Visual Studio](https://www.visualstudio.com/) - Coding
 * [Rider](https://www.jetbrains.com/rider/) - Coding
