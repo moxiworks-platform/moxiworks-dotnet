@@ -19,6 +19,7 @@ var searchData=
   ['brandservice',['BrandService',['../class_moxi_works_1_1_platform_1_1_brand_service.html',1,'MoxiWorks::Platform']]],
   ['buttonfontcolor',['ButtonFontColor',['../class_moxi_works_1_1_platform_1_1_brand.html#a2075be020b8d0868b57b129e48c9be90',1,'MoxiWorks::Platform::Brand']]],
   ['buttongroundfontcolorprimary',['ButtonGroundFontColorPrimary',['../class_moxi_works_1_1_platform_1_1_brand.html#a2b693a7468ae78a94e948737f67bd38b',1,'MoxiWorks::Platform::Brand']]],
+  ['buyercommissionrate',['BuyerCommissionRate',['../class_moxi_works_1_1_platform_1_1_agent.html#abe40df7d7e1d195a1bbd7e531641c5e7',1,'MoxiWorks::Platform::Agent']]],
   ['buyertransaction',['BuyerTransaction',['../class_moxi_works_1_1_platform_1_1_buyer_transaction.html',1,'MoxiWorks::Platform']]],
   ['buyertransactionresults',['BuyerTransactionResults',['../class_moxi_works_1_1_platform_1_1_buyer_transaction_results.html',1,'MoxiWorks::Platform']]],
   ['buyertransactionservice',['BuyerTransactionService',['../class_moxi_works_1_1_platform_1_1_buyer_transaction_service.html',1,'MoxiWorks::Platform']]]

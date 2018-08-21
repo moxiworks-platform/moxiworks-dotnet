@@ -5,7 +5,7 @@ var searchData=
   ['partnereventid',['PartnerEventId',['../class_moxi_works_1_1_platform_1_1_event.html#afef51f7a764b03b3ebbc5d8fe40941af',1,'MoxiWorks::Platform::Event']]],
   ['partnertaskid',['PartnerTaskId',['../class_moxi_works_1_1_platform_1_1_task.html#aaabd6a49b08a0d618ba15f939db3b5b9',1,'MoxiWorks::Platform::Task']]],
   ['pdfrequested',['PdfRequested',['../class_moxi_works_1_1_platform_1_1_presentation_log.html#ac80a733bbd574cc74eac726cfdc1d6b5',1,'MoxiWorks::Platform::PresentationLog']]],
-  ['phone',['Phone',['../class_moxi_works_1_1_platform_1_1_office.html#a66bf3d23cbc1782f22e37f629952f7e5',1,'MoxiWorks.Platform.Office.Phone()'],['../class_moxi_works_1_1_platform_1_1_team.html#a57a44951918265709f39f6fffe5f1695',1,'MoxiWorks.Platform.Team.Phone()']]],
+  ['phone',['Phone',['../class_moxi_works_1_1_platform_1_1_alternate_office.html#aae283f65af7cecc06cd335670424cceb',1,'MoxiWorks.Platform.AlternateOffice.Phone()'],['../class_moxi_works_1_1_platform_1_1_office.html#a66bf3d23cbc1782f22e37f629952f7e5',1,'MoxiWorks.Platform.Office.Phone()'],['../class_moxi_works_1_1_platform_1_1_team.html#a57a44951918265709f39f6fffe5f1695',1,'MoxiWorks.Platform.Team.Phone()']]],
   ['photourl',['PhotoUrl',['../class_moxi_works_1_1_platform_1_1_team.html#aeef255e27d4decd9a550d60db6fd75a2',1,'MoxiWorks::Platform::Team']]],
   ['poolyn',['PoolYN',['../class_moxi_works_1_1_platform_1_1_listing_base.html#a43a3487d48a586a00b568887a145f2d9',1,'MoxiWorks::Platform::ListingBase']]],
   ['postalcode',['PostalCode',['../class_moxi_works_1_1_platform_1_1_listing_base.html#a1afac29e11c222147bcf4f4356859789',1,'MoxiWorks::Platform::ListingBase']]],

@@ -15,5 +15,6 @@ var searchData=
   ['body',['Body',['../class_moxi_works_1_1_platform_1_1_action_log.html#a5df23c6b4f035116724377323c8ecdbe',1,'MoxiWorks::Platform::ActionLog']]],
   ['brands',['Brands',['../class_moxi_works_1_1_platform_1_1_brand_results.html#a68e2dcf9a214f076f79bad52e4c2d2e1',1,'MoxiWorks::Platform::BrandResults']]],
   ['buttonfontcolor',['ButtonFontColor',['../class_moxi_works_1_1_platform_1_1_brand.html#a2075be020b8d0868b57b129e48c9be90',1,'MoxiWorks::Platform::Brand']]],
-  ['buttongroundfontcolorprimary',['ButtonGroundFontColorPrimary',['../class_moxi_works_1_1_platform_1_1_brand.html#a2b693a7468ae78a94e948737f67bd38b',1,'MoxiWorks::Platform::Brand']]]
+  ['buttongroundfontcolorprimary',['ButtonGroundFontColorPrimary',['../class_moxi_works_1_1_platform_1_1_brand.html#a2b693a7468ae78a94e948737f67bd38b',1,'MoxiWorks::Platform::Brand']]],
+  ['buyercommissionrate',['BuyerCommissionRate',['../class_moxi_works_1_1_platform_1_1_agent.html#abe40df7d7e1d195a1bbd7e531641c5e7',1,'MoxiWorks::Platform::Agent']]]
 ];

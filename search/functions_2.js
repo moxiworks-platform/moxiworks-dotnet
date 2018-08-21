@@ -4,6 +4,7 @@ var searchData=
   ['getagentasync',['GetAgentAsync',['../class_moxi_works_1_1_platform_1_1_agent_service.html#ab0f1316db7ea0706780d2b63c614ea95',1,'MoxiWorks::Platform::AgentService']]],
   ['getagentgalleries',['GetAgentGalleries',['../class_moxi_works_1_1_platform_1_1_gallery_service.html#aab23305795542424f8077a885af8ddd3',1,'MoxiWorks::Platform::GalleryService']]],
   ['getagentsasync',['GetAgentsAsync',['../class_moxi_works_1_1_platform_1_1_agent_service.html#afa0add85754eb14c1936ddce60562d92',1,'MoxiWorks::Platform::AgentService']]],
+  ['getagentwithgoalsasync',['GetAgentWithGoalsAsync',['../class_moxi_works_1_1_platform_1_1_agent_service.html#af0bcc9d4fe5f27bc60351ed3b9974f93',1,'MoxiWorks::Platform::AgentService']]],
   ['getbrandsasync',['GetBrandsAsync',['../class_moxi_works_1_1_platform_1_1_brand_service.html#ad54732b2461507f3a5c50aab953adb85',1,'MoxiWorks::Platform::BrandService']]],
   ['getbuyertransactionasync',['GetBuyerTransactionAsync',['../class_moxi_works_1_1_platform_1_1_buyer_transaction_service.html#a6a292da7ba315ad80c78271a8e58ad4f',1,'MoxiWorks::Platform::BuyerTransactionService']]],
   ['getbuyertransactionsasync',['GetBuyerTransactionsAsync',['../class_moxi_works_1_1_platform_1_1_buyer_transaction_service.html#aaa47480c0eb12c25deb1eca986b92e37',1,'MoxiWorks::Platform::BuyerTransactionService']]],

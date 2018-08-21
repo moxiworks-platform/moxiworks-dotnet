@@ -1,8 +1,10 @@
 var class_moxi_works_1_1_platform_1_1_agent =
 [
     [ "AgentId", "class_moxi_works_1_1_platform_1_1_agent.html#a6560fad4c41f7a80b1056baa8dc7ebac", null ],
-    [ "AlternateOffices", "class_moxi_works_1_1_platform_1_1_agent.html#a4faed5fad4bbbdeca63e1e12516bf55c", null ],
+    [ "AlternateOffices", "class_moxi_works_1_1_platform_1_1_agent.html#a974e4e5acdaf41064abb14c8235f48ea", null ],
     [ "AltPhoneNumber", "class_moxi_works_1_1_platform_1_1_agent.html#affc8c4888ab5b3b2566c542f79e8a6ce", null ],
+    [ "AvailableMls", "class_moxi_works_1_1_platform_1_1_agent.html#af9ec1765b880e9ecd7cce659b0184c4f", null ],
+    [ "BuyerCommissionRate", "class_moxi_works_1_1_platform_1_1_agent.html#abe40df7d7e1d195a1bbd7e531641c5e7", null ],
     [ "ClientAgentId", "class_moxi_works_1_1_platform_1_1_agent.html#ad21341be2ff3c99fc606d47af0eaaf11", null ],
     [ "ClientCompanyId", "class_moxi_works_1_1_platform_1_1_agent.html#a45cd98df820fcc50e078e4e53ff7aa35", null ],
     [ "ClientOfficeId", "class_moxi_works_1_1_platform_1_1_agent.html#a62e06d65d93e5a8b0dcc8aea327112a9", null ],
@@ -10,6 +12,7 @@ var class_moxi_works_1_1_platform_1_1_agent =
     [ "Facebook", "class_moxi_works_1_1_platform_1_1_agent.html#ad72117996660447ecaf15353fea57d72", null ],
     [ "FaxPhoneNumber", "class_moxi_works_1_1_platform_1_1_agent.html#aee7375bdae7d5b103620f8095ed02d0b", null ],
     [ "FirstName", "class_moxi_works_1_1_platform_1_1_agent.html#af07f6c84005d2adc9875c45680d24af6", null ],
+    [ "GciGoal", "class_moxi_works_1_1_platform_1_1_agent.html#a4978f7dc49b218a91727df0cb6f67d1c", null ],
     [ "GooglePlus", "class_moxi_works_1_1_platform_1_1_agent.html#a7dd1849731a1e1571edceb87bb6c1d01", null ],
     [ "HasEngageAccess", "class_moxi_works_1_1_platform_1_1_agent.html#ab3b4c5779ad12202f51195e48de948fa", null ],
     [ "HomePage", "class_moxi_works_1_1_platform_1_1_agent.html#a11f7c664eb2b4f9ee6afdbe3f42b6e4f", null ],
@@ -31,6 +34,7 @@ var class_moxi_works_1_1_platform_1_1_agent =
     [ "ProfileImageUrl", "class_moxi_works_1_1_platform_1_1_agent.html#ab9155fd6926640a5a91153e5680da83f", null ],
     [ "ProfileThumbUrl", "class_moxi_works_1_1_platform_1_1_agent.html#ac4943459fbb66ed4c3843bd300523394", null ],
     [ "SecondaryEmailAddress", "class_moxi_works_1_1_platform_1_1_agent.html#a293947dbfb03c0c22e63c0a8eb55c960", null ],
+    [ "SellerCommisionRate", "class_moxi_works_1_1_platform_1_1_agent.html#aadf8c7ce3f549ac6b6b1f01bc603051a", null ],
     [ "Title", "class_moxi_works_1_1_platform_1_1_agent.html#affaef696254f2d2312e4052ef6330b33", null ],
     [ "Twitter", "class_moxi_works_1_1_platform_1_1_agent.html#a51be386a9472896e7e5ff6dd6cce461b", null ],
     [ "Uuid", "class_moxi_works_1_1_platform_1_1_agent.html#a0fdcf1a6a382c7b3369776c96f3f83c1", null ]
