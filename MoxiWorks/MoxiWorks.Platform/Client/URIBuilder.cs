@@ -71,6 +71,16 @@ namespace MoxiWorks.Platform
             return this;
         }
 
+        public UriBuilder AddQueryParameter(string key, bool? value)
+        {
+            if (string.IsNullOrWhiteSpace(key) || ! value.HasValue)
+            {
+                return this; 
+            }
+            QueryParameters.Add(key,value.Value.ToString());
+            return this;
+        }
+
         public UriBuilder AddQueryParameter(string key, DateTime? value)
         {
             if (string.IsNullOrWhiteSpace(key) || !value.HasValue)

@@ -56,5 +56,16 @@
       "office_address_zip": "99899",
       "office_phone_number": "66655544444"
     }
-  ]
+  ],
+  "available_mls":
+  [
+    {
+      "name":"foo",
+      "display_name":"Foo",
+      "mls_abbreviation":"FOO"
+    }
+  ],
+  "gci_goal": 122131,
+  "buyer_commission_rate": 1.25,
+  "seller_commission_rate": 1.25
 }
