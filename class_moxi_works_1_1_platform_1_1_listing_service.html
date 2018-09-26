@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MoxiWork Platform
    </div>
-   <div id="projectbrief">.NET SDK For Moxi Works Public API</div>
+   <div id="projectbrief">.NET SDK For MoxiWorks Public API</div>
   </td>
  </tr>
  </tbody>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('class_moxi_works_1_1_platform_1_1_list
 </div><!--header-->
 <div class="contents">
 
-<p>Moxi Works <a class="el" href="namespace_moxi_works_1_1_platform.html">Platform</a> <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> entities represent a Brokerage’s listings.  
+<p>MoxiWorks <a class="el" href="namespace_moxi_works_1_1_platform.html">Platform</a> <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> entities represent a Brokerage’s listings.
  <a href="class_moxi_works_1_1_platform_1_1_listing_service.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for MoxiWorks.Platform.ListingService:</div>
@@ -131,7 +131,7 @@ Properties</h2></td></tr>
 <tr class="separator:ad67cab1d708252a8a10876c112d60e91 inherit properties_interface_moxi_works_1_1_platform_1_1_interfaces_1_1_i_listing_service"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Moxi Works <a class="el" href="namespace_moxi_works_1_1_platform.html">Platform</a> <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> entities represent a Brokerage’s listings. </p>
+<div class="textblock"><p>MoxiWorks <a class="el" href="namespace_moxi_works_1_1_platform.html">Platform</a> <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> entities represent a Brokerage’s listings. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0394a73e1e76fb5c2bc09414fbf8db9a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0394a73e1e76fb5c2bc09414fbf8db9a">&#9670;&nbsp;</a></span>GetListingAsync()</h2>
@@ -162,8 +162,8 @@ Properties</h2></td></tr>
 <p>Return a single listing </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">moxiWorksListingId</td><td>This is the Moxi Works <a class="el" href="namespace_moxi_works_1_1_platform.html">Platform</a> ID of the <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> which you are requesting to Show. This data is required and must reference a valid Moxi Works <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> ID for your Show request to be accepted. </td></tr>
-    <tr><td class="paramname">moxiWorksCompanyId</td><td>A valid Moxi Works <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> ID. Use <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> Endpoint to determine what moxi_works_company_id you can use. </td></tr>
+    <tr><td class="paramname">moxiWorksListingId</td><td>This is the MoxiWorks <a class="el" href="namespace_moxi_works_1_1_platform.html">Platform</a> ID of the <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> which you are requesting to Show. This data is required and must reference a valid MoxiWorks <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> ID for your Show request to be accepted. </td></tr>
+    <tr><td class="paramname">moxiWorksCompanyId</td><td>A valid MoxiWorks <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> ID. Use <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> Endpoint to determine what moxi_works_company_id you can use. </td></tr>
   </table>
   </dd>
 </dl>
@@ -220,12 +220,12 @@ Properties</h2></td></tr>
 <p>Index will return a paged response of listings that have been updated since a given timestamp for a specified company. For a list of company IDs that you can request listings for, use the <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> Endpoint. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">moxiWorksCompanyId</td><td>A valid Moxi Works <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> ID. Use <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> Endpoint to determine what moxi_works_company_id you can use. </td></tr>
-    <tr><td class="paramname">agentId</td><td>Must include either: AgentUuid This is the Moxi Works <a class="el" href="namespace_moxi_works_1_1_platform.html">Platform</a> ID of the agent which an <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> entry is associated with. This will be an RFC 4122 compliant UUID. agent_uuid or moxi_works_agent_id is required and must reference a valid Moxi Works <a class="el" href="class_moxi_works_1_1_platform_1_1_agent.html" title="The following object makes up the payload of the Agent response for a Show request. ">Agent</a> ID for your <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> request to be accepted.</td></tr>
+    <tr><td class="paramname">moxiWorksCompanyId</td><td>A valid MoxiWorks <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> ID. Use <a class="el" href="class_moxi_works_1_1_platform_1_1_company.html" title="Makes up the payload of the Company response for a Show request. ">Company</a> Endpoint to determine what moxi_works_company_id you can use. </td></tr>
+    <tr><td class="paramname">agentId</td><td>Must include either: AgentUuid This is the MoxiWorks <a class="el" href="namespace_moxi_works_1_1_platform.html">Platform</a> ID of the agent which an <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> entry is associated with. This will be an RFC 4122 compliant UUID. agent_uuid or moxi_works_agent_id is required and must reference a valid MoxiWorks <a class="el" href="class_moxi_works_1_1_platform_1_1_agent.html" title="The following object makes up the payload of the Agent response for a Show request. ">Agent</a> ID for your <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> request to be accepted.</td></tr>
   </table>
   </dd>
 </dl>
-<p>MoxiWorksAgentId This is the Moxi Works <a class="el" href="namespace_moxi_works_1_1_platform.html">Platform</a> ID of the agent which an <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> entry is associated with. This will be a string that may take the form of an email address, or a unique identification string. agent_uuid or moxi_works_agent_id is required and must reference a valid Moxi Works <a class="el" href="class_moxi_works_1_1_platform_1_1_agent.html" title="The following object makes up the payload of the Agent response for a Show request. ">Agent</a> ID for your <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> request to be accepted. <a class="el" href="class_moxi_works_1_1_platform_1_1_agent.html" title="The following object makes up the payload of the Agent response for a Show request. ">Agent</a> ID for your <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> request to be accepted. </p>
+<p>MoxiWorksAgentId This is the MoxiWorks <a class="el" href="namespace_moxi_works_1_1_platform.html">Platform</a> ID of the agent which an <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> entry is associated with. This will be a string that may take the form of an email address, or a unique identification string. agent_uuid or moxi_works_agent_id is required and must reference a valid MoxiWorks <a class="el" href="class_moxi_works_1_1_platform_1_1_agent.html" title="The following object makes up the payload of the Agent response for a Show request. ">Agent</a> ID for your <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> request to be accepted. <a class="el" href="class_moxi_works_1_1_platform_1_1_agent.html" title="The following object makes up the payload of the Agent response for a Show request. ">Agent</a> ID for your <a class="el" href="class_moxi_works_1_1_platform_1_1_listing.html" title="Listing entity representing a Brokerage’s listing. ">Listing</a> request to be accepted. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">agentIdType</td><td>What agentId type you are using.</td></tr>
