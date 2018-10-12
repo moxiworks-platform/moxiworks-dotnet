@@ -268,5 +268,11 @@ namespace MoxiWorks.Platform
         /// </summary>
         [JsonProperty("note")]
         public string Note { get; set; }
+        
+        /// <summary>
+        /// comma seperated string of category names 
+        /// </summary>
+        [JsonProperty("category_names")]
+        public string CategoryNames { get; set; }
     }
 }
