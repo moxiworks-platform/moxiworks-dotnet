@@ -50,6 +50,14 @@ namespace MoxiWorks.Platform
         }
         
         /// <summary>
+        /// Synchronous wrapper for GetContactAsync
+        /// </summary>
+        public Response<Contact> GetContact(string agentId, AgentIdType agentIdType, string partnerContactId)
+        {
+            return System.Threading.Tasks.Task.Run(() => GetContactAsync(agentId,agentIdType, partnerContactId)).Result; 
+        }
+        
+        /// <summary>
         /// Create and returns a new Contact.
         /// </summary>
         /// <param name="contact">
@@ -61,6 +69,14 @@ namespace MoxiWorks.Platform
             var builder = new UriBuilder("contacts");
 
             return await Client.PostRequestAsync(builder.GetUrl(), contact);
+        }
+        
+        /// <summary>
+        /// Synchronous wrapper for CreateContactAsync
+        /// </summary>
+        public Response<Contact> CreateContact(Contact contact)
+        {
+            return System.Threading.Tasks.Task.Run(() => CreateContactAsync(contact)).Result; 
         }
 
         /// <summary>
@@ -75,8 +91,17 @@ namespace MoxiWorks.Platform
             var builder = new UriBuilder($"contacts/{contact.PartnerContactId}");
             
             return await Client.PutRequestAsync(builder.GetUrl(), contact);
-
         }
+        
+        /// <summary>
+        /// Synchronous wrapper for UpdateContactAsync
+        /// </summary>
+        public Response<Contact> UpdateContact(Contact contact)
+        {
+            return System.Threading.Tasks.Task.Run(() => UpdateContactAsync(contact)).Result; 
+        }
+      
+        
         /// <summary>
         /// Gets Contact through the specified ID type.
         /// </summary>
@@ -98,6 +123,22 @@ namespace MoxiWorks.Platform
         {
             return await GetContactsUpdatedSinceAsync(agentId, agentIdType, emailAddress, contactName, phoneNumber,
                 updatedSince, pageNumber);
+        }
+        
+        /// <summary>
+        /// Synchronous wrapper for GetContactsAsync
+        /// </summary>
+        public Response<ContactResults> GetContacts(string agentId, AgentIdType agentIdType, string emailAddress = null,
+            string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1)
+        {
+            return System.Threading.Tasks.Task.Run(() => GetContactsUpdatedSinceAsync( 
+                agentId,  
+                agentIdType,  
+                emailAddress,
+                contactName,  
+                phoneNumber, 
+                updatedSince, 
+                pageNumber)).Result; 
         }
         
         
@@ -123,6 +164,22 @@ namespace MoxiWorks.Platform
             return await GetContactsUpdatedSinceAsync(AgentId, AgentIdType.AgentUuid, emailAddress, contactName, phoneNumber,
                 updatedSince, pageNumber);
         }
+
+        /// <summary>
+        /// Synchronous wrapper for GetContactResultsAgentUuidAsync
+        /// </summary>
+        public Response<ContactResults> GetContactResultsAgentUuid(string AgentId, string emailAddress = null, string contactName = null,
+            string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1)
+        {
+            return System.Threading.Tasks.Task.Run(() => GetContactResultsAgentUuidAsync( 
+                AgentId,  
+                emailAddress,
+                contactName,  
+                phoneNumber, 
+                updatedSince, 
+                pageNumber)).Result; 
+        }
+
         
         /// <summary>
         /// Gets Contact through the MoxiWorksAgentId.
@@ -146,6 +203,29 @@ namespace MoxiWorks.Platform
         {
             return await GetContactsUpdatedSinceAsync(AgentId, AgentIdType.MoxiWorksagentId, emailAddress, contactName,
                 phoneNumber, updatedSince, pageNumber);
+        }
+
+        public Response<ContactResults> GetContactResultsMoxiWorksAgentId(string AgentId, string emailAddress = null, string contactName = null,
+            string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Synchronous wrapper for GetContactResultsMoxiWorksAgentId
+        /// </summary>
+        public  Response<ContactResults> GetContactResultsMoxiWorksAgentId(string agentId, AgentIdType agentIdType, string emailAddress = null,
+            string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1)
+        {
+            return System.Threading.Tasks.Task.Run(() => GetContactsUpdatedSinceAsync( 
+                agentId,  
+                agentIdType,  
+                emailAddress,
+                contactName,  
+                phoneNumber, 
+                updatedSince, 
+                pageNumber)).Result; 
+
         }
 
         /// <summary>
@@ -192,6 +272,24 @@ namespace MoxiWorks.Platform
 
             return await Client.GetRequestAsync<ContactResults>(builder.GetUrl());
         }
+        
+        /// <summary>
+        /// Synchronous wrapper for GetContactsUpdatedSinceAsync
+        /// </summary>
+        public  Response<ContactResults> GetContactsUpdatedSince(string agentId, AgentIdType agentIdType, string emailAddress = null,
+            string contactName = null, string phoneNumber = null, DateTime? updatedSince = null, int pageNumber = 1)
+        {
+            return System.Threading.Tasks.Task.Run(() => GetContactsUpdatedSinceAsync( 
+                agentId,  
+                agentIdType,  
+                emailAddress,
+                contactName,  
+                phoneNumber, 
+                updatedSince, 
+                pageNumber)).Result; 
 
+        }
+
+   
     }
 }
