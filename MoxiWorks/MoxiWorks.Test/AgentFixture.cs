@@ -14,6 +14,17 @@ namespace MoxiWorks.Test
             Assert.IsType<Agent>(response.Item);
           
         }
+        
+        [Fact]
+        public void ShouldReturnAnAgentNoAsync()
+        {
+            var agentJson = StubDataLoader.LoadJsonFile("Agent.json");  
+            IAgentService service = new AgentService(new MoxiWorksClient(new StubContextClient(agentJson)));
+            var response = service.GetAgent("some_agent_id","some_company_id");
+            var agent = response.Item;
+            Assert.True(agent.AlternateOffices.Count == 2);
+            Assert.Equal(agent.AlternateOffices[0].OfficeId, 1234);
+        }
 
         [Fact]
         public void ShouldReternAgentWithAlternateOffices()

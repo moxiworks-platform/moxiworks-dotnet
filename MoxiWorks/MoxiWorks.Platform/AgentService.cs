@@ -47,6 +47,14 @@ namespace MoxiWorks.Platform
         }
         
         /// <summary>
+        /// Synchronous wrapper for GetAgentAsync
+        /// </summary>
+        public Response<Agent> GetAgent(string agentId,string moxiWorksCompanyId)
+        {
+            return System.Threading.Tasks.Task.Run(() =>GetAgentAsync(agentId,moxiWorksCompanyId)).Result; 
+        }
+
+        /// <summary>
         /// When finding an Agent using the Moxi Works platform API and optionaly include an agents gci goals.
         /// </summary>
         /// <param name="agentId">
@@ -78,6 +86,14 @@ namespace MoxiWorks.Platform
                 .AddQueryParameter("include_gci_goals", includeGciGoals)
                 .AddQueryParameter("moxi_works_company_id", moxiWorksCompanyId);
             return await Client.GetRequestAsync<Agent>(builder.GetUrl()); 
+        }
+        
+        /// <summary>
+        /// Synchronous wrapper for GetAgentWithGoalsAsync
+        /// </summary>
+        public Response<Agent> GetAgentWithGoals(string agentId, string moxiWorksCompanyId, bool includeGciGoals)
+        {
+            return System.Threading.Tasks.Task.Run(() =>GetAgentWithGoalsAsync(agentId,moxiWorksCompanyId,includeGciGoals)).Result; 
         }
         
         
@@ -112,6 +128,17 @@ namespace MoxiWorks.Platform
                 .AddQueryParameter("updated_since", updatedSince)
                 .AddQueryParameter("page_number", pageNumber);
             return await  Client.GetRequestAsync<AgentResults>(builder.GetUrl());
+        }
+
+
+        /// <summary>
+        /// Synchronous wrapper for GetAgentsAsync
+        /// </summary>
+        public Response<AgentResults> GetAgents(string moxiWorksCompanyId, string moxiWorksOfficeId = null,
+            DateTime? updatedSince = null, int? pageNumber = 1)
+        {
+            return System.Threading.Tasks.Task.Run(() =>GetAgentsAsync(moxiWorksCompanyId,moxiWorksOfficeId,
+            updatedSince,pageNumber)).Result; 
         }
         
     }

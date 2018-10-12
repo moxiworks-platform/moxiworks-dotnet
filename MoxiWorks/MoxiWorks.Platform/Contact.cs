@@ -153,7 +153,7 @@ namespace MoxiWorks.Platform
         /// interest.
         /// </summary>
         [JsonProperty("property_baths")]
-        public int?  PropertyBaths{ get; set; } 
+        public string  PropertyBaths{ get; set; } 
         /// <summary>
         /// Use this if you have data about a property that this contact has shown interest in 
         /// (property of interest); this should be the list price of the property of interest.
@@ -199,7 +199,7 @@ namespace MoxiWorks.Platform
         /// this should be the minimum bathrooms used in the listing search criteria.
         /// </summary>
         [JsonProperty("search_min_baths")]
-        public int? SearchMinBaths{ get; set; }
+        public string SearchMinBaths{ get; set; }
         /// <summary>
         /// Use this if you have data about listing searches that this contact has performed; 
         /// this should be the minimum bedrooms used in the listing search criteria.
@@ -268,5 +268,11 @@ namespace MoxiWorks.Platform
         /// </summary>
         [JsonProperty("note")]
         public string Note { get; set; }
+        
+        /// <summary>
+        /// comma seperated string of category names 
+        /// </summary>
+        [JsonProperty("category_names")]
+        public string CategoryNames { get; set; }
     }
 }
