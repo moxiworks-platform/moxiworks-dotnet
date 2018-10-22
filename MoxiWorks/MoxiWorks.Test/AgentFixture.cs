@@ -23,7 +23,7 @@ namespace MoxiWorks.Test
             var response = service.GetAgent("some_agent_id","some_company_id");
             var agent = response.Item;
             Assert.True(agent.AlternateOffices.Count == 2);
-            Assert.Equal(agent.AlternateOffices[0].OfficeId, 1234);
+            Assert.Equal(1234,agent.AlternateOffices[0].OfficeId);
         }
 
         [Fact]
@@ -34,7 +34,7 @@ namespace MoxiWorks.Test
             var response = service.GetAgentAsync("some_agent_id","some_company_id").Result;
             var agent = response.Item;
             Assert.True(agent.AlternateOffices.Count == 2);
-            Assert.Equal(agent.AlternateOffices[0].OfficeId, 1234);
+            Assert.Equal(1234,agent.AlternateOffices[0].OfficeId);
         }
         
         
@@ -47,9 +47,9 @@ namespace MoxiWorks.Test
             var response = service.GetAgentWithGoalsAsync("some_agent_id","some_company_id", true).Result;
             var agent = response.Item;
             Assert.IsType<Agent>(response.Item);
-            Assert.Equal(agent.GciGoal,122131);
-            Assert.Equal(agent.BuyerCommissionRate, 1.25f); 
-            Assert.Equal(agent.SellerCommisionRate,1.25f); 
+            Assert.Equal(122131,agent.GciGoal);
+            Assert.Equal(1.25f,agent.BuyerCommissionRate); 
+            Assert.Equal(1.25f,agent.SellerCommisionRate); 
           
         }
         
