@@ -142,7 +142,7 @@ namespace MoxiWorks.Platform
                 var e = new MoxiWorksError
                 {
                     Status = "invalid",
-                    ErrorCode = "0"
+                    StatusCode = "0"
                 };
                 e.Messages.Add(error);
                 response.Errors.Add(e);

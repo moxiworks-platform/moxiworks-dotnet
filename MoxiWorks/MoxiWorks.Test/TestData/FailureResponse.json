@@ -1,5 +1,6 @@
 ﻿{
-    "status":"fail",
-    "errorCode": 1234,
-    "messages": ["messages"]
+    "status":"error",
+    "status_code": 3015,
+    "messages": ["Invalid moxi_works_agent_id"],
+    "request_id": "31e1368a-e483-4d55-a1b0-e1e51854693d"
 }

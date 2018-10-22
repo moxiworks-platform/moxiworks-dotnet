@@ -20,9 +20,15 @@ namespace MoxiWorks.Platform
         [JsonProperty("messages")]
         public List<string> Messages { get; set; } = new List<string>(); 
         /// <summary>
-        /// The error code returned from the API.
+        /// The status code returned from the API.
         /// </summary>
-        [JsonProperty("errorCode")]
-        public string ErrorCode { get; set; }
+        [JsonProperty("status_code")]
+        public string StatusCode { get; set; }
+        /// <summary>
+        /// The request Id returned from the API.
+        /// </summary>
+        [JsonProperty("request_id")]
+        public string RequestId { get; set; }
+        
     }
 }

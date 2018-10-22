@@ -63,6 +63,10 @@ namespace MoxiWorks.Test
             var service = new TaskService(new MoxiWorksClient(new StubContextClient(json)));
             var response = service.GetTaskAsync("foo", AgentIdType.AgentUuid, "1234", "12345").Result;
             Assert.True((bool?) response.HasErrors); 
+            Assert.True(response.Errors[0].StatusCode == "3015");
+            Assert.Contains(response.Errors[0].Status,"error");
+            Assert.Contains(response.Errors[0].Messages[0], "Invalid moxi_works_agent_id");
+            Assert.Contains(response.Errors[0].RequestId,"31e1368a-e483-4d55-a1b0-e1e51854693d");
             
         }
 
