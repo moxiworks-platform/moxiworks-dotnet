@@ -31,6 +31,14 @@ namespace MoxiWorks.Platform
         }
         
         /// <summary>
+        /// Synchronous wrapper for GetCompanyBrandAsync
+        /// </summary>
+        public Response<Brand> GetCompanyBrand(string moxiWorksCompanyId)
+        {
+            return System.Threading.Tasks.Task.Run(() => GetCompanyBrandAsync(moxiWorksCompanyId)).Result; 
+        }
+        
+        /// <summary>
         /// Returns BrandResults that contains associated Brands for the request query
         /// </summary>
         /// <param name="moxiWorksAgentId">
@@ -52,6 +60,13 @@ namespace MoxiWorks.Platform
             return await Client.GetRequestAsync<BrandResults>(builder.GetUrl());
         }
         
+        /// <summary>
+        /// Synchronous wrapper for GetBrandsAsync
+        /// </summary>
+        public  Response<BrandResults> GetBrands(string moxiWorksCompanyId, string agentId = null)
+        {
+            return System.Threading.Tasks.Task.Run(() => GetBrandsAsync(moxiWorksCompanyId, agentId)).Result; 
+        }
         
     }
 }

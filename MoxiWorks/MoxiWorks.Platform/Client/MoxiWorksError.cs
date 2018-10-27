@@ -15,7 +15,7 @@ namespace MoxiWorks.Platform
         [JsonProperty("status")]
         public string Status { get; set; }
         /// <summary>
-        /// The messages returned from teh API 
+        /// The messages returned from the API 
         /// </summary>
         [JsonProperty("messages")]
         public List<string> Messages { get; set; } = new List<string>(); 

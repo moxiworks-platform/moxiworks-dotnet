@@ -1,0 +1,18 @@
+{
+  "image_logo": "http://image.url/image.png",
+  "cma_authoring_color": "#123456",
+  "background_color": "#123456",
+  "background_font_color_primary": "#654321",
+  "button_background_color": "#123456",
+  "button_font_color": "#654321",
+  "copyright": "&copy; 2017 <a href=\"http://embedded.href.url\" target=\"_blank\">Company Copyright Holder</a> and Possibly another Company",
+"display_name": "Company Display Name",
+  "email_element_background_color": "#654321",
+  "email_background_font_color": "#123456",
+  "image_cma_pdf_logo_header": "http://image.url/pdf_logo@341x110.png",
+  "image_email_logo_alt": "http://image.url/email_logo@341x110.png",
+  "image_favicon": "http://favicon.url/favicon.ico",
+  "image_pres_cover_logo": "http://image.url/pres_cover_logo@341x110.png",
+  "pres_block_background_color": "#654321",
+  "pres_block_text_color": "#123456"
+}
