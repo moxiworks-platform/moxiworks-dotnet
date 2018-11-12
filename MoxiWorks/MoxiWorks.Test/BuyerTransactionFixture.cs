@@ -50,7 +50,12 @@ namespace MoxiWorks.Test
             Assert.False(fake.Validate());
             Assert.StrictEqual(1, fake.Errors.Count); 
         }
-        
+
+        [Fact]
+        public void ReturnsByTransaction()
+        {
+           var buyerTransaction = StubDataLoader.LoadJsonFile("BuyerTransaction.json");  
+        }
         
         public Faker<BuyerTransaction> GetFakerBuyerTransaction()
         {
@@ -62,5 +67,7 @@ namespace MoxiWorks.Test
                 .RuleFor(b => b.Notes, f => f.Lorem.Paragraph());
 
         }
+        
+        
     }
 }
