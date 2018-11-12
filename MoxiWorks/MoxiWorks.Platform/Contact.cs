@@ -24,7 +24,7 @@ namespace MoxiWorks.Platform
         [JsonProperty("moxi_works_agent_id")]
         public string MoxiWorksAgentId { get; set; }
         /// <summary>
-        /// This is the unique identifer you use in your system that has been associated with 
+        /// This is the unique identifier you use in your system that has been associated with 
         /// the Contact that you are creating.
         /// </summary>
         [JsonProperty("partner_contact_id")]
@@ -59,7 +59,7 @@ namespace MoxiWorks.Platform
         [JsonProperty("primary_phone_number")]
         public string PrimaryPhoneNumber { get; set; }
         /// <summary>
-        /// This is the phone numberthat should be used as an alternate. 
+        /// This is the phone number that should be used as an alternate. 
         /// </summary>
         [JsonProperty("secondary_phone_number")]
         public string SecondaryPhoneNumber { get; set; }
@@ -101,7 +101,7 @@ namespace MoxiWorks.Platform
         /// The contact’s profession.
         /// </summary>
         [JsonProperty("occupation")]
-        public string Occuparion { get; set; }
+        public string Occupation { get; set; }
         /// <summary>
         /// This should be a valid URL for a property of interest in your system that can
         ///  be viewed by the agent.
@@ -270,7 +270,7 @@ namespace MoxiWorks.Platform
         public string Note { get; set; }
         
         /// <summary>
-        /// comma seperated string of category names 
+        /// comma separated string of category names 
         /// </summary>
         [JsonProperty("category_names")]
         public string CategoryNames { get; set; }
