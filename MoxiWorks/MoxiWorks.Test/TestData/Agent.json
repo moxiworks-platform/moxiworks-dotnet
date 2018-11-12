@@ -35,6 +35,8 @@
   "home_page": "foo.com",
   "profile_image_url": "http://picturererer.com/pics37/ImageStore.dll?id=852087C5D3A533DD&w=200",
   "profile_thumb_url": "http://picturererer.com/pics37/ImageStore.dll?id=852087C5D3A533DD&w=75",
+  "deactivated_timestamp":null,
+  "created_timestamp":1542045888,
   "alternate_offices": [
     {
       "moxi_works_office_id": "abc123",

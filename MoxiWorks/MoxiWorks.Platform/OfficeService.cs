@@ -31,6 +31,15 @@ namespace MoxiWorks.Platform
             
             return await Client.GetRequestAsync<Office>(builder.GetUrl()); 
         }
+        
+        /// <summary>
+        /// Synchronous wrapper for GetOfficeAsync
+        /// </summary>
+        public Response<Office> GetOffice(string moxiWorksOfficeId, string moxiWorksCompanyId)
+        {
+            return System.Threading.Tasks.Task.Run(() =>GetOfficeAsync(moxiWorksOfficeId,moxiWorksCompanyId)).Result; 
+
+        }
 
 
         /// <summary>
@@ -50,6 +59,15 @@ namespace MoxiWorks.Platform
                 .AddQueryParameter("page_number", pageNumber);
             
             return await Client.GetRequestAsync<OfficeResults>(builder.GetUrl()); 
+        }
+        
+        /// <summary>
+        /// Synchronous wrapper for GetCompanyOfficesAsync
+        /// </summary>
+        public Response<OfficeResults> GetCompanyOffices(string moxiWorksCompanyId, int pageNumber = 1)
+        {
+          return System.Threading.Tasks.Task.Run(() =>GetCompanyOfficesAsync(moxiWorksCompanyId,pageNumber)).Result; 
+
         }
         
         

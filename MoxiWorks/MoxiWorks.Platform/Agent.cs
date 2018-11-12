@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace MoxiWorks.Platform
@@ -231,7 +232,19 @@ namespace MoxiWorks.Platform
         /// Percentage commission rate for the agent when acting as a seller’s agent.
         /// </summary>
         [JsonProperty("seller_commission_rate")]
-        public float? SellerCommisionRate { get; set; }
+        public float? SellerCommissionRate { get; set; }
+        
+        /// <summary>
+        /// Date the agent was created
+        /// </summary>
+        [JsonProperty("created_timestamp")]
+        public int? CreatedTimestamp { get; set; }
+        
+        /// <summary>
+        /// Date the agent was deactivated
+        /// </summary>
+        [JsonProperty("deactivated_timestamp")]
+        public int? DeactivatedTimestamp { get; set; }
         
         
     }

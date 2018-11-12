@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace MoxiWorks.Platform
 
@@ -82,7 +83,7 @@ namespace MoxiWorks.Platform
         /// Office’s Google Plus account name. This can be null if there is no data for this attribute.
         /// </summary>
         [JsonProperty("google_plus")]
-        public string GooglePluse { get; set; }
+        public string GooglePlus { get; set; }
         /// <summary>
         /// This is the office’s main phone number. This number should be considered the number the office would prefer to be contacted by. 
         /// This can be null if there is no data for this attribute.
@@ -99,6 +100,19 @@ namespace MoxiWorks.Platform
         /// </summary>
         [JsonProperty("twitter")]
         public string Twitter { get; set; }
+        
+        /// <summary>
+        /// Date the Office was created
+        /// </summary>
+        [JsonProperty("created_timestamp")]
+        public int? CreatedTimestamp { get; set; }
+        
+        /// <summary>
+        /// Date the Office was deactivated
+        /// </summary>
+        [JsonProperty("deactivated_timestamp")]
+        public int? DeactivatedTimestamp { get; set; }
+
         
     }
 }

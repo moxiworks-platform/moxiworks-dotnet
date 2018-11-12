@@ -9,6 +9,9 @@ namespace MoxiWorks.Platform.Interfaces
     {
         IMoxiWorksClient Client { get; set; }
         Task<Response<Office>> GetOfficeAsync(string moxiWorksOfficeId, string moxiWorksCompanyId);
+        Response<Office> GetOffice(string moxiWorksOfficeId, string moxiWorksCompanyId);
         Task<Response<OfficeResults>> GetCompanyOfficesAsync(string moxiWorksCompanyId, int pageNumber = 1);
+        Response<OfficeResults> GetCompanyOffices(string moxiWorksCompanyId, int pageNumber = 1);
+       
     }
 }

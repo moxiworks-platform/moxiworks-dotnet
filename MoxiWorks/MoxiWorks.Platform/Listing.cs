@@ -27,6 +27,11 @@ namespace MoxiWorks.Platform
         /// </summary>
         public List<OpenHouse> OpenHouse { get; set; }
         
+        /// <summary>
+        /// Partner specific listing information in a json formatted string.
+        /// </summary>
+        public string SharedPartnerData { get; set; }
+        
         
     }
 

@@ -1,0 +1,30 @@
+{
+  "page_number":9,
+  "total_pages":9,
+  "offices":[
+    {
+      "moxi_works_office_id":"feedface-dead-beef-aadf-baddeedc645",
+      "id":"1234",
+      "image_url":"http://the.office.image/image.png",
+      "name":"Bob's Better Brokerage",
+      "common_name":"Bob's Salsburry Hill Branch",
+      "address":"101 South Southerly Street",
+      "address2":null,
+      "city":"Townseville",
+      "county":"Ye Olde Countrie",
+      "state":"UM",
+      "zip_code":"12123",
+      "alt_phone":"8185551212",
+      "email":"office@bobsbetterbrokers.erp",
+      "facebook":null,
+      "google_plus":null,
+      "phone":"8185551213",
+      "timezone":"Pacific Time (US & Canada)",
+      "twitter":null,
+      "office_website":"http://the.office.website",
+      "region":"WESTERN WASHINGTON",
+      "deactivated_timestamp":null,
+      "created_timestamp":1542045888
+    }
+  ]
+}
