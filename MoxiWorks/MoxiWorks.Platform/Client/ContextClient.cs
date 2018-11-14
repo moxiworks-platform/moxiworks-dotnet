@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Net.Http;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using MoxiWorks.Platform.Interfaces;
-
+[assembly:InternalsVisibleTo("MoxiWorks.Test")]
 namespace MoxiWorks.Platform
 {
     internal class ContextClient : IContextClient
@@ -40,13 +41,21 @@ namespace MoxiWorks.Platform
             var cred = new Credentials();
             var auth = AuthenticationHeaderValue.Parse("Basic " + cred.ToBase64());
             client.DefaultRequestHeaders.Authorization = auth;
-            client.DefaultRequestHeaders.Add("Accept", "application/vnd.moxi-platform+json;version=1");
-            client.DefaultRequestHeaders.Add("User-Agent", "moxiworks_platform dotnet client");
+
+            if (client.DefaultRequestHeaders.Accept.Count == 0)
+            {
+                client.DefaultRequestHeaders.Add("Accept", "application/vnd.moxi-platform+json;version=1");
+            }
+
+            if (client.DefaultRequestHeaders.UserAgent.Count == 0)
+            {
+                client.DefaultRequestHeaders.Add("User-Agent", "moxiworks_platform dotnet client");
+            }
+
             if (!Session.Instance.IsSessionCookieSet) return client;
 
             var cookie = Session.Instance.SessionCookie;
-            client.DefaultRequestHeaders.Add("Cookie", $"{cookie.Name}={cookie.Value}; path=/; HttpOnly");
-
+            client.DefaultRequestHeaders.Add("Cookie", $"{cookie.Name}={cookie.Value}; path=/; HttpOnly");          
             return client;
         }
         

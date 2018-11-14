@@ -32,5 +32,23 @@ namespace MoxiWorks.Test
             Assert.IsType<Contact>(response.Item);
             Assert.True(response.Item.AgentUuid == "12345678-1234-1234-1234-1234567890ab");
         }
+
+        [Fact]
+        public void ShouldHandleSubdomianEmails()
+        {
+            var contactJson = StubDataLoader.LoadJsonFile("Contact.json");  
+            var service = new ContactService(new MoxiWorksClient(new StubContextClient(contactJson)));
+            var response = service.GetContact("12345678-1234-1234-1234-1234567890ab",
+                AgentIdType.AgentUuid,"booyuh");
+            var contact = response.Item;
+            contact.PrimaryEmailAddress = "gmm@neohio.twcbc.com"; 
+            
+            response = service.CreateContact(contact); 
+            Assert.IsType<Contact>(response.Item);
+            Assert.True(response.Item.AgentUuid == "12345678-1234-1234-1234-1234567890ab");
+
+        }
+        
+        
     }
 }
