@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using Xunit;
 namespace MoxiWorks.Test.Client
@@ -13,8 +12,8 @@ namespace MoxiWorks.Test.Client
             var expected = 3;
 
             // call twice to see if the headers are only added once 
-            var client = MoxiWorks.Platform.ContextClient.RequestClient();
-            client = MoxiWorks.Platform.ContextClient.RequestClient();
+            var client = Platform.ContextClient.RequestClient();
+            client = Platform.ContextClient.RequestClient();
             
             var actual =  client.DefaultRequestHeaders.UserAgent.Count();
      
@@ -29,8 +28,8 @@ namespace MoxiWorks.Test.Client
             var expected = 1;
 
             // call twice to see if the headers are only added once 
-            var client = MoxiWorks.Platform.ContextClient.RequestClient();
-            var client_2 = MoxiWorks.Platform.ContextClient.RequestClient();
+            var client = Platform.ContextClient.RequestClient();
+            var client_2 = Platform.ContextClient.RequestClient();
             
             var actual =  client_2.DefaultRequestHeaders.Accept.Count();   
             
