@@ -7,8 +7,6 @@ namespace MoxiWorks.Test.Client
         [Fact]
         public void ShouldOnlyGenerateOneSetOfUserAgentHeaders()
         {
-
-
             var expected = 3;
 
             // call twice to see if the headers are only added once 
@@ -17,7 +15,6 @@ namespace MoxiWorks.Test.Client
             
             var actual =  client.DefaultRequestHeaders.UserAgent.Count();
      
-            
             Assert.Equal(expected,actual);
         }
 
