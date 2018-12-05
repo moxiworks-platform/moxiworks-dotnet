@@ -2,14 +2,14 @@
 <package>
   <metadata>
     <id>MoxiWorks.Platform</id>
-    <version>1.2.11</version>
+    <version>1.2.12</version>
     <title>Moxi Works Platform</title>
     <authors>Anthony Hatch</authors>
     <owners>Moxi Works</owners>
     <projectUrl>https://github.com/moxiworks-platform/moxiworks-dotnet</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>"SDK for interaction with the Moxi Works API platform.</description>
-    <releaseNotes> Adding better exception handling and removing repeated UserAgent data.
+    <releaseNotes>       Adding IMoxiworksCredentials Interface for custom credentials.
     </releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>moxiworks api sdk</tags>
