@@ -1,6 +1,8 @@
 ﻿﻿using System;
 using System.Text;
 using System.Configuration;
+ using System.Net;
+ using MoxiWorks.Platform.Interfaces;
 
 
 namespace MoxiWorks.Platform
@@ -8,7 +10,7 @@ namespace MoxiWorks.Platform
     /// <summary>
     /// Get the application configurations for the Identifier and Secret
     /// </summary>
-    public class Credentials
+    public class Credentials: IMoxiWorksCredentials
     {
         public static  string Identifier  = ConfigurationManager.AppSettings["Identifier"];
         public static  string Secret = ConfigurationManager.AppSettings["Secret"];

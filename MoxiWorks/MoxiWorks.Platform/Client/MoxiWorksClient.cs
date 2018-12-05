@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
@@ -17,10 +18,18 @@ namespace MoxiWorks.Platform
 
         protected IContextClient ClientContext { get; set; } = new ContextClient();
 
+        private readonly IMoxiWorksCredentials _credentials;  
+
         public MoxiWorksClient(IContextClient context = null)
         {
             if (context != null)
                 ClientContext = context;
+        }
+
+        public MoxiWorksClient(IMoxiWorksCredentials cred)
+        {
+            _credentials = cred;
+            ClientContext =  new ContextClient(_credentials);
         }
 
         public async Task<Response<T>> GetRequestAsync<T>(string url)

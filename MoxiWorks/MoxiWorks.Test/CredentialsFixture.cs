@@ -11,7 +11,7 @@ namespace MoxiWorks.Test
 
          public CredentialsFixture()
          {
-             // lame dependancy on Configuration Manager
+             // lame dependency on Configuration Manager
              ConfigurationManager.AppSettings["Identifier"] = "foo";
              ConfigurationManager.AppSettings["Secret"] = "bar";
          }
@@ -19,8 +19,7 @@ namespace MoxiWorks.Test
         [Fact]
         public void ShouldTakeIdentifierAndSecret()
         {
-           
-            // lame dependancy on Configuration Manager
+            // lame dependency on Configuration Manager
             ConfigurationManager.AppSettings["Identifier"] = "foo";
             ConfigurationManager.AppSettings["Secret"] = "bar";
             

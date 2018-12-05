@@ -35,10 +35,12 @@ namespace MoxiWorks.Platform
             return new HttpClient(_handler);
         }
         
-        public static HttpClient RequestClient()
+        public static HttpClient RequestClient(IMoxiWorksCredentials credentials = null)
         {
+            var cred = credentials ?? new Credentials(); 
+            
             var client = Context;
-            var cred = new Credentials();
+        
             var auth = AuthenticationHeaderValue.Parse("Basic " + cred.ToBase64());
             client.DefaultRequestHeaders.Authorization = auth;
 
@@ -58,12 +60,22 @@ namespace MoxiWorks.Platform
             client.DefaultRequestHeaders.Add("Cookie", $"{cookie.Name}={cookie.Value}; path=/; HttpOnly");          
             return client;
         }
-        
+
+        private readonly IMoxiWorksCredentials _credentials; 
+        public ContextClient(IMoxiWorksCredentials credentials)
+        {
+            _credentials = credentials; 
+        }
+
+        public ContextClient()
+        {
+            _credentials = new Credentials();
+        }
+
         public async Task<string>  GetRequestAsync(string url)
         {
 
-            var client = RequestClient();
-            Console.WriteLine(url);
+            var client = RequestClient(_credentials);
             var result = await client.GetAsync(new Uri(url));
             var content = result.Content;
 
@@ -79,7 +91,7 @@ namespace MoxiWorks.Platform
 
         public async Task<string> PostRequestAsync<T>(string url, T obj)
         {
-            var client = RequestClient();
+            var client = RequestClient(_credentials);
             var result =  await client.PostAsJsonAsync(url, obj);
             var content = result.Content;
 
@@ -97,7 +109,7 @@ namespace MoxiWorks.Platform
 
         public async Task<string> PutRequestAsync<T>(string url, T obj)
         {
-            var client = RequestClient();
+            var client = RequestClient(_credentials);
             var result = await client.PutAsJsonAsync(url, obj);
             var content = result.Content;
            
@@ -114,7 +126,7 @@ namespace MoxiWorks.Platform
 
         public async Task<string>  DeleteRequestAsync(string url)
         {
-            var client = RequestClient();
+            var client = RequestClient(_credentials);
             var result = await client.DeleteAsync(new Uri(url));
             var content = result.Content;
 
