@@ -29,7 +29,12 @@ namespace MoxiWorks.Platform
         /// </summary>
         [JsonProperty("partner_contact_id")]
         public string PartnerContactId { get; set; }
+        
         /// <summary>
+        /// This is the Moxi Works Platform ID of this Contact. This will be an RFC 4122 compliant UUID.
+        /// <summary>
+        [JsonProperty("moxi_works_contact_id")]
+        public string MoxiWorksContactId { get; set; }
         /// This is the full name of the contact you are creating a Contact record for. 
         /// You should format this information as first middle last.
         /// </summary>
