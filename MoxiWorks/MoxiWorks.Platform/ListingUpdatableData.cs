@@ -1,4 +1,6 @@
-﻿namespace MoxiWorks.Platform
+﻿using System.Collections.Generic;
+
+namespace MoxiWorks.Platform
 {
     /// <summary>
     /// Used to hold properties updatable for listings
@@ -13,7 +15,7 @@
         /// <summary>
         /// Partner specific listing information in a json formatted string.
         /// </summary>
-        public string SharedPartnerData { get; set; }
+        public IDictionary<string, object> SharedPartnerData { get; set; }
         
     }
     

@@ -30,7 +30,7 @@ namespace MoxiWorks.Platform
         /// <summary>
         /// Partner specific listing information in a json formatted string.
         /// </summary>
-        public string SharedPartnerData { get; set; }
+        public IDictionary<string, object> SharedPartnerData { get; set; }
         
         
     }
