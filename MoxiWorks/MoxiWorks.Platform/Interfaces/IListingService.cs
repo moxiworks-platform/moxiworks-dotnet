@@ -14,5 +14,7 @@ namespace MoxiWorks.Platform.Interfaces
         Task<Response<ListingResults>> GetListingsUpdatedSinceAsync(string moxiWorksCompanyId
             ,AgentIdType agentIdType, string agentId = null,DateTime? updatedSince = null  
             ,string lastMoxiWorksListingId = null);
+
+        Task<Response<ListingResults>> UpdateListingDataAsync(ListingUpdate listingUpdate);
     }
 }

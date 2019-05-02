@@ -1,12 +1,15 @@
 ﻿using System;
+using MoxiWorks.Platform.Serializers;
+using Newtonsoft.Json;
 
 namespace MoxiWorks.Platform
 {
     public class OpenHouse
     {
         /// <summary>
-        /// Represent the date of the open house
+        /// Represent the date of the open house. YYYY-MM-DD formatted string representing the date of the open house
         /// </summary>
+        [JsonConverter(typeof(MoxiDateFormatConverter), "yyyy-MM-dd")]
         public DateTime Date { get; set; }
         
         /// <summary>

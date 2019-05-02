@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 
 namespace MoxiWorks.Platform
-
 {
     /// <summary>
     /// Office entities represent brokerage offices.
@@ -22,12 +21,22 @@ namespace MoxiWorks.Platform
         [JsonProperty("id")]
         public string Id { get; set; }
         /// <summary>
-        /// URL to an image of the office. This can be null if there is no data for this attribute.
+        /// This is the ID of the office utilized by the company.
+        /// </summary>
+        [JsonProperty("client_office_id")]
+        public string ClientOfficeId { get; set; }
+        /// <summary>
+        /// The name of the office. This can be null if there is no data for this attribute.
         /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }
         /// <summary>
-        /// The name of the office. This can be null if there is no data for this attribute.
+        /// The commonly known name of the office. This can be null if there is no data for this attribute.
+        /// </summary>
+        [JsonProperty("common_name")]
+        public string CommonName { get; set; }
+        /// <summary>
+        /// URL to an image of the office. This can be null if there is no data for this attribute.
         /// </summary>
         [JsonProperty("image_url")]
         public string ImageUrl { get; set; }
@@ -100,19 +109,25 @@ namespace MoxiWorks.Platform
         /// </summary>
         [JsonProperty("twitter")]
         public string Twitter { get; set; }
-        
+        /// <summary>
+        /// Office’s website URL. This can be null if there is no data available for this attribute.
+        /// </summary>
+        [JsonProperty("office_website")]
+        public string OfficeWebsite { get; set; }
+        /// <summary>
+        /// The region the agent’s office is in. This can be null if there is no data for this attribute.
+        /// </summary>
+        [JsonProperty("region")]
+        public string Region { get; set; }
         /// <summary>
         /// Date the Office was created
         /// </summary>
         [JsonProperty("created_timestamp")]
         public int? CreatedTimestamp { get; set; }
-        
         /// <summary>
         /// Date the Office was deactivated
         /// </summary>
         [JsonProperty("deactivated_timestamp")]
         public int? DeactivatedTimestamp { get; set; }
-
-        
     }
 }

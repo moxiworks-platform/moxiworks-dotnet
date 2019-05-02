@@ -1,6 +1,8 @@
 ﻿using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using MoxiWorks.Platform.Serializers;
+
 namespace MoxiWorks.Platform
 {
     /// <summary>
@@ -15,6 +17,7 @@ namespace MoxiWorks.Platform
         /// day will be included in the results for this day.
         /// </summary>
         [JsonProperty("date")]
+        [JsonConverter(typeof(MoxiDateFormatConverter), "MM/dd/yyyy")]
         public DateTime? date { get; set; } 
         
         /// <summary>

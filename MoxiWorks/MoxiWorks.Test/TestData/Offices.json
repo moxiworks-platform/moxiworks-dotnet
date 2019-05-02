@@ -1,10 +1,12 @@
 {
-  "page_number":9,
+  "page_number":"9",
   "total_pages":9,
   "offices":[
     {
       "moxi_works_office_id":"feedface-dead-beef-aadf-baddeedc645",
       "id":"1234",
+      "client_office_id": "99887766",
+      "company_id": 11223344,
       "image_url":"http://the.office.image/image.png",
       "name":"Bob's Better Brokerage",
       "common_name":"Bob's Salsburry Hill Branch",
@@ -19,7 +21,7 @@
       "facebook":null,
       "google_plus":null,
       "phone":"8185551213",
-      "timezone":"Pacific Time (US & Canada)",
+      "timezone":"Pacific Time (US \u0026 Canada)",
       "twitter":null,
       "office_website":"http://the.office.website",
       "region":"WESTERN WASHINGTON",
