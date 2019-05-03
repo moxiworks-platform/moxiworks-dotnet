@@ -55,6 +55,7 @@
   "MoxiWorksListingId":"abc123",
   "AgentCreatedListing":false,
   "VirtualTourURL":"http://the.virtual.tour.url",
+  "SharedPartnerData": {},
   "ListingURL":"http://the.listing.url",
   
   "PropertyFeatures":[

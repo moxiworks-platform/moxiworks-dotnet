@@ -18,6 +18,7 @@ namespace MoxiWorks.Test
             Assert.IsType<Office>(response.Item);
             Assert.True(response.Item.CreatedTimestamp.HasValue);
             Assert.False(response.Item.DeactivatedTimestamp.HasValue);
+            Assert.Equal(response.Item.Timezone, "Pacific Time (US & Canada)");
         }
         
         [Fact]

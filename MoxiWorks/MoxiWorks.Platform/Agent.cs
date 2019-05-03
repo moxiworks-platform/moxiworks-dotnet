@@ -21,6 +21,26 @@ namespace MoxiWorks.Platform
         [JsonProperty("client_agent_id")]
         public string ClientAgentId { get; set; }
         /// <summary>
+        /// This is the ID of the Agent utilized by their primary MLS.
+        /// </summary>
+        [JsonProperty("mls_agent_id")]
+        public string MlsAgentId { get; set; }
+        /// <summary>
+        /// This is the number of the license granted to the agent.
+        /// </summary>
+        [JsonProperty("license")]
+        public string License { get; set; }
+        /// <summary>
+        /// This is the name of the primary MLS for the agent.
+        /// </summary>
+        [JsonProperty("mls_name")]
+        public string MlsName { get; set; }
+        /// <summary>
+        /// This is the standard abbreviation of the primary MLS utilized by the agent.
+        /// </summary>
+        [JsonProperty("mls_abbreviation")]
+        public string MlsAbbreviation { get; set; }
+        /// <summary>
         /// This is the ID of this Agent. This will be an integer.
         /// </summary>
         [JsonProperty("agent_id")]
@@ -99,6 +119,12 @@ namespace MoxiWorks.Platform
         [JsonProperty("last_name")]
         public string LastName { get; set; }
         /// <summary>
+        /// The nickname of the agent.
+        /// This can be null if there is no data for this attribute.
+        /// </summary>
+        [JsonProperty("nickname")]
+        public string Nickname { get; set; }
+        /// <summary>
         /// This is the agent’s main phone number. 
         /// This number should be considered the number the agent would like to be contacted by.
         ///  This can be null if there is no data for this attribute.
@@ -167,6 +193,21 @@ namespace MoxiWorks.Platform
         [JsonProperty("uuid")]
         public string Uuid { get; set; }
         /// <summary>
+        /// Indicates whether the agent has access to MoxiWorks Products.
+        /// </summary>
+        [JsonProperty("has_product_access")]
+        public bool? HasProductAccess { get; set; }
+        /// <summary>
+        /// Indicates whether the agent has access to Moxiworks Engage.
+        /// </summary>
+        [JsonProperty("has_engage_access")]
+        public bool HasEngageAccess { get; set; }
+        /// <summary>
+        /// The access level of the agent.
+        /// </summary>
+        [JsonProperty("access_level")]
+        public string AccessLevel { get; set; }
+        /// <summary>
         /// Agent’s Twitter account name. 
         /// This can be null if there is no data available for this attribute.
         /// </summary>
@@ -202,12 +243,28 @@ namespace MoxiWorks.Platform
         /// If no agent image has been uploaded for this agent a default image url will be provided.
         /// </summary>
         [JsonProperty("profile_thumb_url")]
-        public string ProfileThumbUrl { get; set; }      
+        public string ProfileThumbUrl { get; set; }
         /// <summary>
-        /// Indicates whether the agent has access to Moxiworks Engage.
+        /// The region the agent’s office is in.
+        /// This can be null if there is no data for this attribute.
         /// </summary>
-        [JsonProperty("has_engage_access")]
-        public bool  HasEngageAccess { get; set; }
+        [JsonProperty("region")]
+        public string Region { get; set; }
+        /// <summary>
+        /// The agent’s stated gross commission income goal.
+        /// </summary>
+        [JsonProperty("gci_goal")]
+        public int? GciGoal { get; set; }
+        /// <summary>
+        /// Percentage commission rate for the agent when acting as a buyer’s agent.
+        /// </summary>
+        [JsonProperty("buyer_commission_rate")]
+        public float? BuyerCommissionRate { get; set; }
+        /// <summary>
+        /// Percentage commission rate for the agent when acting as a seller’s agent.
+        /// </summary>
+        [JsonProperty("seller_commission_rate")]
+        public float? SellerCommissionRate { get; set; }
         /// <summary>
         /// AlternateOffices contains a collection of objects representing AlternateOffice entries. 
         /// </summary>
@@ -219,33 +276,14 @@ namespace MoxiWorks.Platform
         [JsonProperty("available_mls")]
         public List<MlsEntry> AvailableMls { get; set; }
         /// <summary>
-        /// The agent’s stated gross commission income goal.
-        /// </summary>
-        [JsonProperty("gci_goal")]
-        public int? GciGoal { get; set;}  
-        /// <summary>
-        /// Percentage commission rate for the agent when acting as a buyer’s agent.
-        /// </summary>
-        [JsonProperty("buyer_commission_rate")]
-        public float? BuyerCommissionRate { get; set; }
-        /// <summary>
-        /// Percentage commission rate for the agent when acting as a seller’s agent.
-        /// </summary>
-        [JsonProperty("seller_commission_rate")]
-        public float? SellerCommissionRate { get; set; }
-        
-        /// <summary>
         /// Date the agent was created
         /// </summary>
         [JsonProperty("created_timestamp")]
         public int? CreatedTimestamp { get; set; }
-        
         /// <summary>
         /// Date the agent was deactivated
         /// </summary>
         [JsonProperty("deactivated_timestamp")]
         public int? DeactivatedTimestamp { get; set; }
-        
-        
     }
 }

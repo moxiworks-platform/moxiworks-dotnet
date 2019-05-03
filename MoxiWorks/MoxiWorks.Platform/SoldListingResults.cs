@@ -17,7 +17,7 @@ namespace MoxiWorks.Platform
         /// <summary>
         /// This is the payload object for the query. Any Listing object that matches the request query will be returned here.
         /// </summary>
-        public List<Listing> Listings { get; set; } = new List<Listing>();
+        public List<SoldListing> Listings { get; set; } = new List<SoldListing>();
         
     }
 }
