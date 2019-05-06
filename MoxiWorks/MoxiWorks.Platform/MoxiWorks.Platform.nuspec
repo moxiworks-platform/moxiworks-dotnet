@@ -2,16 +2,16 @@
 <package>
   <metadata>
     <id>MoxiWorks.Platform</id>
-    <version>1.2.12</version>
+    <version>1.2.13</version>
     <title>Moxi Works Platform</title>
     <authors>Anthony Hatch</authors>
     <owners>Moxi Works</owners>
     <projectUrl>https://github.com/moxiworks-platform/moxiworks-dotnet</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>"SDK for interaction with the Moxi Works API platform.</description>
-    <releaseNotes>       Adding IMoxiworksCredentials Interface for custom credentials.
+    <releaseNotes>  Adding better handling of SharedPartner deserialization
     </releaseNotes>
-    <copyright>Copyright 2018</copyright>
+    <copyright>Copyright 2019</copyright>
     <tags>moxiworks api sdk</tags>
   </metadata>
 </package>
