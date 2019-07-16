@@ -2,17 +2,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>MoxiWorks.Platform</PackageId>
-    <PackageVersion>1.2.13.0</PackageVersion>
+    <PackageVersion>1.2.14.0</PackageVersion>
     <Authors>Anthony Hatch</Authors>
     <Description>SDK for accessing the Moxi Works API in a .NET application.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>
-      Adding better handling of shared partner data
+      updating virtual url for listing update
     </PackageReleaseNotes>
     <Copyright>Copyright 2019 (c) Moxi Works Corporation. All rights reserved.</Copyright>
     <PackageTags>sdk moxiworks Moxi</PackageTags>
-    <AssemblyVersion>1.2.13.0</AssemblyVersion>
-    <FileVersion>1.2.13.0</FileVersion>
+    <AssemblyVersion>1.2.14.0</AssemblyVersion>
+    <FileVersion>1.2.14.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
