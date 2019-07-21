@@ -15,14 +15,14 @@
 Install through Package Manager
 
 ```
-PM> Install-Package MoxiWorks.Platform -Version 1.2.14
+PM> Install-Package MoxiWorks.Platform -Version 1.2.15
 
 ```
 
 Install through .NET CLI
 
 ```
-> dotnet add package MoxiWorks.Platform --version 1.2.14
+> dotnet add package MoxiWorks.Platform --version 1.2.15
 
 ```
 ###### ASP.NET Core  
