@@ -2,19 +2,20 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>MoxiWorks.Platform</PackageId>
-    <PackageVersion>1.2.14.0</PackageVersion>
+    <PackageVersion>1.2.15.0</PackageVersion>
     <Authors>Anthony Hatch</Authors>
     <Description>SDK for accessing the Moxi Works API in a .NET application.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>
-      updating virtual url for listing update
+      Moving to urlbuilder
     </PackageReleaseNotes>
     <Copyright>Copyright 2019 (c) Moxi Works Corporation. All rights reserved.</Copyright>
     <PackageTags>sdk moxiworks Moxi</PackageTags>
-    <AssemblyVersion>1.2.14.0</AssemblyVersion>
-    <FileVersion>1.2.14.0</FileVersion>
+    <AssemblyVersion>1.2.15.0</AssemblyVersion>
+    <FileVersion>1.2.15.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="AnthonyHatch.UrlBuilder" Version="1.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.0" />
     <PackageReference Include="Wdc.System.Net.Http.Formatting.NetStandard" Version="1.0.7" />
