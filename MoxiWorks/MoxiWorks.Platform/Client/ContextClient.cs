@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using MoxiWorks.Platform.Interfaces;
+using UrlBuilder; 
 [assembly:InternalsVisibleTo("MoxiWorks.Test")]
 namespace MoxiWorks.Platform
 {

@@ -122,17 +122,14 @@ namespace MoxiWorks.Test
             var listingJson = StubDataLoader.LoadJsonFile("listings.json");
 
             IListingService service = new ListingService(new MoxiWorksClient(new StubContextClient(listingJson)));
-            var update = new ListingUpdate();
-            update.Listing = new ListingUpdatableData
+            var update = new ListingUpdate
             {
                 VirtualTourURL = "http://www.example.com"
             };
             
-            
             var response = service.UpdateListingDataAsync(update).Result;
             Assert.IsType<ListingResults>(response.Item);
             Assert.True(response.Item.Listings.Count == 1);
-            
         }
           
     }
