@@ -65,6 +65,12 @@ namespace MoxiWorks.Platform
         [JsonConverter(typeof(IsoDateTimeConverter))]
         public DateTime? ModificationTimestamp { get; set; }
         /// <summary>
+        /// This is a string representing a date on which the listing data was last updated in ISO 8601 format. 
+        /// If no data is available for this attribute, it will be null.
+        /// </summary>
+        [JsonConverter(typeof(IsoDateTimeConverter))]
+        public DateTime? ImagesLastModified { get; set; }
+        /// <summary>
         /// This denotes whether the property should be displayed on a public facing website. If no data is available for this attribute, it will be null.
         /// </summary>
         public bool? InternetAddressDisplayYN { get; set; }

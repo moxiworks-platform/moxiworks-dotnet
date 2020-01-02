@@ -29,15 +29,6 @@ namespace MoxiWorks.Platform
         /// </summary>
         public IDictionary<string, object> SharedPartnerData { get; set; }
         
-        /// <summary>
-        /// Virtual tour URL for this listing.
-        /// </summary>
-        public string VirtualTourURL { get; set; }
-        
-        /// <summary>
-        /// Partner specific listing information in a json formatted string.
-        /// </summary>
-        public IDictionary<string, dynamic> SharedPartnerData { get; set; }
     }
 
 }

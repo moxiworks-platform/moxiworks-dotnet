@@ -2,17 +2,23 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>MoxiWorks.Platform</PackageId>
-    <PackageVersion>1.2.15.0</PackageVersion>
+    <PackageVersion>1.2.17.0</PackageVersion>
     <Authors>Anthony Hatch</Authors>
     <Description>SDK for accessing the Moxi Works API in a .NET application.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>
-      Moving to urlbuilder
-    </PackageReleaseNotes>
+    <PackageReleaseNotes>Add ImagesLastModified to Listing Response Handler</PackageReleaseNotes>
     <Copyright>Copyright 2019 (c) Moxi Works Corporation. All rights reserved.</Copyright>
     <PackageTags>sdk moxiworks Moxi</PackageTags>
-    <AssemblyVersion>1.2.15.0</AssemblyVersion>
-    <FileVersion>1.2.15.0</FileVersion>
+    <AssemblyVersion>1.2.17.0</AssemblyVersion>
+    <FileVersion>1.2.17.0</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Title>MoxiWorks Client Library</Title>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://moxiworks-platform.github.io/moxiworks-dotnet/</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/moxiworks-platform/moxiworks-dotnet</PackageLicenseUrl>
+    <PackageIconUrl>https://images-static.moxiworks.com/static/images/br/moxi/MoxiWorks_logo_lightBG-300x65.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/moxiworks-platform/moxiworks-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AnthonyHatch.UrlBuilder" Version="1.0.0" />

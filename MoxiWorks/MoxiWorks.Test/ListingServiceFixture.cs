@@ -30,6 +30,7 @@ namespace MoxiWorks.Test
             Assert.NotNull(response.Item.PublicTitle);
             Assert.NotNull(response.Item.PublicRemarks);
             Assert.True(response.Item.ModificationTimestamp.HasValue);
+            Assert.True(response.Item.ImagesLastModified.HasValue);
             Assert.True(response.Item.InternetAddressDisplayYN.HasValue);
             Assert.True(response.Item.DaysOnMarket.HasValue);
             Assert.True(response.Item.ListingContractDate.HasValue);
