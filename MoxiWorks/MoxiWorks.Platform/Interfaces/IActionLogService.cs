@@ -12,5 +12,8 @@ namespace MoxiWorks.Platform.Interfaces
 
         Task<Response<ActionLogResults>> GetActionLogsAsync(string agentId, AgentIdType agentIdType,
             string moxiWorksContactId, string partnerContactId);
+        
+        Task<Response<ActionLog>> DeleteActionLogAsync(string moxiWorksActionLogId);
+
     }
 }
