@@ -26,6 +26,9 @@
     <None Update="TestData\FailureResponse.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="TestData\LargeListings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="TestData\Listing.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

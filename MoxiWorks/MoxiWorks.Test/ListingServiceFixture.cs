@@ -134,6 +134,18 @@ namespace MoxiWorks.Test
             Assert.True(response.Item.Listings.Count == 1);
             
         }
-          
+        [Fact]
+        public void ShouldDeserializeLargePropertyListing()
+        {
+            var listingJson = StubDataLoader.LoadJsonFile("LargeListings.json");
+
+            IListingService service = new ListingService(new MoxiWorksClient(new StubContextClient(listingJson)));
+
+            var response = service.GetListingsUpdatedSinceAsync("moxi_works_company_id", AgentIdType.AgentUuid,"some_uuid",DateTime.Now).Result;
+            Assert.IsType<ListingResults>(response.Item);
+            Assert.True(response.Item.Listings.Count == 1);
+            
+        }
+
     }
 }
