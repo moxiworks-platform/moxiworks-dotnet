@@ -177,7 +177,7 @@ namespace MoxiWorks.Platform
         /// <summary>
         /// Total area of the lot.
         /// </summary>
-        public int? LotSizeSquareFeet { get; set; }
+        public long? LotSizeSquareFeet { get; set; }
         /// <summary>
         /// Whether to display information about this listing publicly. 
         /// If this is false, then the information about this listing should not be visible to the Internet.
