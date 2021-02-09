@@ -22,6 +22,10 @@ namespace MoxiWorks.Platform
         /// </summary>
         [JsonProperty("mls_abbreviation")]
         public string MlsAbbreviation { get; set; }
-
+        /// <summary>
+        /// The ID of the Agent in the MLS.
+        /// </summary>
+        [JsonProperty("agent_id")]
+        public string AgentId { get; set; }
     }
 }

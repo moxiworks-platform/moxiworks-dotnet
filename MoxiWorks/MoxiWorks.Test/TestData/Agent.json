@@ -64,7 +64,8 @@
     {
       "name":"foo",
       "display_name":"Foo",
-      "mls_abbreviation":"FOO"
+      "mls_abbreviation":"FOO",
+      "agent_id":"abc123"
     }
   ],
   "gci_goal": 122131,
