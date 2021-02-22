@@ -96,6 +96,48 @@ namespace MoxiWorks.Platform
             return System.Threading.Tasks.Task.Run(() =>GetAgentWithGoalsAsync(agentId,moxiWorksCompanyId,includeGciGoals)).Result; 
         }
         
+            /// <summary>
+        /// When finding an Agent using the Moxi Works platform API and optionaly include an agents access level.
+        /// </summary>
+        /// <param name="agentId">
+        /// Must include either:
+        /// AgentUuid
+        /// This is the Moxi Works Platform ID of the agent which an ActionLog entry is associated 
+        /// with. This will be an RFC 4122 compliant UUID. 
+        /// agent_uuid or moxi_works_agent_id is required and must reference a 
+        /// valid Moxi Works Agent ID for your ActionLog request to be accepted.
+        ///
+        /// MoxiWorksAgentId
+        /// This is the Moxi Works Platform ID of the agent which an ActionLog entry is associated 
+        /// with. This will be a string that may take the form of an email address, 
+        /// or a unique identification string. agent_uuid or moxi_works_agent_id is required 
+        /// and must reference a valid Moxi Works Agent ID for your ActionLog request to be accepted.
+        /// Agent ID for your ActionLog request to be accepted.
+        /// </param>
+        /// <param name="moxiWorksCompanyId">
+        /// A valid Moxi Works Company ID. Use Company Endpoint to determine what 
+        /// moxi_works_company_id you can use
+        /// </param>
+        /// <param name="includeGciGoals">
+        /// Whether to include agent’s access level data in the response data.
+        /// </param>
+        /// <returns> the Agent if exists or an empty Agent Object </returns>
+        public async Task<Response<Agent>> GetAgentWithAccessLevelAsync(string agentId, string moxiWorksCompanyId, bool includeAccessLevel)
+        {
+            var builder = new UriBuilder($"agents/{agentId}")
+                .AddQueryParameter("include_access_level", includeAccessLevel)
+                .AddQueryParameter("moxi_works_company_id", moxiWorksCompanyId);
+            return await Client.GetRequestAsync<Agent>(builder.GetUrl()); 
+        }
+        
+        /// <summary>
+        /// Synchronous wrapper for GetAgentWithAccessLevelAsync
+        /// </summary>
+        public Response<Agent> GetAgentWithAccessLevel(string agentId, string moxiWorksCompanyId, bool includeAccessLevel)
+        {
+            return System.Threading.Tasks.Task.Run(() =>GetAgentWithAccessLevelAsync(agentId,moxiWorksCompanyId,includeAccessLevel)).Result; 
+        }
+        
         
         /// <summary>
         /// When searching for Agent entities using the Moxi Works platform API

@@ -2,17 +2,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>MoxiWorks.Platform</PackageId>
-    <PackageVersion>1.2.19.0</PackageVersion>
+    <PackageVersion>1.2.20.0</PackageVersion>
     <Authors>Anthony Hatch</Authors>
     <Description>SDK for accessing the Moxi Works API in a .NET application.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>
       Moving to urlbuilder
     </PackageReleaseNotes>
-    <Copyright>Copyright 2020 (c) Moxi Works Corporation. All rights reserved.</Copyright>
+    <Copyright>Copyright 2021 (c) Moxi Works Corporation. All rights reserved.</Copyright>
     <PackageTags>sdk moxiworks Moxi</PackageTags>
-    <AssemblyVersion>1.2.19.0</AssemblyVersion>
-    <FileVersion>1.2.19.0</FileVersion>
+    <AssemblyVersion>1.2.20.0</AssemblyVersion>
+    <FileVersion>1.2.20.0</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Title>MoxiCloud API Client Library</Title>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

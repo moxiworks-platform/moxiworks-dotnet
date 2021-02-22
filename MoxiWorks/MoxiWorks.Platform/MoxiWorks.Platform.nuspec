@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>MoxiWorks.Platform</id>
-    <version>1.2.19</version>
+    <version>1.2.20</version>
     <title>Moxi Works Platform</title>
     <authors>Anthony Hatch</authors>
     <owners>Moxi Works</owners>
@@ -11,7 +11,7 @@
     <description>"SDK for interaction with the Moxi Works API platform.</description>
     <releaseNotes>  Updating listing update to proper format for listing update endpoint
     </releaseNotes>
-    <copyright>Copyright 2019</copyright>
+    <copyright>Copyright 2021</copyright>
     <tags>moxiworks api sdk</tags>
   </metadata>
 </package>

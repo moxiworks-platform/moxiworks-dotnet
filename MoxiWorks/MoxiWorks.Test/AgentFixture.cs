@@ -50,10 +50,24 @@ namespace MoxiWorks.Test
             var agent = response.Item;
             Assert.IsType<Agent>(response.Item);
             Assert.Equal(122131,agent.GciGoal);
+            Assert.Equal("YERP",agent.AccessLevel);
             Assert.Equal(1.25f,agent.BuyerCommissionRate); 
             Assert.Equal(1.25f,agent.SellerCommissionRate); 
           
         }
         
+        [Fact]
+        public void ShouldReturnAnAgentWithAccessLevel()
+        {
+            var agentJson = StubDataLoader.LoadJsonFile("Agent.json");  
+            IAgentService service = new AgentService(new MoxiWorksClient(new StubContextClient(agentJson)));
+            var response = service.GetAgentWithAccessLevelAsync("some_agent_id","some_company_id", true).Result;
+            var agent = response.Item;
+            Assert.IsType<Agent>(response.Item);
+            Assert.Equal("YERP",agent.AccessLevel);
+            Assert.Equal(1.25f,agent.BuyerCommissionRate); 
+            Assert.Equal(1.25f,agent.SellerCommissionRate); 
+          
+        }
     }
 }

@@ -70,5 +70,6 @@
   ],
   "gci_goal": 122131,
   "buyer_commission_rate": 1.25,
-  "seller_commission_rate": 1.25
+  "seller_commission_rate": 1.25,
+  "access_level":"YERP"
 }
